@@ -1,0 +1,27 @@
+{
+  "name": "ym-wallet-app",
+  "version": "1.0.0",
+  "description": "Проект «Мой кошелек»",
+  "author": "",
+  "scripts": {
+    "start": "NODE_PATH=. node ./source/app.js",
+    "watch": "NODE_PATH=. nodemon --watch source ./source/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket-public.yamoney.ru/frontend-tools/node-school-app.git"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": "^8.2"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.2",
+    "eslint-config-htmlacademy": "^0.3.1"
+  }
+}
