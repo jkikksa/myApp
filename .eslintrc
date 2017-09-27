@@ -1,7 +1,7 @@
 root: true
 
 parserOptions:
-  ecmaVersion: 6
+  ecmaVersion: 2017
   sourceType: "script"
 
 env:
@@ -18,3 +18,4 @@ extends:
 rules:
   camelcase: [2, { properties: "never" }]
   indent: ["error", "tab"]
+  quotes: [2, "single"]
