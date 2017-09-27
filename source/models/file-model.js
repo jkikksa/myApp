@@ -4,11 +4,11 @@ const fs = require('fs');
 const path = require('path');
 
 class FileModel {
-	constructor() {
-		this._sourceFile = path.join(__dirname, 'data', 'cards.json');
+	constructor(fileName) {
+		this._sourceFile = path.join(__dirname, 'data', fileName);
 		this._sourceData = null;
 	}
-	async readFile() {
+	async read() {
 		await new Promise((resolve, reject) => {
 			fs.readFile(this._sourceFile, (err, data) => {
 				if (err) {
@@ -24,7 +24,7 @@ class FileModel {
 		});
 		return this._sourceData;
 	}
-	async saveFile(data) {
+	async write(data) {
 		await new Promise((resolve, reject) => {
 			fs.writeFile(this._sourceFile, JSON.stringify(data, null, 4), (err) => {
 				if (err) {
@@ -35,9 +35,9 @@ class FileModel {
 			});
 		});
 	}
-	async getAllCards() {
-		return await this.readFile();
-	}
+	// async getAll() {
+	// 	return await this.readFile();
+	// }
 }
 
 module.exports = FileModel;

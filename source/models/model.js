@@ -1,27 +1,33 @@
 'use strict';
 
-const fileModel = new (require('./file-model'))();
+const cardModel = new (require('./card-model'))();
+const transactionModel = new (require('./transaction-model'))();
 
 class Model {
 
-	async getAll() {
-		return await fileModel.readFile();
+	async getAllCards() {
+		return await cardModel.getAllCards();
 	}
 
-	async get() {
-
+	async createCard(card) {
+		return await cardModel.createCard(card);
 	}
 
-	async create(card) {
-		const data = await fileModel.readFile();
-		data.push(card);
-		await fileModel.saveFile(data);
-		return card;
+	async getTransaction(cardId) {
+		return await transactionModel.getTransaction(cardId);
 	}
 
-	async remove(card) {
-
+	async getAllTransaction() {
+		return await transactionModel.getAllTransaction();
 	}
+
+	// async getTransaction(cardId) {
+	//
+	// }
+	//
+	// async createTransaction(transactionData) {
+	//
+	// }
 
 
 }
