@@ -6,6 +6,7 @@
   "scripts": {
     "start": "NODE_PATH=. node ./source/app.js",
     "watch": "NODE_PATH=. nodemon --watch source ./source/app.js",
+    "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,7 +24,11 @@
     "koa-static": "^4.0.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
     "eslint": "^4.7.2",
-    "eslint-config-htmlacademy": "^0.3.1"
+    "eslint-config-htmlacademy": "^0.3.1",
+    "webpack": "^3.6.0"
   }
 }

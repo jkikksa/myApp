@@ -1,4 +1,3 @@
-'use strict';
 const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
@@ -14,12 +13,12 @@ const app = new Koa();
 const router = new Router();
 
 router.param('id', (id, ctx, next) => {
-	return next();
+  return next();
 });
 
 app.use(async (ctx, next) => {
-	ctx.Model = new Model();
-	await next();
+  ctx.Model = new Model();
+  await next();
 });
 
 router.get('/cards/', getCardsController);
