@@ -7,19 +7,21 @@ class FileModel {
     this._sourceData = null;
   }
   async read() {
-    await new Promise((resolve, reject) => {
-      fs.readFile(this._sourceFile, (err, data) => {
-        if (err) {
-          return reject(err);
-        }
-        try {
-          this._sourceData = JSON.parse(data);
-          return resolve();
-        } catch (e) {
-          return reject(e);
-        }
+    if (this._sourceData === null) {
+      await new Promise((resolve, reject) => {
+        fs.readFile(this._sourceFile, (err, data) => {
+          if (err) {
+            return reject(err);
+          }
+          try {
+            this._sourceData = JSON.parse(data);
+            return resolve();
+          } catch (e) {
+            return reject(e);
+          }
+        });
       });
-    });
+    }
     return this._sourceData;
   }
   async write(data) {
@@ -33,9 +35,11 @@ class FileModel {
       });
     });
   }
-  // async getAll() {
-  //   return await this.readFile();
-  // }
+
+  _generateId() {
+    return this._sourceData.reduce((max, item) => Math.max(max, item.id), 0) + 1;
+  }
+
 }
 
 module.exports = FileModel;

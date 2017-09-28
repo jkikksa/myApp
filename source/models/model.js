@@ -11,12 +11,12 @@ class Model {
     return await cardModel.createCard(card);
   }
 
-  async getTransaction(cardId) {
-    return await transactionModel.getTransaction(cardId);
+  async getTransactions(cardId) {
+    return await transactionModel.getTransactions(cardId);
   }
 
-  async getAllTransaction() {
-    return await transactionModel.getAllTransaction();
+  async createTransaction(transactionData) {
+    return await transactionModel.createTransaction(transactionData);
   }
 
   // async getTransaction(cardId) {

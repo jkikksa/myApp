@@ -1,20 +1,22 @@
-const TRANSACTION_FILE = 'transactions.json';
+const TRANSACTIONS_FILE = 'transactions.json';
 
 const FileModel = require('./file-model');
-const fileModel = new FileModel(TRANSACTION_FILE);
+const fileModel = new FileModel(TRANSACTIONS_FILE);
+fileModel.read();
 
 class TransactionModel {
-  async getAllTransaction() {
-    return await fileModel.read();
-  }
 
-  async getTransaction(cardId) {
-    const data = await fileModel.read();
-    return data[cardId];
+  async getTransactions(cardId) {
+    const cards = await fileModel.read();
+    return cards.filter((card) => card.cardId === cardId);
   }
 
   async createTransaction(transactionData) {
-
+    const cards = await fileModel.read();
+    transactionData.id = fileModel._generateId();
+    cards.push(transactionData);
+    await fileModel.write(cards);
+    return transactionData;
   }
 }
 
