@@ -2,7 +2,7 @@ root: true
 
 parserOptions:
   ecmaVersion: 2017
-  sourceType: "script"
+  sourceType: "module"
 
 env:
   browser: true
@@ -17,5 +17,4 @@ extends:
 
 rules:
   camelcase: [2, { properties: "never" }]
-  indent: ["error", "tab"]
   quotes: [2, "single"]
