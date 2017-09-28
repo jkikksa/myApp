@@ -14,8 +14,7 @@ const app = new Koa();
 const router = new Router();
 
 router.param('id', (id, ctx, next) => {
-	// ctx.id = id;
-	next();
+	return next();
 });
 
 app.use(async (ctx, next) => {
