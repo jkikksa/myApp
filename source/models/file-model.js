@@ -12,13 +12,15 @@ class FileModel {
       await new Promise((resolve, reject) => {
         fs.readFile(this._sourceFile, (err, data) => {
           if (err) {
+            err.message = 'Ошибка чтения файла';
             return reject(err);
           }
           try {
             this._sourceData = JSON.parse(data);
             return resolve();
-          } catch (e) {
-            return reject(e);
+          } catch (error) {
+            error.message = 'Ошибка парсинга JSON';
+            return reject(error);
           }
         });
       });
@@ -39,7 +41,7 @@ class FileModel {
   }
 
   async getAll() {
-    return this._sourceData;
+    return await this.readFile();
   }
 
   _generateId() {

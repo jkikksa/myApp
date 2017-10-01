@@ -13,15 +13,8 @@ class CardModel extends FileModel {
     if (cardIndex !== -1) {
       cards.splice(cardIndex, 1);
       await this.writeFile(cards);
-      return {
-        success: true,
-        id
-      };
     } else {
-      return {
-        success: false,
-        id
-      };
+      throw new Error(`Карты с таким id(${id}) не найдено`);
     }
   }
 

@@ -24,15 +24,15 @@ router.delete('/cards/:id/', removeCardController);
 router.get('/cards/:id/transactions/', getTransactionsController);
 router.post('/cards/:id/transactions/', createTransactionController);
 
-app.use(async (ctx, next) => {
-  try {
-    await next();
-  } catch (err) {
-    console.log('Error detected', err);
-    ctx.status = 500;
-    ctx.body = `Error [${err.message}] :(`;
-  }
-});
+// app.use(async (ctx, next) => {
+//   try {
+//     await next();
+//   } catch (err) {
+//     console.log('Error detected', err);
+//     ctx.status = 500;
+//     ctx.body = `Error [${err.message}] :(`;
+//   }
+// });
 
 app.use(async (ctx, next) => {
   ctx.Model = new Model();

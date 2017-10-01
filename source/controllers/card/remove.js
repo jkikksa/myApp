@@ -4,10 +4,17 @@
 module.exports = async (ctx) => {
   const id = Number(ctx.params.id);
 
-  if (id > 0) {
-    const response = await ctx.Model.removeCard(id);
-    ctx.body = response.success === true ? `Карта c id ${response.id} успешно удалена` : `Карта c id ${response.id} не найдена`;
+  if (id <= 0) {
+    ctx.status = 404;
+    ctx.body = 'Id карты должен быть больше 0';
   } else {
-    throw new Error('Id карты должен быть больше 0');
+    try {
+      await ctx.Model.removeCard(id);
+      ctx.status = 200;
+      ctx.body = 'Карта удалена успешно';
+    } catch (err) {
+      ctx.status = 404;
+      ctx.body = err.message;
+    }
   }
 };
