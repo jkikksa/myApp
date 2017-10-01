@@ -1,27 +1,42 @@
 const CARDS_FILE = 'cards.json';
 
 const FileModel = require('./file-model');
-const fileModel = new FileModel(CARDS_FILE);
 
-class CardModel {
-
-  async getCard(id) {
-
+class CardModel extends FileModel {
+  constructor() {
+    super(CARDS_FILE);
   }
 
-  async removeCard(card) {
-
+  async removeCard(id) {
+    const cards = await this.getAllCards();
+    const cardIndex = cards.findIndex((it) => it.id === id);
+    if (cardIndex !== -1) {
+      cards.splice(cardIndex, 1);
+      await this.writeFile(cards);
+      return {
+        success: true,
+        id
+      };
+    } else {
+      return {
+        success: false,
+        id
+      };
+    }
   }
 
   async getAllCards() {
-    return await fileModel.read();
+    return await this.getAll();
   }
 
-  async createCard(card) {
-    const data = await fileModel.read();
-    data.push(card);
-    await fileModel.write(data);
-    return card;
+  async createCard(cardData) {
+    const cards = await this.getAllCards();
+    const newCard = Object.assign({}, {
+      'id': this._generateId()
+    }, cardData);
+    await this.writeFile([...cards, newCard]);
+
+    return newCard;
   }
 }
 

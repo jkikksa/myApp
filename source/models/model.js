@@ -2,6 +2,12 @@ const cardModel = new (require('./card-model'))();
 const transactionModel = new (require('./transaction-model'))();
 
 class Model {
+  async init() {
+    await Promise.all([
+      cardModel.readFile(),
+      transactionModel.readFile()
+    ]);
+  }
 
   async getAllCards() {
     return await cardModel.getAllCards();
@@ -9,6 +15,10 @@ class Model {
 
   async createCard(card) {
     return await cardModel.createCard(card);
+  }
+
+  async removeCard(id) {
+    return await cardModel.removeCard(id);
   }
 
   async getTransactions(cardId) {

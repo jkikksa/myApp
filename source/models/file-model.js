@@ -6,7 +6,8 @@ class FileModel {
     this._sourceFile = path.join(__dirname, 'data', fileName);
     this._sourceData = null;
   }
-  async read() {
+
+  async readFile() {
     if (this._sourceData === null) {
       await new Promise((resolve, reject) => {
         fs.readFile(this._sourceFile, (err, data) => {
@@ -24,7 +25,8 @@ class FileModel {
     }
     return this._sourceData;
   }
-  async write(data) {
+
+  async writeFile(data) {
     await new Promise((resolve, reject) => {
       fs.writeFile(this._sourceFile, JSON.stringify(data, null, 4), (err) => {
         if (err) {
@@ -34,6 +36,10 @@ class FileModel {
         return resolve();
       });
     });
+  }
+
+  async getAll() {
+    return this._sourceData;
   }
 
   _generateId() {
