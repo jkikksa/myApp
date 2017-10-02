@@ -2,6 +2,7 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
 const serve = require('koa-static');
+const fs = require('fs');
 
 const Model = require('./models/model');
 
@@ -16,6 +17,10 @@ const router = new Router();
 
 router.param('id', (id, ctx, next) => {
   return next();
+});
+
+router.get('/', (ctx) => {
+  ctx.body = fs.readFileSync('./public/index.html', 'utf8');
 });
 
 router.get('/cards/', getCardsController);
