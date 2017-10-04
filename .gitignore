@@ -5,4 +5,7 @@ Thumbs.db
 .idea
 *.sublime*
 *.log
+public/css
+public/js
+source/app.bundle.js
 npm-debug.log*

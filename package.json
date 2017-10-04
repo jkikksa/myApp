@@ -4,9 +4,9 @@
   "description": "Проект «Мой кошелек»",
   "author": "",
   "scripts": {
-    "start": "nodemon --watch source ./source/app.bundle.js",
-    "build": "node ./source/app.bundle.js",
-    "webpack": "webpack",
+    "start": "node ./source/app.bundle.js",
+    "watch": "nodemon --watch source ./source/app.bundle.js",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

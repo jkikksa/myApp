@@ -64429,7 +64429,7 @@ exports.default = App;
 /* 379 */
 /***/ (function(module, exports) {
 
-module.exports = [{"id":1,"cardNumber":"546925000000000","balance":"231310"},{"id":2,"cardNumber":"676230000000000","balance":"0"},{"id":3,"cardNumber":"405870000000000","balance":"700"},{"id":4,"cardNumber":"550064000000000","balance":"2"},{"id":5,"cardNumber":"437784000000000","balance":"4545"},{"id":6,"cardNumber":"676803000000000","balance":"120"}]
+module.exports = [{"id":1,"cardNumber":"546925000000000","balance":"231310"},{"id":2,"cardNumber":"676230000000000","balance":"0"},{"id":3,"cardNumber":"405870000000000","balance":"700"},{"id":4,"cardNumber":"550064000000000","balance":"2"},{"id":5,"cardNumber":"437784000000000","balance":"4545"},{"id":6,"cardNumber":"676803000000000","balance":"120"},{"id":7,"cardNumber":"5106216010126757","balance":"700"},{"id":8,"cardNumber":"5106216010126757","balance":"700"}]
 
 /***/ }),
 /* 380 */
