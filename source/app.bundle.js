@@ -25230,7 +25230,6 @@ var serve = __webpack_require__(467);
 var fs = __webpack_require__(17);
 
 var Model = __webpack_require__(486);
-
 var getCardsController = __webpack_require__(489);
 var createCardController = __webpack_require__(490);
 var removeCardController = __webpack_require__(492);
@@ -25240,34 +25239,13 @@ var createTransactionController = __webpack_require__(494);
 var app = new Koa();
 var router = new Router();
 
-// import React from 'react';
-// import {renderToString} from 'react-dom/server';
-// import {App} from './client/components';
-// import { extractCritical } from 'emotion-server'
-
 router.param('id', function (id, ctx, next) {
   return next();
 });
 
-// import template from './views/template';
-
-// const {css} = extractCritical(renderToString(<App/>));
 fs.writeFileSync('./public/css/style.css', _template.css);
 
 router.get('/', function (ctx) {
-  // ctx.body = `<html>
-  //   <head>
-  //     <meta charset="utf-8">
-  //     <link rel="shortcut icon" href="/public/favicon.ico">
-  //     <title>Hello, Node School App!</title>
-  //     <link rel="stylesheet" href="css/common.css">
-  //     <link rel="stylesheet" href="css/style.css">
-  //   </head>
-  //   <body>
-  //     <div id="root">${renderToString(<App />)}</div>
-  //     <script src="js/bundle.js"></script>
-  //   </body>
-  // </html>`;
   ctx.body = _template.template;
 });
 
@@ -25328,7 +25306,7 @@ var renderedApp = (0, _server.renderToString)(_react2.default.createElement(_com
 var _extractCritical = (0, _emotionServer.extractCritical)(renderedApp),
     css = _extractCritical.css;
 
-var template = '\n<!DOCTYPE html>\n<html lang="ru">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <link rel="stylesheet" href="css/common.css">\n  <link rel="stylesheet" href="css/style.css">\n  <link rel="shortcut icon" href="/public/favicon.ico">\n  <meta http-equiv="X-UA-Compatible" content="ie=edge">\n  <title>Hello, Node School App!</title>\n</head>\n<body>\n  <div id="root">\n    ' + renderedApp + '\n  </div>\n  <script src="js/bundle.js"></script>\n</body>\n</html>\n';
+var template = '<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><link rel="stylesheet" href="css/common.css"><link rel="stylesheet" href="css/style.css"><link rel="shortcut icon" href="/public/favicon.ico"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Hello, Node School App!</title></head><body><div id="root">' + renderedApp + '</div><script src="js/bundle.js"></script></body></html>';
 
 exports.css = css;
 exports.template = template;
