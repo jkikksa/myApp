@@ -3,7 +3,7 @@ const path = require('path');
 
 class FileModel {
   constructor(fileName) {
-    this._sourceFile = path.join(__dirname, 'data', fileName);
+    this._sourceFile = path.join(__dirname, 'models/data', fileName);
     this._sourceData = null;
   }
 

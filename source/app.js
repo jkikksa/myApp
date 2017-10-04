@@ -15,12 +15,35 @@ const createTransactionController = require('./controllers/transaction/create');
 const app = new Koa();
 const router = new Router();
 
+import React from 'react';
+import {renderToString} from 'react-dom/server';
+import {App} from './client/components';
+import { extractCritical } from 'emotion-server'
+
 router.param('id', (id, ctx, next) => {
   return next();
 });
 
 router.get('/', (ctx) => {
-  ctx.body = fs.readFileSync('./public/index.html', 'utf8');
+  // ctx.body = fs.readFileSync('./public/index.html', 'utf8');
+  // ctx.body = testapp;
+  const { css } = extractCritical(renderToString(<App/>));
+  fs.writeFileSync('./public/style.css', css);
+  ctx.body = `<html>
+  	<head>
+  		<meta charset="utf-8">
+  		<link rel="shortcut icon" href="/public/favicon.ico">
+  		<title>Hello, Node School App!</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="styles.css">
+  	</head>
+  	<body>
+  		<div id="root">
+      ${renderToString(<App />)}
+      </div>
+  		<script src="bundle.js"></script>
+  	</body>
+  </html>`;
 });
 
 router.get('/cards/', getCardsController);
