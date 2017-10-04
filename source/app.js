@@ -5,7 +5,6 @@ const serve = require('koa-static');
 const fs = require('fs');
 
 const Model = require('./models/model');
-
 const getCardsController = require('./controllers/card/get-all');
 const createCardController = require('./controllers/card/create');
 const removeCardController = require('./controllers/card/remove');
@@ -15,35 +14,16 @@ const createTransactionController = require('./controllers/transaction/create');
 const app = new Koa();
 const router = new Router();
 
-import React from 'react';
-import {renderToString} from 'react-dom/server';
-import {App} from './client/components';
-import { extractCritical } from 'emotion-server'
-
 router.param('id', (id, ctx, next) => {
   return next();
 });
 
+import {css, template} from './views/template';
+
+fs.writeFileSync('./public/css/style.css', css);
+
 router.get('/', (ctx) => {
-  // ctx.body = fs.readFileSync('./public/index.html', 'utf8');
-  // ctx.body = testapp;
-  const { css } = extractCritical(renderToString(<App/>));
-  fs.writeFileSync('./public/style.css', css);
-  ctx.body = `<html>
-  	<head>
-  		<meta charset="utf-8">
-  		<link rel="shortcut icon" href="/public/favicon.ico">
-  		<title>Hello, Node School App!</title>
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="styles.css">
-  	</head>
-  	<body>
-  		<div id="root">
-      ${renderToString(<App />)}
-      </div>
-  		<script src="bundle.js"></script>
-  	</body>
-  </html>`;
+  ctx.body = template;
 });
 
 router.get('/cards/', getCardsController);

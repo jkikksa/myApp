@@ -1,27 +1,28 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
-// module.exports = {
-//   entry: './source/client/index.js',
-//   output: {
-//     path: path.resolve(__dirname, 'public'),
-//     filename: 'bundle.js'
-//   },
-//   module: {
-//     rules: [
-//       {
-//         test: /\.js$/,
-//         loader: 'babel-loader',
-//       },
-//       {
-//         test: /\.css$/,
-//         loader: 'style-loader!css-loader'
-//       }
-//     ]
-//   }
-// };
-
-module.exports = {
+module.exports = [{
+  // client
+  entry: './source/client/index.js',
+  output: {
+    path: path.resolve(__dirname, 'public/js'),
+    filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      }
+    ]
+  }
+},
+{
+  // server
   entry: './source/app.js',
   target: 'node',
   node: {
@@ -41,28 +42,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        // include: [/node_modules\\antd/, /source/],
-        // exclude: /node_modules/,
         use: ExtractTextPlugin.extract(['css-loader'])
-        // use: [
-        //   { loader: "style-loader" },
-        //   { loader: "css-loader" }
-        // ]
       }
-      // {
-      //   test: /\.css$/,
-      //   use: ExtractTextPlugin.extract({
-      //     use: 'style-loader!css-loader'
-      //   })
-      // }
-      // {
-      //   test: /\.css$/,
-      //   loader: 'style-loader!css-loader'
-      // }
     ]
   },
   plugins: [
-    // new webpack.IgnorePlugin(/\.css$/),
-    new ExtractTextPlugin('../public/styles.css'),
+    new ExtractTextPlugin('../public/css/common.css'),
   ],
-};
+}];
