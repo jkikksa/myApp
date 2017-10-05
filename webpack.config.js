@@ -1,52 +1,71 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const fs = require('fs');
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = [{
-  // client
-  entry: './source/client/index.js',
-  output: {
-    path: path.resolve(__dirname, 'public/js'),
-    filename: 'bundle.js'
+function getExternals() {
+  return fs.readdirSync('node_modules')
+      .concat(['react-dom/server'])
+      .filter((mod) => mod !== '.bin')
+      .reduce((externals, mod) => {
+        externals[mod] = `commonjs ${mod}`;
+        return externals;
+      }, {});
+}
+
+module.exports = [
+  {
+    entry: {
+      index: './source/views/index.src.js'
+    },
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader'
+        },
+        {
+          test: /\.css$/,
+          loader: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: 'css-loader'
+          })
+        }
+      ]
+    },
+    output: {
+      filename: 'js/script.js',
+      path: path.resolve(__dirname, 'public')
+    },
+    plugins: [
+      new ExtractTextPlugin('css/style.css')
+    ],
+    watch: true
   },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      }
-    ]
+  {
+    entry: {
+      index: './source/views/index.server.src.js'
+    },
+    target: 'node',
+    externals: getExternals(),
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader'
+        },
+        {
+          test: /\.css$/,
+          loader: 'ignore-loader'
+        }
+      ]
+    },
+    output: {
+      filename: 'index.server.js',
+      path: path.resolve(__dirname, 'source/views'),
+      libraryTarget: 'umd'
+    },
+    watch: true
   }
-},
-{
-  // server
-  entry: './source/app.js',
-  target: 'node',
-  node: {
-    __dirname: false,
-    __filename: false
-  },
-  output: {
-    path: path.resolve(__dirname, 'source'),
-    filename: 'app.bundle.js'
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract(['css-loader'])
-      }
-    ]
-  },
-  plugins: [
-    new ExtractTextPlugin('../public/css/common.css'),
-  ],
-}];
+];

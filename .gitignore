@@ -1,11 +1,8 @@
-build/
 node_modules/
 .DS_Store
 Thumbs.db
 .idea
 *.sublime*
 *.log
-public/css
-public/js
-source/app.bundle.js
 npm-debug.log*
+package-lock.json

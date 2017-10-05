@@ -2,7 +2,7 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
 const serve = require('koa-static');
-const fs = require('fs');
+const {renderToStaticMarkup} = require('react-dom/server');
 
 const Model = require('./models/model');
 const getCardsController = require('./controllers/card/get-all');
@@ -18,12 +18,11 @@ router.param('id', (id, ctx, next) => {
   return next();
 });
 
-import {css, template} from './views/template';
-
-fs.writeFileSync('./public/css/style.css', css);
+const indexView = require('./views/index.server.js');
 
 router.get('/', (ctx) => {
-  ctx.body = template;
+  const indexViewHtml = renderToStaticMarkup(indexView());
+  ctx.body = indexViewHtml;
 });
 
 router.get('/cards/', getCardsController);
