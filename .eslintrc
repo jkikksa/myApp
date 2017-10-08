@@ -1,20 +1,26 @@
-root: true
-
-parserOptions:
-  ecmaVersion: 2017
-  sourceType: "module"
-
-env:
-  browser: true
-  node: true
-  es6: true
-
-globals:
-  define: true
-
-extends:
-  "htmlacademy/es6"
-
-rules:
-  camelcase: [2, { properties: "never" }]
-  quotes: [2, "single"]
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "define": true
+  },
+  "extends": ["htmlacademy/es6", "plugin:react/recommended"],
+  "rules": {
+    "camelcase": [2, { "properties": "never" }],
+    "quotes": [2, "single"]
+  }
+}

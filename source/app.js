@@ -14,6 +14,8 @@ const createTransactionController = require('./controllers/transaction/create');
 const app = new Koa();
 const router = new Router();
 
+const logger = require('../libs/logger.js')('wallet-app');
+
 router.param('id', (id, ctx, next) => {
   return next();
 });
@@ -35,7 +37,7 @@ app.use(async (ctx, next) => {
   try {
     await next();
   } catch (err) {
-    console.log('Error detected', err);
+    logger.log('error', 'Error detected', err);
     ctx.status = 500;
     ctx.body = `Error [${err.message}] :(`;
   }
@@ -51,4 +53,6 @@ app.use(bodyParser());
 app.use(router.routes());
 app.use(serve('./public'));
 
-app.listen(3000);
+app.listen(3000, () => {
+	logger.log('info', 'Application started');
+});

@@ -1,7 +1,13 @@
 {
-  "presets": ["es2015", "react"],
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions"]
+      }
+    }], "es2015", "react"
+  ],
   "plugins": [
     "emotion",
-    ["import", {libraryName: "antd", style: "css"}]
+    ["import", {"libraryName": "antd", "style": "css"}]
   ]
 }
