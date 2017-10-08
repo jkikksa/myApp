@@ -54,5 +54,5 @@ app.use(router.routes());
 app.use(serve('./public'));
 
 app.listen(3000, () => {
-	logger.log('info', 'Application started');
+  logger.log('info', 'Application started');
 });
