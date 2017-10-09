@@ -1012,7 +1012,7 @@ module.exports = require("serialize-javascript");
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
@@ -1029,28 +1029,28 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledTitle = /*#__PURE__*/(0, _react4.default)('h2', 'css-StyledTitle-1ufh08u0', [], [], function createEmotionStyledRules() {
-	return {
-		'margin': '0 0 20px',
-		'fontSize': '24px',
-		'fontWeight': 'bold',
-		'color': '#000'
-	};
+var StyledTitle = /*#__PURE__*/(0, _react4.default)('h2', 'css-StyledTitle-b7zxyf0', [], [], function createEmotionStyledRules() {
+  return {
+    'margin': '0 0 20px',
+    'fontSize': '24px',
+    'fontWeight': 'bold',
+    'color': '#000'
+  };
 });
 
 var Title = function Title(_ref) {
-	var children = _ref.children,
-	    className = _ref.className;
-	return _react2.default.createElement(
-		StyledTitle,
-		{ className: className },
-		children
-	);
+  var children = _ref.children,
+      className = _ref.className;
+  return _react2.default.createElement(
+    StyledTitle,
+    { className: className },
+    children
+  );
 };
 
 Title.propTypes = {
-	children: _propTypes2.default.node,
-	className: _propTypes2.default.string
+  children: _propTypes2.default.node,
+  className: _propTypes2.default.string
 };
 
 exports.default = Title;
@@ -1069,7 +1069,7 @@ module.exports = require("react-emotion");
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
@@ -1086,53 +1086,53 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledButton = /*#__PURE__*/(0, _react4.default)('button', 'css-StyledButton-xmnj3i0', [], [function (_ref) {
-	var bgColor = _ref.bgColor;
-	return bgColor || 'rgba(0, 0, 0, 0.05)';
+var StyledButton = /*#__PURE__*/(0, _react4.default)('button', 'css-StyledButton-1rl13kv0', [], [function (_ref) {
+  var bgColor = _ref.bgColor;
+  return bgColor || 'rgba(0, 0, 0, 0.05)';
 }, function (_ref2) {
-	var textColor = _ref2.textColor;
-	return textColor || 'rgba(0, 0, 0, 0.65)';
+  var textColor = _ref2.textColor;
+  return textColor || 'rgba(0, 0, 0, 0.65)';
 }, function (_ref3) {
-	var textColor = _ref3.textColor;
-	return textColor || 'rgba(0, 0, 0, 0.65)';
+  var textColor = _ref3.textColor;
+  return textColor || 'rgba(0, 0, 0, 0.65)';
 }, function (_ref4) {
-	var bgColor = _ref4.bgColor;
-	return bgColor || 'rgba(0, 0, 0, 0.05)';
+  var bgColor = _ref4.bgColor;
+  return bgColor || 'rgba(0, 0, 0, 0.05)';
 }], function createEmotionStyledRules(x0, x1, x2, x3) {
-	return {
-		'height': '36px',
-		'width': '120px',
-		'fontSize': '13px',
-		'fontWeight': '600',
-		'border': 'none',
-		'borderRadius': '3px',
-		'cursor': 'pointer',
-		'backgroundColor': x0,
-		'color': x1,
-		'&:focus,\n\t&:hover': {
-			'color': x2,
-			'backgroundColor': x3
-		}
-	};
+  return {
+    'height': '36px',
+    'width': '120px',
+    'fontSize': '13px',
+    'fontWeight': '600',
+    'border': 'none',
+    'borderRadius': '3px',
+    'cursor': 'pointer',
+    'backgroundColor': x0,
+    'color': x1,
+    '&:focus,\n  &:hover': {
+      'color': x2,
+      'backgroundColor': x3
+    }
+  };
 });
 
 var Button = function Button(_ref5) {
-	var bgColor = _ref5.bgColor,
-	    textColor = _ref5.textColor,
-	    children = _ref5.children,
-	    className = _ref5.className;
-	return _react2.default.createElement(
-		StyledButton,
-		{ bgColor: bgColor, textColor: textColor, className: className },
-		children
-	);
+  var bgColor = _ref5.bgColor,
+      textColor = _ref5.textColor,
+      children = _ref5.children,
+      className = _ref5.className;
+  return _react2.default.createElement(
+    StyledButton,
+    { bgColor: bgColor, textColor: textColor, className: className },
+    children
+  );
 };
 
 Button.propTypes = {
-	bgColor: _propTypes2.default.string,
-	textColor: _propTypes2.default.string,
-	children: _propTypes2.default.node,
-	className: _propTypes2.default.string
+  bgColor: _propTypes2.default.string,
+  textColor: _propTypes2.default.string,
+  children: _propTypes2.default.node,
+  className: _propTypes2.default.string
 };
 
 exports.default = Button;
@@ -1145,7 +1145,7 @@ exports.default = Button;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -1164,31 +1164,31 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledInput = /*#__PURE__*/(0, _react4.default)('input', 'css-StyledInput-g4muet0', [], [function (_ref) {
-	var textColor = _ref.textColor;
-	return textColor || '#fff';
+var StyledInput = /*#__PURE__*/(0, _react4.default)('input', 'css-StyledInput-1h8z7dh0', [], [function (_ref) {
+  var textColor = _ref.textColor;
+  return textColor || '#fff';
 }], function createEmotionStyledRules(x0) {
-	return {
-		'display': 'inline-block',
-		'position': 'relative',
-		'height': '36px',
-		'padding': '4px 7px',
-		'border': '1px solid rgba(0, 0, 0, 0.04)',
-		'borderRadius': '3px',
-		'backgroundColor': 'rgba(0, 0, 0, 0.2)',
-		'fontSize': '15px',
-		'lineHeight': '1.5',
-		'color': x0
-	};
+  return {
+    'display': 'inline-block',
+    'position': 'relative',
+    'height': '36px',
+    'padding': '4px 7px',
+    'border': '1px solid rgba(0, 0, 0, 0.04)',
+    'borderRadius': '3px',
+    'backgroundColor': 'rgba(0, 0, 0, 0.2)',
+    'fontSize': '15px',
+    'lineHeight': '1.5',
+    'color': x0
+  };
 });
 
 var Input = function Input(props) {
-	return _react2.default.createElement(StyledInput, _extends({ textColor: props.textColor, className: props.className }, props));
+  return _react2.default.createElement(StyledInput, _extends({ textColor: props.textColor, className: props.className }, props));
 };
 
 Input.propTypes = {
-	textColor: _propTypes2.default.string,
-	className: _propTypes2.default.string
+  textColor: _propTypes2.default.string,
+  className: _propTypes2.default.string
 };
 
 exports.default = Input;
@@ -1201,7 +1201,7 @@ exports.default = Input;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _css = __webpack_require__(56);
@@ -1220,35 +1220,35 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledSelect = /*#__PURE__*/(0, _react4.default)(_select2.default, 'css-StyledSelect-1hf2ya40', [], [function (_ref) {
-	var textColor = _ref.textColor;
-	return textColor || '#fff';
+var StyledSelect = /*#__PURE__*/(0, _react4.default)(_select2.default, 'css-StyledSelect-17celhd0', [], [function (_ref) {
+  var textColor = _ref.textColor;
+  return textColor || '#fff';
 }], function createEmotionStyledRules(x0) {
-	return {
-		'&.ant-select': {
-			'& .ant-select-selection': {
-				'height': '36px',
-				'backgroundColor': 'rgba(0, 0, 0, 0.08)',
-				'border': '1px solid rgba(0, 0, 0, 0.04)',
-				'borderRadius': '3px',
-				'color': x0,
-				'&:focus,\n\t\t\t&:hover': {
-					'border': '1px solid rgba(0, 0, 0, 0.04)'
-				},
-				'&__rendered': {
-					'fontSize': '12px',
-					'lineHeight': '34px'
-				}
-			},
-			'.ant-select-arrow': {
-				'fontSize': '15px'
-			}
-		}
-	};
+  return {
+    '&.ant-select': {
+      '& .ant-select-selection': {
+        'height': '36px',
+        'backgroundColor': 'rgba(0, 0, 0, 0.08)',
+        'border': '1px solid rgba(0, 0, 0, 0.04)',
+        'borderRadius': '3px',
+        'color': x0,
+        '&:focus,\n      &:hover': {
+          'border': '1px solid rgba(0, 0, 0, 0.04)'
+        },
+        '&__rendered': {
+          'fontSize': '12px',
+          'lineHeight': '34px'
+        }
+      },
+      '.ant-select-arrow': {
+        'fontSize': '15px'
+      }
+    }
+  };
 });
 
 var Select = function Select(props) {
-	return _react2.default.createElement(StyledSelect, props);
+  return _react2.default.createElement(StyledSelect, props);
 };
 
 Select.Option = _select2.default.Option;
@@ -2503,7 +2503,7 @@ module.exports = require("warning");
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
@@ -2520,30 +2520,30 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var IslandLayout = /*#__PURE__*/(0, _react4.default)('div', 'css-IslandLayout-1l5uuhm0', [], [], function createEmotionStyledRules() {
-	return {
-		'margin': '15px',
-		'padding': '30px 30px 20px',
-		'borderRadius': '4px',
-		'background': '#fff',
-		'WebkitBoxShadow': '0px 2px 12px 0px rgba(0, 0, 0, 0.05)',
-		'boxShadow': '0px 2px 12px 0px rgba(0, 0, 0, 0.05)'
-	};
+var IslandLayout = /*#__PURE__*/(0, _react4.default)('div', 'css-IslandLayout-oshedm0', [], [], function createEmotionStyledRules() {
+  return {
+    'margin': '15px',
+    'padding': '30px 30px 20px',
+    'borderRadius': '4px',
+    'background': '#fff',
+    'WebkitBoxShadow': '0px 2px 12px 0px rgba(0, 0, 0, 0.05)',
+    'boxShadow': '0px 2px 12px 0px rgba(0, 0, 0, 0.05)'
+  };
 });
 
 var Island = function Island(_ref) {
-	var children = _ref.children,
-	    className = _ref.className;
-	return _react2.default.createElement(
-		IslandLayout,
-		{ className: className },
-		children
-	);
+  var children = _ref.children,
+      className = _ref.className;
+  return _react2.default.createElement(
+    IslandLayout,
+    { className: className },
+    children
+  );
 };
 
 Island.propTypes = {
-	children: _propTypes2.default.node,
-	className: _propTypes2.default.string
+  children: _propTypes2.default.node,
+  className: _propTypes2.default.string
 };
 
 exports.default = Island;
@@ -2556,7 +2556,7 @@ exports.default = Island;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -2583,89 +2583,89 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var CardLayout = /*#__PURE__*/(0, _react4.default)('div', 'css-CardLayout-qjzdc20', [], [function (_ref) {
-	var bgColor = _ref.bgColor,
-	    active = _ref.active;
-	return active ? bgColor : 'rgba(255, 255, 255, 0.1)';
+var CardLayout = /*#__PURE__*/(0, _react4.default)('div', 'css-CardLayout-1ai4zmo0', [], [function (_ref) {
+  var bgColor = _ref.bgColor,
+      active = _ref.active;
+  return active ? bgColor : 'rgba(255, 255, 255, 0.1)';
 }], function createEmotionStyledRules(x0) {
-	return {
-		'position': 'relative',
-		'width': '260px',
-		'height': '164px',
-		'WebkitBoxSizing': 'border-box',
-		'boxSizing': 'border-box',
-		'marginBottom': '15px',
-		'padding': '25px 20px 20px 25px',
-		'borderRadius': '4px',
-		'backgroundColor': x0
-	};
+  return {
+    'position': 'relative',
+    'width': '260px',
+    'height': '164px',
+    'WebkitBoxSizing': 'border-box',
+    'boxSizing': 'border-box',
+    'marginBottom': '15px',
+    'padding': '25px 20px 20px 25px',
+    'borderRadius': '4px',
+    'backgroundColor': x0
+  };
 });
 
-var CardLogo = /*#__PURE__*/(0, _react4.default)('div', 'css-CardLogo-qjzdc21', [], [function (_ref2) {
-	var url = _ref2.url;
-	return url;
+var CardLogo = /*#__PURE__*/(0, _react4.default)('div', 'css-CardLogo-1ai4zmo1', [], [function (_ref2) {
+  var url = _ref2.url;
+  return url;
 }, function (_ref3) {
-	var active = _ref3.active;
-	return active ? 'none' : 'grayscale(100%) opacity(60%)';
+  var active = _ref3.active;
+  return active ? 'none' : 'grayscale(100%) opacity(60%)';
 }], function createEmotionStyledRules(x0, x1) {
-	return {
-		'height': '28px',
-		'marginBottom': '25px',
-		'backgroundImage': 'url(' + x0 + ')',
-		'backgroundSize': 'contain',
-		'backgroundRepeat': 'no-repeat',
-		'WebkitFilter': x1,
-		'filter': x1
-	};
+  return {
+    'height': '28px',
+    'marginBottom': '25px',
+    'backgroundImage': 'url(' + x0 + ')',
+    'backgroundSize': 'contain',
+    'backgroundRepeat': 'no-repeat',
+    'WebkitFilter': x1,
+    'filter': x1
+  };
 });
 
-var CardNumber = /*#__PURE__*/(0, _react4.default)('div', 'css-CardNumber-qjzdc22', [], [function (_ref4) {
-	var active = _ref4.active,
-	    textColor = _ref4.textColor;
-	return active ? textColor : 'rgba(255, 255, 255, 0.6)';
+var CardNumber = /*#__PURE__*/(0, _react4.default)('div', 'css-CardNumber-1ai4zmo2', [], [function (_ref4) {
+  var active = _ref4.active,
+      textColor = _ref4.textColor;
+  return active ? textColor : 'rgba(255, 255, 255, 0.6)';
 }], function createEmotionStyledRules(x0) {
-	return {
-		'marginBottom': '20px',
-		'color': x0,
-		'fontSize': '16px',
-		'fontFamily': '\'OCR A Std Regular\''
-	};
+  return {
+    'marginBottom': '20px',
+    'color': x0,
+    'fontSize': '16px',
+    'fontFamily': '\'OCR A Std Regular\''
+  };
 });
 
-var CardType = /*#__PURE__*/(0, _react4.default)('div', 'css-CardType-qjzdc23', [], [function (_ref5) {
-	var url = _ref5.url;
-	return url;
+var CardType = /*#__PURE__*/(0, _react4.default)('div', 'css-CardType-1ai4zmo3', [], [function (_ref5) {
+  var url = _ref5.url;
+  return url;
 }, function (_ref6) {
-	var active = _ref6.active;
-	return active ? '1' : '0.6';
+  var active = _ref6.active;
+  return active ? '1' : '0.6';
 }], function createEmotionStyledRules(x0, x1) {
-	return {
-		'height': '26px',
-		'backgroundImage': 'url(' + x0 + ')',
-		'backgroundSize': 'contain',
-		'backgroundRepeat': 'no-repeat',
-		'backgroundPositionX': 'right',
-		'opacity': x1
-	};
+  return {
+    'height': '26px',
+    'backgroundImage': 'url(' + x0 + ')',
+    'backgroundSize': 'contain',
+    'backgroundRepeat': 'no-repeat',
+    'backgroundPositionX': 'right',
+    'opacity': x1
+  };
 });
 
-var NewCardLayout = /*#__PURE__*/(0, _react4.default)(CardLayout, 'css-NewCardLayout-qjzdc24', [], [], function createEmotionStyledRules() {
-	return {
-		'backgroundColor': 'transparent',
-		'backgroundImage': 'url(\'/assets/cards-add.svg\')',
-		'backgroundRepeat': 'no-repeat',
-		'backgroundPosition': 'center',
-		'WebkitBoxSizing': 'border-box',
-		'boxSizing': 'border-box',
-		'border': '2px dashed rgba(255, 255, 255, 0.2)'
-	};
+var NewCardLayout = /*#__PURE__*/(0, _react4.default)(CardLayout, 'css-NewCardLayout-1ai4zmo4', [], [], function createEmotionStyledRules() {
+  return {
+    'backgroundColor': 'transparent',
+    'backgroundImage': 'url(\'/assets/cards-add.svg\')',
+    'backgroundRepeat': 'no-repeat',
+    'backgroundPosition': 'center',
+    'WebkitBoxSizing': 'border-box',
+    'boxSizing': 'border-box',
+    'border': '2px dashed rgba(255, 255, 255, 0.2)'
+  };
 });
 
-var CardSelect = /*#__PURE__*/(0, _react4.default)(_.Select, 'css-CardSelect-qjzdc25', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '100%',
-		'marginBottom': '15px'
-	};
+var CardSelect = /*#__PURE__*/(0, _react4.default)(_.Select, 'css-CardSelect-1ai4zmo5', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '100%',
+    'marginBottom': '15px'
+  };
 });
 
 /**
@@ -2673,122 +2673,122 @@ var CardSelect = /*#__PURE__*/(0, _react4.default)(_.Select, 'css-CardSelect-qjz
  */
 
 var Card = function (_Component) {
-	_inherits(Card, _Component);
+  _inherits(Card, _Component);
 
-	/**
-  * Конструктор
-  *
-  * @param {Object} props свойства компонента
-  */
-	function Card(props) {
-		_classCallCheck(this, Card);
-
-		var _this = _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
-
-		_this.state = {
-			activeCardIndex: 0
-		};
-		return _this;
-	}
-
-	/**
-  * Обработчик переключения карты
-  *
-  * @param {Number} activeCardIndex индекс выбранной карты
-  */
-
-
-	_createClass(Card, [{
-		key: 'onCardChange',
-		value: function onCardChange(activeCardIndex) {
-			this.setState({ activeCardIndex: activeCardIndex });
-		}
-
-		/**
-   * Рендер компонента
+  /**
+   * Конструктор
    *
-   * @override
-   * @returns {JSX}
+   * @param {Object} props свойства компонента
+   */
+  function Card(props) {
+    _classCallCheck(this, Card);
+
+    var _this = _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
+
+    _this.state = {
+      activeCardIndex: 0
+    };
+    return _this;
+  }
+
+  /**
+   * Обработчик переключения карты
+   *
+   * @param {Number} activeCardIndex индекс выбранной карты
    */
 
-	}, {
-		key: 'render',
-		value: function render() {
-			var _this2 = this;
 
-			var _props = this.props,
-			    data = _props.data,
-			    type = _props.type,
-			    active = _props.active,
-			    onClick = _props.onClick;
+  _createClass(Card, [{
+    key: 'onCardChange',
+    value: function onCardChange(activeCardIndex) {
+      this.setState({ activeCardIndex: activeCardIndex });
+    }
+
+    /**
+     * Рендер компонента
+     *
+     * @override
+     * @return {JSX}
+     */
+
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _props = this.props,
+          data = _props.data,
+          type = _props.type,
+          active = _props.active,
+          onClick = _props.onClick;
 
 
-			if (type === 'new') {
-				return _react2.default.createElement(NewCardLayout, null);
-			}
+      if (type === 'new') {
+        return _react2.default.createElement(NewCardLayout, null);
+      }
 
-			if (type === 'select') {
-				var activeCardIndex = this.state.activeCardIndex;
+      if (type === 'select') {
+        var activeCardIndex = this.state.activeCardIndex;
 
-				var selectedCard = data[activeCardIndex];
-				var _selectedCard$theme = selectedCard.theme,
-				    _bgColor = _selectedCard$theme.bgColor,
-				    _bankLogoUrl = _selectedCard$theme.bankLogoUrl,
-				    _brandLogoUrl = _selectedCard$theme.brandLogoUrl;
+        var selectedCard = data[activeCardIndex];
+        var _selectedCard$theme = selectedCard.theme,
+            _bgColor = _selectedCard$theme.bgColor,
+            _bankLogoUrl = _selectedCard$theme.bankLogoUrl,
+            _brandLogoUrl = _selectedCard$theme.brandLogoUrl;
 
 
-				return _react2.default.createElement(
-					CardLayout,
-					{ active: true, bgColor: _bgColor },
-					_react2.default.createElement(CardLogo, { url: _bankLogoUrl, active: true }),
-					_react2.default.createElement(
-						CardSelect,
-						{ defaultValue: '0', onChange: function onChange(activeCardIndex) {
-								return _this2.onCardChange(activeCardIndex);
-							} },
-						data.map(function (card, index) {
-							return _react2.default.createElement(
-								_.Select.Option,
-								{ key: index, value: '' + index },
-								card.number
-							);
-						})
-					),
-					_react2.default.createElement(CardType, { url: _brandLogoUrl, active: true })
-				);
-			}
+        return _react2.default.createElement(
+          CardLayout,
+          { active: true, bgColor: _bgColor },
+          _react2.default.createElement(CardLogo, { url: _bankLogoUrl, active: true }),
+          _react2.default.createElement(
+            CardSelect,
+            { defaultValue: '0', onChange: function onChange(activeCardIndex) {
+                return _this2.onCardChange(activeCardIndex);
+              } },
+            data.map(function (card, index) {
+              return _react2.default.createElement(
+                _.Select.Option,
+                { key: index, value: '' + index },
+                card.number
+              );
+            })
+          ),
+          _react2.default.createElement(CardType, { url: _brandLogoUrl, active: true })
+        );
+      }
 
-			var number = data.number,
-			    theme = data.theme;
-			var bgColor = theme.bgColor,
-			    textColor = theme.textColor,
-			    bankLogoUrl = theme.bankLogoUrl,
-			    brandLogoUrl = theme.brandLogoUrl;
+      var number = data.number,
+          theme = data.theme;
+      var bgColor = theme.bgColor,
+          textColor = theme.textColor,
+          bankLogoUrl = theme.bankLogoUrl,
+          brandLogoUrl = theme.brandLogoUrl;
 
-			var themedBrandLogoUrl = active ? brandLogoUrl : brandLogoUrl.replace(/-colored.svg$/, '-white.svg');
+      var themedBrandLogoUrl = active ? brandLogoUrl : brandLogoUrl.replace(/-colored.svg$/, '-white.svg');
 
-			return _react2.default.createElement(
-				CardLayout,
-				{ active: active, bgColor: bgColor, onClick: onClick },
-				_react2.default.createElement(CardLogo, { url: bankLogoUrl, active: active }),
-				_react2.default.createElement(
-					CardNumber,
-					{ textColor: textColor, active: active },
-					number
-				),
-				_react2.default.createElement(CardType, { url: themedBrandLogoUrl, active: active })
-			);
-		}
-	}]);
+      return _react2.default.createElement(
+        CardLayout,
+        { active: active, bgColor: bgColor, onClick: onClick },
+        _react2.default.createElement(CardLogo, { url: bankLogoUrl, active: active }),
+        _react2.default.createElement(
+          CardNumber,
+          { textColor: textColor, active: active },
+          number
+        ),
+        _react2.default.createElement(CardType, { url: themedBrandLogoUrl, active: active })
+      );
+    }
+  }]);
 
-	return Card;
+  return Card;
 }(_react.Component);
 
 Card.propTypes = {
-	data: _propTypes2.default.oneOfType([_propTypes2.default.array, _propTypes2.default.object]),
-	type: _propTypes2.default.string,
-	active: _propTypes2.default.bool,
-	onClick: _propTypes2.default.func
+  data: _propTypes2.default.oneOfType([_propTypes2.default.array, _propTypes2.default.object]),
+  type: _propTypes2.default.string,
+  active: _propTypes2.default.bool,
+  onClick: _propTypes2.default.func
 };
 
 exports.default = Card;
@@ -2801,7 +2801,7 @@ exports.default = Card;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
@@ -2820,94 +2820,94 @@ var _ = __webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Layout = /*#__PURE__*/(0, _react4.default)('div', 'css-Layout-1rtn3xv0', [], [], function createEmotionStyledRules() {
-	return {
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'WebkitBoxOrient': 'vertical',
-		'WebkitBoxDirection': 'normal',
-		'msFlexDirection': 'column',
-		'flexDirection': 'column',
-		'position': 'relative',
-		'backgroundColor': '#242424',
-		'padding': '20px'
-	};
+var Layout = /*#__PURE__*/(0, _react4.default)('div', 'css-Layout-yj10he0', [], [], function createEmotionStyledRules() {
+  return {
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'WebkitBoxOrient': 'vertical',
+    'WebkitBoxDirection': 'normal',
+    'msFlexDirection': 'column',
+    'flexDirection': 'column',
+    'position': 'relative',
+    'backgroundColor': '#242424',
+    'padding': '20px'
+  };
 });
 
-var Logo = /*#__PURE__*/(0, _react4.default)('div', 'css-Logo-1rtn3xv1', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '147px',
-		'height': '28px',
-		'marginBottom': '55px',
-		'backgroundImage': 'url(\'/assets/yamoney-logo.svg\')'
-	};
+var Logo = /*#__PURE__*/(0, _react4.default)('div', 'css-Logo-yj10he1', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '147px',
+    'height': '28px',
+    'marginBottom': '55px',
+    'backgroundImage': 'url(\'/assets/yamoney-logo.svg\')'
+  };
 });
 
-var Edit = /*#__PURE__*/(0, _react4.default)('div', 'css-Edit-1rtn3xv2', [], [], function createEmotionStyledRules() {
-	return {
-		'position': 'absolute',
-		'top': '25px',
-		'right': '20px',
-		'width': '18px',
-		'height': '18px',
-		'backgroundImage': 'url(\'/assets/cards-edit.svg\')'
-	};
+var Edit = /*#__PURE__*/(0, _react4.default)('div', 'css-Edit-yj10he2', [], [], function createEmotionStyledRules() {
+  return {
+    'position': 'absolute',
+    'top': '25px',
+    'right': '20px',
+    'width': '18px',
+    'height': '18px',
+    'backgroundImage': 'url(\'/assets/cards-edit.svg\')'
+  };
 });
 
-var CardsList = /*#__PURE__*/(0, _react4.default)('div', 'css-CardsList-1rtn3xv3', [], [], function createEmotionStyledRules() {
-	return {
-		'WebkitBoxFlex': '1',
-		'msFlex': '1',
-		'flex': '1'
-	};
+var CardsList = /*#__PURE__*/(0, _react4.default)('div', 'css-CardsList-yj10he3', [], [], function createEmotionStyledRules() {
+  return {
+    'WebkitBoxFlex': '1',
+    'msFlex': '1',
+    'flex': '1'
+  };
 });
 
-var Footer = /*#__PURE__*/(0, _react4.default)('footer', 'css-Footer-1rtn3xv4', [], [], function createEmotionStyledRules() {
-	return {
-		'color': 'rgba(255, 255, 255, 0.2)',
-		'fontSize': '15px'
-	};
+var Footer = /*#__PURE__*/(0, _react4.default)('footer', 'css-Footer-yj10he4', [], [], function createEmotionStyledRules() {
+  return {
+    'color': 'rgba(255, 255, 255, 0.2)',
+    'fontSize': '15px'
+  };
 });
 
 var CardsBar = function CardsBar(_ref) {
-	var activeCardIndex = _ref.activeCardIndex,
-	    cardsList = _ref.cardsList,
-	    onCardChange = _ref.onCardChange;
+  var activeCardIndex = _ref.activeCardIndex,
+      cardsList = _ref.cardsList,
+      onCardChange = _ref.onCardChange;
 
-	var onCardClick = function onCardClick(activeCardIndex) {
-		onCardChange && onCardChange(activeCardIndex);
-	};
+  var onCardClick = function onCardClick(activeCardIndex) {
+    onCardChange && onCardChange(activeCardIndex);
+  };
 
-	return _react2.default.createElement(
-		Layout,
-		null,
-		_react2.default.createElement(Logo, null),
-		_react2.default.createElement(Edit, null),
-		_react2.default.createElement(
-			CardsList,
-			null,
-			cardsList.map(function (card, index) {
-				return _react2.default.createElement(_.Card, {
-					key: index,
-					data: card,
-					active: index === activeCardIndex,
-					onClick: function onClick() {
-						return onCardClick(index);
-					} });
-			}),
-			_react2.default.createElement(_.Card, { type: 'new' })
-		),
-		_react2.default.createElement(
-			Footer,
-			null,
-			'Yamoney Node School'
-		)
-	);
+  return _react2.default.createElement(
+    Layout,
+    null,
+    _react2.default.createElement(Logo, null),
+    _react2.default.createElement(Edit, null),
+    _react2.default.createElement(
+      CardsList,
+      null,
+      cardsList.map(function (card, index) {
+        return _react2.default.createElement(_.Card, {
+          key: index,
+          data: card,
+          active: index === activeCardIndex,
+          onClick: function onClick() {
+            return onCardClick(index);
+          } });
+      }),
+      _react2.default.createElement(_.Card, { type: 'new' })
+    ),
+    _react2.default.createElement(
+      Footer,
+      null,
+      'Yamoney Node School'
+    )
+  );
 };
 
 CardsBar.propTypes = {
-	cardsList: _propTypes2.default.array.isRequired,
-	activeCardIndex: _propTypes2.default.number.isRequired,
-	onCardChange: _propTypes2.default.func.isRequired
+  cardsList: _propTypes2.default.array.isRequired,
+  activeCardIndex: _propTypes2.default.number.isRequired,
+  onCardChange: _propTypes2.default.func.isRequired
 };
 
 exports.default = CardsBar;
@@ -2920,7 +2920,7 @@ exports.default = CardsBar;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -2953,85 +2953,85 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * Класс компонента Prepaid
  */
 var Prepaid = function (_Component) {
-	_inherits(Prepaid, _Component);
+  _inherits(Prepaid, _Component);
 
-	/**
-  * Конструктор
-  * @param {Object} props свойства компонента Prepaid
-  */
-	function Prepaid(props) {
-		_classCallCheck(this, Prepaid);
+  /**
+   * Конструктор
+   * @param {Object} props свойства компонента Prepaid
+   */
+  function Prepaid(props) {
+    _classCallCheck(this, Prepaid);
 
-		var _this = _possibleConstructorReturn(this, (Prepaid.__proto__ || Object.getPrototypeOf(Prepaid)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Prepaid.__proto__ || Object.getPrototypeOf(Prepaid)).call(this, props));
 
-		_this.state = { stage: 'contract' };
-		return _this;
-	}
+    _this.state = { stage: 'contract' };
+    return _this;
+  }
 
-	/**
-  * Обработка успешного платежа
-  * @param {Object} transaction данные о транзакции
-  */
-
-
-	_createClass(Prepaid, [{
-		key: 'onPaymentSuccess',
-		value: function onPaymentSuccess(transaction) {
-			this.setState({
-				stage: 'success',
-				transaction: transaction
-			});
-		}
-
-		/**
-   * Повторить платеж
+  /**
+   * Обработка успешного платежа
+   * @param {Object} transaction данные о транзакции
    */
 
-	}, {
-		key: 'repeatPayment',
-		value: function repeatPayment() {
-			this.setState({ stage: 'contract' });
-		}
 
-		/**
-   * Функция отрисовки компонента
-   * @returns {JSX}
-   */
+  _createClass(Prepaid, [{
+    key: 'onPaymentSuccess',
+    value: function onPaymentSuccess(transaction) {
+      this.setState({
+        stage: 'success',
+        transaction: transaction
+      });
+    }
 
-	}, {
-		key: 'render',
-		value: function render() {
-			var _this2 = this;
+    /**
+     * Повторить платеж
+     */
 
-			var transaction = this.state.transaction;
-			var _props = this.props,
-			    activeCard = _props.activeCard,
-			    inactiveCardsList = _props.inactiveCardsList;
+  }, {
+    key: 'repeatPayment',
+    value: function repeatPayment() {
+      this.setState({ stage: 'contract' });
+    }
+
+    /**
+     * Функция отрисовки компонента
+     * @return {JSX}
+     */
+
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var transaction = this.state.transaction;
+      var _props = this.props,
+          activeCard = _props.activeCard,
+          inactiveCardsList = _props.inactiveCardsList;
 
 
-			if (this.state.stage === 'success') {
-				return _react2.default.createElement(_PrepaidSuccess2.default, { transaction: transaction, repeatPayment: function repeatPayment() {
-						return _this2.repeatPayment();
-					} });
-			}
+      if (this.state.stage === 'success') {
+        return _react2.default.createElement(_PrepaidSuccess2.default, { transaction: transaction, repeatPayment: function repeatPayment() {
+            return _this2.repeatPayment();
+          } });
+      }
 
-			return _react2.default.createElement(_PrepaidContract2.default, {
-				activeCard: activeCard,
-				inactiveCardsList: inactiveCardsList,
-				onPaymentSuccess: function onPaymentSuccess(transaction) {
-					return _this2.onPaymentSuccess(transaction);
-				} });
-		}
-	}]);
+      return _react2.default.createElement(_PrepaidContract2.default, {
+        activeCard: activeCard,
+        inactiveCardsList: inactiveCardsList,
+        onPaymentSuccess: function onPaymentSuccess(transaction) {
+          return _this2.onPaymentSuccess(transaction);
+        } });
+    }
+  }]);
 
-	return Prepaid;
+  return Prepaid;
 }(_react.Component);
 
 Prepaid.propTypes = {
-	activeCard: _propTypes2.default.shape({
-		id: _propTypes2.default.number
-	}).isRequired,
-	inactiveCardsList: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired
+  activeCard: _propTypes2.default.shape({
+    id: _propTypes2.default.number
+  }).isRequired,
+  inactiveCardsList: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired
 };
 
 exports.default = Prepaid;
@@ -3044,7 +3044,7 @@ exports.default = Prepaid;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3073,116 +3073,116 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PrepaidLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-PrepaidLayout-z0w1ui0', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '350px',
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'WebkitBoxOrient': 'vertical',
-		'WebkitBoxDirection': 'normal',
-		'msFlexDirection': 'column',
-		'flexDirection': 'column',
-		'WebkitBoxAlign': 'center',
-		'msFlexAlign': 'center',
-		'alignItems': 'center',
-		'backgroundColor': '#353536'
-	};
+var PrepaidLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-PrepaidLayout-1ck0c3v0', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '350px',
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'WebkitBoxOrient': 'vertical',
+    'WebkitBoxDirection': 'normal',
+    'msFlexDirection': 'column',
+    'flexDirection': 'column',
+    'WebkitBoxAlign': 'center',
+    'msFlexAlign': 'center',
+    'alignItems': 'center',
+    'backgroundColor': '#353536'
+  };
 });
 
-var PrepaidTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-PrepaidTitle-z0w1ui1', [], [], function createEmotionStyledRules() {
-	return {
-		'color': '#fff'
-	};
+var PrepaidTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-PrepaidTitle-1ck0c3v1', [], [], function createEmotionStyledRules() {
+  return {
+    'color': '#fff'
+  };
 });
 
-var PrepaidItems = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItems-z0w1ui2', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '285px',
-		'marginBottom': '40px'
-	};
+var PrepaidItems = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItems-1ck0c3v2', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '285px',
+    'marginBottom': '40px'
+  };
 });
 
-var PrepaidItem = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItem-z0w1ui3', [], [function (_ref) {
-	var selected = _ref.selected,
-	    bgColor = _ref.bgColor;
-	return selected ? bgColor : 'rgba(0, 0, 0, 0.05)';
+var PrepaidItem = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItem-1ck0c3v3', [], [function (_ref) {
+  var selected = _ref.selected,
+      bgColor = _ref.bgColor;
+  return selected ? bgColor : 'rgba(0, 0, 0, 0.05)';
 }], function createEmotionStyledRules(x0) {
-	return {
-		'height': '65px',
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'WebkitBoxAlign': 'center',
-		'msFlexAlign': 'center',
-		'alignItems': 'center',
-		'borderRadius': '3px',
-		'cursor': 'pointer',
-		'backgroundColor': x0
-	};
+  return {
+    'height': '65px',
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'WebkitBoxAlign': 'center',
+    'msFlexAlign': 'center',
+    'alignItems': 'center',
+    'borderRadius': '3px',
+    'cursor': 'pointer',
+    'backgroundColor': x0
+  };
 });
 
-var PrepaidItemIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemIcon-z0w1ui4', [], [function (_ref2) {
-	var bankSmLogoUrl = _ref2.bankSmLogoUrl;
-	return bankSmLogoUrl;
+var PrepaidItemIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemIcon-1ck0c3v4', [], [function (_ref2) {
+  var bankSmLogoUrl = _ref2.bankSmLogoUrl;
+  return bankSmLogoUrl;
 }, function (_ref3) {
-	var selected = _ref3.selected;
-	return selected ? 'none' : 'grayscale(100%)';
+  var selected = _ref3.selected;
+  return selected ? 'none' : 'grayscale(100%)';
 }], function createEmotionStyledRules(x0, x1) {
-	return {
-		'width': '42px',
-		'height': '42px',
-		'margin': '18px',
-		'borderRadius': '21px',
-		'backgroundImage': 'url(' + x0 + ')',
-		'backgroundSize': 'contain',
-		'backgroundRepeat': 'no-repeat',
-		'WebkitFilter': x1,
-		'filter': x1
-	};
+  return {
+    'width': '42px',
+    'height': '42px',
+    'margin': '18px',
+    'borderRadius': '21px',
+    'backgroundImage': 'url(' + x0 + ')',
+    'backgroundSize': 'contain',
+    'backgroundRepeat': 'no-repeat',
+    'WebkitFilter': x1,
+    'filter': x1
+  };
 });
 
-var PrepaidItemTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemTitle-z0w1ui5', [], [function (_ref4) {
-	var selected = _ref4.selected,
-	    textColor = _ref4.textColor;
-	return selected ? textColor : 'rgba(255, 255, 255, 0.6)';
+var PrepaidItemTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemTitle-1ck0c3v5', [], [function (_ref4) {
+  var selected = _ref4.selected,
+      textColor = _ref4.textColor;
+  return selected ? textColor : 'rgba(255, 255, 255, 0.6)';
 }], function createEmotionStyledRules(x0) {
-	return {
-		'fontSize': '13px',
-		'color': x0
-	};
+  return {
+    'fontSize': '13px',
+    'color': x0
+  };
 });
 
-var PrepaidItemDescription = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemDescription-z0w1ui6', [], [function (_ref5) {
-	var selected = _ref5.selected,
-	    textColor = _ref5.textColor;
-	return selected ? textColor : 'rgba(255, 255, 255, 0.4)';
+var PrepaidItemDescription = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemDescription-1ck0c3v6', [], [function (_ref5) {
+  var selected = _ref5.selected,
+      textColor = _ref5.textColor;
+  return selected ? textColor : 'rgba(255, 255, 255, 0.4)';
 }], function createEmotionStyledRules(x0) {
-	return {
-		'color': x0
-	};
+  return {
+    'color': x0
+  };
 });
 
-var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-z0w1ui7', [], [], function createEmotionStyledRules() {
-	return {
-		'margin': '20px 0',
-		'position': 'relative'
-	};
+var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-1ck0c3v7', [], [], function createEmotionStyledRules() {
+  return {
+    'margin': '20px 0',
+    'position': 'relative'
+  };
 });
 
-var SumInput = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-SumInput-z0w1ui8', [], [], function createEmotionStyledRules() {
-	return {
-		'maxWidth': '200px',
-		'paddingRight': '20px',
-		'backgroundColor': 'rgba(0, 0, 0, 0.08)',
-		'color': '#fff'
-	};
+var SumInput = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-SumInput-1ck0c3v8', [], [], function createEmotionStyledRules() {
+  return {
+    'maxWidth': '200px',
+    'paddingRight': '20px',
+    'backgroundColor': 'rgba(0, 0, 0, 0.08)',
+    'color': '#fff'
+  };
 });
 
-var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-z0w1ui9', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '12px',
-		'position': 'absolute',
-		'right': '10',
-		'top': '8px',
-		'color': '#fff'
-	};
+var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-1ck0c3v9', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '12px',
+    'position': 'absolute',
+    'right': '10',
+    'top': '8px',
+    'color': '#fff'
+  };
 });
 
 /**
@@ -3190,182 +3190,182 @@ var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-z0w1ui9',
  */
 
 var PrepaidContract = function (_Component) {
-	_inherits(PrepaidContract, _Component);
+  _inherits(PrepaidContract, _Component);
 
-	/**
-  * Конструктор
-  * @param {Object} props свойства компонента PrepaidContract
-  */
-	function PrepaidContract(props) {
-		_classCallCheck(this, PrepaidContract);
+  /**
+   * Конструктор
+   * @param {Object} props свойства компонента PrepaidContract
+   */
+  function PrepaidContract(props) {
+    _classCallCheck(this, PrepaidContract);
 
-		var _this = _possibleConstructorReturn(this, (PrepaidContract.__proto__ || Object.getPrototypeOf(PrepaidContract)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (PrepaidContract.__proto__ || Object.getPrototypeOf(PrepaidContract)).call(this, props));
 
-		_this.state = {
-			activeCardIndex: 0,
-			sum: 0
-		};
-		return _this;
-	}
+    _this.state = {
+      activeCardIndex: 0,
+      sum: 0
+    };
+    return _this;
+  }
 
-	/**
-  * Изменения активной карты
-  * @param {Number} activeCardIndex индекс активной карты
-  */
-
-
-	_createClass(PrepaidContract, [{
-		key: 'onCardChange',
-		value: function onCardChange(activeCardIndex) {
-			this.setState({ activeCardIndex: activeCardIndex });
-		}
-
-		/**
-   * Обработка изменения значения в input
-   * @param {Event} event событие изменения значения input
+  /**
+   * Изменения активной карты
+   * @param {Number} activeCardIndex индекс активной карты
    */
 
-	}, {
-		key: 'onChangeInputValue',
-		value: function onChangeInputValue(event) {
-			if (!event) {
-				return;
-			}
 
-			var _event$target = event.target,
-			    name = _event$target.name,
-			    value = _event$target.value;
+  _createClass(PrepaidContract, [{
+    key: 'onCardChange',
+    value: function onCardChange(activeCardIndex) {
+      this.setState({ activeCardIndex: activeCardIndex });
+    }
 
+    /**
+     * Обработка изменения значения в input
+     * @param {Event} event событие изменения значения input
+     */
 
-			this.setState(_defineProperty({}, name, value));
-		}
+  }, {
+    key: 'onChangeInputValue',
+    value: function onChangeInputValue(event) {
+      if (!event) {
+        return;
+      }
 
-		/**
-   * Отправка формы
-   * @param {Event} event событие отправки формы
-   */
-
-	}, {
-		key: 'onSubmitForm',
-		value: function onSubmitForm(event) {
-			if (event) {
-				event.preventDefault();
-			}
-
-			var sum = this.state.sum;
-			var activeCard = this.props.activeCard;
+      var _event$target = event.target,
+          name = _event$target.name,
+          value = _event$target.value;
 
 
-			var isNumber = !isNaN(parseFloat(sum)) && isFinite(sum);
-			if (!isNumber || sum <= 0) {
-				return;
-			}
+      this.setState(_defineProperty({}, name, value));
+    }
 
-			this.props.onPaymentSuccess({
-				sum: sum,
-				number: activeCard.number
-			});
-		}
+    /**
+     * Отправка формы
+     * @param {Event} event событие отправки формы
+     */
 
-		/**
-   *
-   * @returns {XML}
-   */
+  }, {
+    key: 'onSubmitForm',
+    value: function onSubmitForm(event) {
+      if (event) {
+        event.preventDefault();
+      }
 
-	}, {
-		key: 'render',
-		value: function render() {
-			var _this2 = this;
+      var sum = this.state.sum;
+      var activeCard = this.props.activeCard;
 
-			var inactiveCardsList = this.props.inactiveCardsList;
-			var activeCardIndex = this.state.activeCardIndex;
 
-			var selectedCard = inactiveCardsList[activeCardIndex];
+      var isNumber = !isNaN(parseFloat(sum)) && isFinite(sum);
+      if (!isNumber || sum <= 0) {
+        return;
+      }
 
-			return _react2.default.createElement(
-				'form',
-				{ onSubmit: function onSubmit(event) {
-						return _this2.onSubmitForm(event);
-					} },
-				_react2.default.createElement(
-					PrepaidLayout,
-					null,
-					_react2.default.createElement(
-						PrepaidTitle,
-						null,
-						'\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u043A\u0430\u0440\u0442\u0443'
-					),
-					_react2.default.createElement(
-						PrepaidItems,
-						null,
-						inactiveCardsList.map(function (card, index) {
-							return _react2.default.createElement(
-								PrepaidItem,
-								{
-									bgColor: card.theme.bgColor,
-									key: card.id,
-									onClick: function onClick() {
-										return _this2.onCardChange(index);
-									},
-									selected: activeCardIndex === index },
-								_react2.default.createElement(PrepaidItemIcon, {
-									bankSmLogoUrl: card.theme.bankSmLogoUrl,
-									selected: activeCardIndex === index }),
-								_react2.default.createElement(
-									PrepaidItemTitle,
-									{
-										textColor: card.theme.textColor,
-										selected: activeCardIndex === index },
-									'C \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0439 \u043A\u0430\u0440\u0442\u044B',
-									_react2.default.createElement(
-										PrepaidItemDescription,
-										{
-											textColor: card.theme.textColor,
-											selected: activeCardIndex === index },
-										card.number
-									)
-								)
-							);
-						})
-					),
-					_react2.default.createElement(
-						InputField,
-						null,
-						_react2.default.createElement(SumInput, {
-							name: 'sum',
-							value: this.state.sum,
-							onChange: function onChange(event) {
-								return _this2.onChangeInputValue(event);
-							} }),
-						_react2.default.createElement(
-							Currency,
-							null,
-							'\u20BD'
-						)
-					),
-					_react2.default.createElement(
-						_.Button,
-						{
-							type: 'submit',
-							bgColor: selectedCard.theme.bgColor,
-							textColor: selectedCard.theme.textColor },
-						'\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C'
-					)
-				)
-			);
-		}
-	}]);
+      this.props.onPaymentSuccess({
+        sum: sum,
+        number: activeCard.number
+      });
+    }
 
-	return PrepaidContract;
+    /**
+     *
+     * @return {XML}
+     */
+
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var inactiveCardsList = this.props.inactiveCardsList;
+      var activeCardIndex = this.state.activeCardIndex;
+
+      var selectedCard = inactiveCardsList[activeCardIndex];
+
+      return _react2.default.createElement(
+        'form',
+        { onSubmit: function onSubmit(event) {
+            return _this2.onSubmitForm(event);
+          } },
+        _react2.default.createElement(
+          PrepaidLayout,
+          null,
+          _react2.default.createElement(
+            PrepaidTitle,
+            null,
+            '\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u043A\u0430\u0440\u0442\u0443'
+          ),
+          _react2.default.createElement(
+            PrepaidItems,
+            null,
+            inactiveCardsList.map(function (card, index) {
+              return _react2.default.createElement(
+                PrepaidItem,
+                {
+                  bgColor: card.theme.bgColor,
+                  key: card.id,
+                  onClick: function onClick() {
+                    return _this2.onCardChange(index);
+                  },
+                  selected: activeCardIndex === index },
+                _react2.default.createElement(PrepaidItemIcon, {
+                  bankSmLogoUrl: card.theme.bankSmLogoUrl,
+                  selected: activeCardIndex === index }),
+                _react2.default.createElement(
+                  PrepaidItemTitle,
+                  {
+                    textColor: card.theme.textColor,
+                    selected: activeCardIndex === index },
+                  'C \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0439 \u043A\u0430\u0440\u0442\u044B',
+                  _react2.default.createElement(
+                    PrepaidItemDescription,
+                    {
+                      textColor: card.theme.textColor,
+                      selected: activeCardIndex === index },
+                    card.number
+                  )
+                )
+              );
+            })
+          ),
+          _react2.default.createElement(
+            InputField,
+            null,
+            _react2.default.createElement(SumInput, {
+              name: 'sum',
+              value: this.state.sum,
+              onChange: function onChange(event) {
+                return _this2.onChangeInputValue(event);
+              } }),
+            _react2.default.createElement(
+              Currency,
+              null,
+              '\u20BD'
+            )
+          ),
+          _react2.default.createElement(
+            _.Button,
+            {
+              type: 'submit',
+              bgColor: selectedCard.theme.bgColor,
+              textColor: selectedCard.theme.textColor },
+            '\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C'
+          )
+        )
+      );
+    }
+  }]);
+
+  return PrepaidContract;
 }(_react.Component);
 
 PrepaidContract.propTypes = {
-	activeCard: _propTypes2.default.shape({
-		id: _propTypes2.default.number,
-		theme: _propTypes2.default.object
-	}).isRequired,
-	inactiveCardsList: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired,
-	onPaymentSuccess: _propTypes2.default.func.isRequired
+  activeCard: _propTypes2.default.shape({
+    id: _propTypes2.default.number,
+    theme: _propTypes2.default.object
+  }).isRequired,
+  inactiveCardsList: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired,
+  onPaymentSuccess: _propTypes2.default.func.isRequired
 };
 
 exports.default = PrepaidContract;
@@ -3378,7 +3378,7 @@ exports.default = PrepaidContract;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
@@ -3397,163 +3397,163 @@ var _ = __webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PrepaidLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-PrepaidLayout-5ivf1s0', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '350px',
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'WebkitBoxOrient': 'vertical',
-		'WebkitBoxDirection': 'normal',
-		'msFlexDirection': 'column',
-		'flexDirection': 'column',
-		'backgroundColor': '#353536',
-		'position': 'relative',
-		'color': '#fff'
-	};
+var PrepaidLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-PrepaidLayout-1x6805s0', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '350px',
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'WebkitBoxOrient': 'vertical',
+    'WebkitBoxDirection': 'normal',
+    'msFlexDirection': 'column',
+    'flexDirection': 'column',
+    'backgroundColor': '#353536',
+    'position': 'relative',
+    'color': '#fff'
+  };
 });
 
-var CheckIcom = /*#__PURE__*/(0, _react4.default)('div', 'css-CheckIcom-5ivf1s1', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '48px',
-		'height': '48px',
-		'backgroundImage': 'url(/assets/round-check.svg)',
-		'position': 'absolute',
-		'top': '14',
-		'right': '20'
-	};
+var CheckIcom = /*#__PURE__*/(0, _react4.default)('div', 'css-CheckIcom-1x6805s1', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '48px',
+    'height': '48px',
+    'backgroundImage': 'url(/assets/round-check.svg)',
+    'position': 'absolute',
+    'top': '14',
+    'right': '20'
+  };
 });
 
-var Header = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-Header-5ivf1s2', [], [], function createEmotionStyledRules() {
-	return {
-		'color': '#fff'
-	};
+var Header = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-Header-1x6805s2', [], [], function createEmotionStyledRules() {
+  return {
+    'color': '#fff'
+  };
 });
 
-var SectionGroup = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionGroup-5ivf1s3', [], [], function createEmotionStyledRules() {
-	return {
-		'marginBottom': '20px'
-	};
+var SectionGroup = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionGroup-1x6805s3', [], [], function createEmotionStyledRules() {
+  return {
+    'marginBottom': '20px'
+  };
 });
 
-var Section = /*#__PURE__*/(0, _react4.default)('div', 'css-Section-5ivf1s4', [], [], function createEmotionStyledRules() {
-	return {
-		'marginBottom': '20px',
-		'width': '100%'
-	};
+var Section = /*#__PURE__*/(0, _react4.default)('div', 'css-Section-1x6805s4', [], [], function createEmotionStyledRules() {
+  return {
+    'marginBottom': '20px',
+    'width': '100%'
+  };
 });
 
-var SectionLabel = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionLabel-5ivf1s5', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '13px',
-		'textAlign': 'left'
-	};
+var SectionLabel = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionLabel-1x6805s5', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '13px',
+    'textAlign': 'left'
+  };
 });
 
-var SectionValue = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionValue-5ivf1s6', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '13px',
-		'letterSpacing': '0.6px'
-	};
+var SectionValue = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionValue-1x6805s6', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '13px',
+    'letterSpacing': '0.6px'
+  };
 });
 
-var RepeatPayment = /*#__PURE__*/(0, _react4.default)('button', 'css-RepeatPayment-5ivf1s7', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '13px',
-		'backgroundColor': 'rgba(0, 0, 0, 0.08)',
-		'height': '42px',
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'WebkitBoxPack': 'center',
-		'msFlexPack': 'center',
-		'justifyContent': 'center',
-		'WebkitBoxAlign': 'center',
-		'msFlexAlign': 'center',
-		'alignItems': 'center',
-		'border': 'none',
-		'width': '100%',
-		'position': 'absolute',
-		'left': '0',
-		'bottom': '0',
-		'cursor': 'pointer',
-		'textTransform': 'uppercase'
-	};
+var RepeatPayment = /*#__PURE__*/(0, _react4.default)('button', 'css-RepeatPayment-1x6805s7', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '13px',
+    'backgroundColor': 'rgba(0, 0, 0, 0.08)',
+    'height': '42px',
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'WebkitBoxPack': 'center',
+    'msFlexPack': 'center',
+    'justifyContent': 'center',
+    'WebkitBoxAlign': 'center',
+    'msFlexAlign': 'center',
+    'alignItems': 'center',
+    'border': 'none',
+    'width': '100%',
+    'position': 'absolute',
+    'left': '0',
+    'bottom': '0',
+    'cursor': 'pointer',
+    'textTransform': 'uppercase'
+  };
 });
 
 var PrepaidSuccess = function PrepaidSuccess(_ref) {
-	var transaction = _ref.transaction,
-	    repeatPayment = _ref.repeatPayment;
-	var sum = transaction.sum,
-	    number = transaction.number;
+  var transaction = _ref.transaction,
+      repeatPayment = _ref.repeatPayment;
+  var sum = transaction.sum,
+      number = transaction.number;
 
 
-	return _react2.default.createElement(
-		PrepaidLayout,
-		null,
-		_react2.default.createElement(CheckIcom, null),
-		_react2.default.createElement(
-			SectionGroup,
-			null,
-			_react2.default.createElement(
-				Header,
-				null,
-				'\u041A\u0430\u0440\u0442\u0430 \u043F\u043E\u043F\u043E\u043B\u043D\u0435\u043D\u0430'
-			),
-			_react2.default.createElement(
-				Section,
-				null,
-				_react2.default.createElement(
-					SectionLabel,
-					null,
-					'\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043F\u043B\u0430\u0442\u0435\u0436\u0430:'
-				),
-				_react2.default.createElement(
-					SectionValue,
-					null,
-					'\u041F\u043E\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u0435 c \u043F\u0440\u0438\u0432\u044F\u0437\u0430\u043D\u043D\u043E\u0439 \u043A\u0430\u0440\u0442\u044B'
-				)
-			),
-			_react2.default.createElement(
-				Section,
-				null,
-				_react2.default.createElement(
-					SectionLabel,
-					null,
-					'\u041A\u0430\u0440\u0442\u0430 \u0441 \u043A\u043E\u0442\u043E\u0440\u043E\u0439 \u043F\u043E\u043F\u043E\u043B\u043D\u0438\u043B\u0438:'
-				),
-				_react2.default.createElement(
-					SectionValue,
-					null,
-					number
-				)
-			),
-			_react2.default.createElement(
-				Section,
-				null,
-				_react2.default.createElement(
-					SectionLabel,
-					null,
-					'\u0421\u0443\u043C\u043C\u0430:'
-				),
-				_react2.default.createElement(
-					SectionValue,
-					null,
-					sum,
-					' \u20BD'
-				)
-			)
-		),
-		_react2.default.createElement(
-			RepeatPayment,
-			{ onClick: repeatPayment },
-			'\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u043E\u0434\u0438\u043D \u043F\u0435\u0440\u0435\u0432\u043E\u0434'
-		)
-	);
+  return _react2.default.createElement(
+    PrepaidLayout,
+    null,
+    _react2.default.createElement(CheckIcom, null),
+    _react2.default.createElement(
+      SectionGroup,
+      null,
+      _react2.default.createElement(
+        Header,
+        null,
+        '\u041A\u0430\u0440\u0442\u0430 \u043F\u043E\u043F\u043E\u043B\u043D\u0435\u043D\u0430'
+      ),
+      _react2.default.createElement(
+        Section,
+        null,
+        _react2.default.createElement(
+          SectionLabel,
+          null,
+          '\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043F\u043B\u0430\u0442\u0435\u0436\u0430:'
+        ),
+        _react2.default.createElement(
+          SectionValue,
+          null,
+          '\u041F\u043E\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u0435 c \u043F\u0440\u0438\u0432\u044F\u0437\u0430\u043D\u043D\u043E\u0439 \u043A\u0430\u0440\u0442\u044B'
+        )
+      ),
+      _react2.default.createElement(
+        Section,
+        null,
+        _react2.default.createElement(
+          SectionLabel,
+          null,
+          '\u041A\u0430\u0440\u0442\u0430 \u0441 \u043A\u043E\u0442\u043E\u0440\u043E\u0439 \u043F\u043E\u043F\u043E\u043B\u043D\u0438\u043B\u0438:'
+        ),
+        _react2.default.createElement(
+          SectionValue,
+          null,
+          number
+        )
+      ),
+      _react2.default.createElement(
+        Section,
+        null,
+        _react2.default.createElement(
+          SectionLabel,
+          null,
+          '\u0421\u0443\u043C\u043C\u0430:'
+        ),
+        _react2.default.createElement(
+          SectionValue,
+          null,
+          sum,
+          ' \u20BD'
+        )
+      )
+    ),
+    _react2.default.createElement(
+      RepeatPayment,
+      { onClick: repeatPayment },
+      '\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u043E\u0434\u0438\u043D \u043F\u0435\u0440\u0435\u0432\u043E\u0434'
+    )
+  );
 };
 
 PrepaidSuccess.propTypes = {
-	transaction: _propTypes2.default.shape({
-		sum: _propTypes2.default.string,
-		number: _propTypes2.default.string
-	}).isRequired,
-	repeatPayment: _propTypes2.default.func.isRequired
+  transaction: _propTypes2.default.shape({
+    sum: _propTypes2.default.string,
+    number: _propTypes2.default.string
+  }).isRequired,
+  repeatPayment: _propTypes2.default.func.isRequired
 };
 
 exports.default = PrepaidSuccess;
@@ -3566,7 +3566,7 @@ exports.default = PrepaidSuccess;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3599,86 +3599,86 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * Класс компонента MobilePayment
  */
 var MobilePayment = function (_Component) {
-	_inherits(MobilePayment, _Component);
+  _inherits(MobilePayment, _Component);
 
-	/**
-  * Конструктор
-  * @param {Object} props свойства компонента MobilePayment
-  */
-	function MobilePayment(props) {
-		_classCallCheck(this, MobilePayment);
+  /**
+   * Конструктор
+   * @param {Object} props свойства компонента MobilePayment
+   */
+  function MobilePayment(props) {
+    _classCallCheck(this, MobilePayment);
 
-		var _this = _possibleConstructorReturn(this, (MobilePayment.__proto__ || Object.getPrototypeOf(MobilePayment)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (MobilePayment.__proto__ || Object.getPrototypeOf(MobilePayment)).call(this, props));
 
-		_this.state = { stage: 'contract' };
-		return _this;
-	}
+    _this.state = { stage: 'contract' };
+    return _this;
+  }
 
-	/**
-  * Обработка успешного платежа
-  * @param {Object} transaction данные о транзакции
-  */
-
-
-	_createClass(MobilePayment, [{
-		key: 'onPaymentSuccess',
-		value: function onPaymentSuccess(transaction) {
-			this.setState({
-				stage: 'success',
-				transaction: transaction
-			});
-		}
-
-		/**
-   * Повторить платеж
+  /**
+   * Обработка успешного платежа
+   * @param {Object} transaction данные о транзакции
    */
 
-	}, {
-		key: 'repeatPayment',
-		value: function repeatPayment() {
-			this.setState({ stage: 'contract' });
-		}
 
-		/**
-   * Рендер компонента
-   *
-   * @override
-   * @returns {JSX}
-   */
+  _createClass(MobilePayment, [{
+    key: 'onPaymentSuccess',
+    value: function onPaymentSuccess(transaction) {
+      this.setState({
+        stage: 'success',
+        transaction: transaction
+      });
+    }
 
-	}, {
-		key: 'render',
-		value: function render() {
-			var _this2 = this;
+    /**
+     * Повторить платеж
+     */
 
-			var activeCard = this.props.activeCard;
+  }, {
+    key: 'repeatPayment',
+    value: function repeatPayment() {
+      this.setState({ stage: 'contract' });
+    }
+
+    /**
+     * Рендер компонента
+     *
+     * @override
+     * @return {JSX}
+     */
+
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var activeCard = this.props.activeCard;
 
 
-			if (this.state.stage === 'success') {
-				return _react2.default.createElement(_MobilePaymentSuccess2.default, {
-					activeCard: activeCard,
-					transaction: this.state.transaction,
-					repeatPayment: function repeatPayment() {
-						return _this2.repeatPayment();
-					} });
-			}
+      if (this.state.stage === 'success') {
+        return _react2.default.createElement(_MobilePaymentSuccess2.default, {
+          activeCard: activeCard,
+          transaction: this.state.transaction,
+          repeatPayment: function repeatPayment() {
+            return _this2.repeatPayment();
+          } });
+      }
 
-			return _react2.default.createElement(_MobilePaymentContract2.default, {
-				activeCard: activeCard,
-				onPaymentSuccess: function onPaymentSuccess(transaction) {
-					return _this2.onPaymentSuccess(transaction);
-				} });
-		}
-	}]);
+      return _react2.default.createElement(_MobilePaymentContract2.default, {
+        activeCard: activeCard,
+        onPaymentSuccess: function onPaymentSuccess(transaction) {
+          return _this2.onPaymentSuccess(transaction);
+        } });
+    }
+  }]);
 
-	return MobilePayment;
+  return MobilePayment;
 }(_react.Component);
 
 MobilePayment.propTypes = {
-	activeCard: _propTypes2.default.shape({
-		id: _propTypes2.default.number,
-		theme: _propTypes2.default.object
-	}).isRequired
+  activeCard: _propTypes2.default.shape({
+    id: _propTypes2.default.number,
+    theme: _propTypes2.default.object
+  }).isRequired
 };
 
 exports.default = MobilePayment;
@@ -3691,7 +3691,7 @@ exports.default = MobilePayment;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3720,90 +3720,90 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var MobilePaymentLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-MobilePaymentLayout-1lwv01l0', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '440px',
-		'background': '#108051'
-	};
+var MobilePaymentLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-MobilePaymentLayout-kxxfei0', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '440px',
+    'background': '#108051'
+  };
 });
 
-var MobilePaymentTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-MobilePaymentTitle-1lwv01l1', [], [], function createEmotionStyledRules() {
-	return {
-		'color': '#fff'
-	};
+var MobilePaymentTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-MobilePaymentTitle-kxxfei1', [], [], function createEmotionStyledRules() {
+  return {
+    'color': '#fff'
+  };
 });
 
-var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-1lwv01l2', [], [], function createEmotionStyledRules() {
-	return {
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'WebkitBoxAlign': 'center',
-		'msFlexAlign': 'center',
-		'alignItems': 'center',
-		'marginBottom': '26px',
-		'position': 'relative',
-		'paddingLeft': '150px'
-	};
+var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-kxxfei2', [], [], function createEmotionStyledRules() {
+  return {
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'WebkitBoxAlign': 'center',
+    'msFlexAlign': 'center',
+    'alignItems': 'center',
+    'marginBottom': '26px',
+    'position': 'relative',
+    'paddingLeft': '150px'
+  };
 });
 
-var Label = /*#__PURE__*/(0, _react4.default)('div', 'css-Label-1lwv01l3', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '15px',
-		'color': '#fff',
-		'position': 'absolute',
-		'left': '0'
-	};
+var Label = /*#__PURE__*/(0, _react4.default)('div', 'css-Label-kxxfei3', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '15px',
+    'color': '#fff',
+    'position': 'absolute',
+    'left': '0'
+  };
 });
 
-var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-1lwv01l4', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '13px',
-		'color': '#fff',
-		'marginLeft': '12px'
-	};
+var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-kxxfei4', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '13px',
+    'color': '#fff',
+    'marginLeft': '12px'
+  };
 });
 
-var Commission = /*#__PURE__*/(0, _react4.default)('div', 'css-Commission-1lwv01l5', [], [], function createEmotionStyledRules() {
-	return {
-		'color': 'rgba(255, 255, 255, 0.6)',
-		'fontSize': '13px',
-		'textAlign': 'right',
-		'margin': '35px 0 20px'
-	};
+var Commission = /*#__PURE__*/(0, _react4.default)('div', 'css-Commission-kxxfei5', [], [], function createEmotionStyledRules() {
+  return {
+    'color': 'rgba(255, 255, 255, 0.6)',
+    'fontSize': '13px',
+    'textAlign': 'right',
+    'margin': '35px 0 20px'
+  };
 });
 
-var Underline = /*#__PURE__*/(0, _react4.default)('div', 'css-Underline-1lwv01l6', [], [], function createEmotionStyledRules() {
-	return {
-		'height': '1px',
-		'marginBottom': '20px',
-		'backgroundColor': 'rgba(0, 0, 0, 0.16)'
-	};
+var Underline = /*#__PURE__*/(0, _react4.default)('div', 'css-Underline-kxxfei6', [], [], function createEmotionStyledRules() {
+  return {
+    'height': '1px',
+    'marginBottom': '20px',
+    'backgroundColor': 'rgba(0, 0, 0, 0.16)'
+  };
 });
 
-var PaymentButton = /*#__PURE__*/(0, _react4.default)(_.Button, 'css-PaymentButton-1lwv01l7', [], [], function createEmotionStyledRules() {
-	return {
-		'float': 'right'
-	};
+var PaymentButton = /*#__PURE__*/(0, _react4.default)(_.Button, 'css-PaymentButton-kxxfei7', [], [], function createEmotionStyledRules() {
+  return {
+    'float': 'right'
+  };
 });
 
-var InputPhoneNumber = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputPhoneNumber-1lwv01l8', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '225px'
-	};
+var InputPhoneNumber = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputPhoneNumber-kxxfei8', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '225px'
+  };
 });
 
-var InputSum = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputSum-1lwv01l9', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '160px'
-	};
+var InputSum = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputSum-kxxfei9', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '160px'
+  };
 });
 
-var InputCommision = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputCommision-1lwv01l10', [], [], function createEmotionStyledRules() {
-	return {
-		'cursor': 'no-drop',
-		'width': '160px',
-		'border': 'dotted 1.5px rgba(0, 0, 0, 0.2)',
-		'backgroundColor': 'initial'
-	};
+var InputCommision = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputCommision-kxxfei10', [], [], function createEmotionStyledRules() {
+  return {
+    'cursor': 'no-drop',
+    'width': '160px',
+    'border': 'dotted 1.5px rgba(0, 0, 0, 0.2)',
+    'backgroundColor': 'initial'
+  };
 });
 
 /**
@@ -3811,196 +3811,196 @@ var InputCommision = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputCommis
  */
 
 var MobilePaymentContract = function (_Component) {
-	_inherits(MobilePaymentContract, _Component);
+  _inherits(MobilePaymentContract, _Component);
 
-	/**
-  * Конструктор
-  * @param {Object} props свойства компонента MobilePaymentContract
-  */
-	function MobilePaymentContract(props) {
-		_classCallCheck(this, MobilePaymentContract);
+  /**
+   * Конструктор
+   * @param {Object} props свойства компонента MobilePaymentContract
+   */
+  function MobilePaymentContract(props) {
+    _classCallCheck(this, MobilePaymentContract);
 
-		var _this = _possibleConstructorReturn(this, (MobilePaymentContract.__proto__ || Object.getPrototypeOf(MobilePaymentContract)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (MobilePaymentContract.__proto__ || Object.getPrototypeOf(MobilePaymentContract)).call(this, props));
 
-		_this.state = {
-			phoneNumber: '+79218908064',
-			sum: 0,
-			commission: 3
-		};
-		return _this;
-	}
+    _this.state = {
+      phoneNumber: '+79218908064',
+      sum: 0,
+      commission: 3
+    };
+    return _this;
+  }
 
-	/**
-  * Получить цену с учетом комиссии
-  * @returns {Number}
-  */
-
-
-	_createClass(MobilePaymentContract, [{
-		key: 'getSumWithCommission',
-		value: function getSumWithCommission() {
-			var _state = this.state,
-			    sum = _state.sum,
-			    commission = _state.commission;
-
-
-			var isNumber = !isNaN(parseFloat(sum)) && isFinite(sum);
-			if (!isNumber || sum <= 0) {
-				return 0;
-			}
-
-			return Number(sum) + Number(commission);
-		}
-
-		/**
-   * Отправка формы
-   * @param {Event} event событие отправки формы
+  /**
+   * Получить цену с учетом комиссии
+   * @return {Number}
    */
 
-	}, {
-		key: 'handleSubmit',
-		value: function handleSubmit(event) {
-			if (event) {
-				event.preventDefault();
-			}
 
-			var _state2 = this.state,
-			    sum = _state2.sum,
-			    phoneNumber = _state2.phoneNumber,
-			    commission = _state2.commission;
+  _createClass(MobilePaymentContract, [{
+    key: 'getSumWithCommission',
+    value: function getSumWithCommission() {
+      var _state = this.state,
+          sum = _state.sum,
+          commission = _state.commission;
 
 
-			var isNumber = !isNaN(parseFloat(sum)) && isFinite(sum);
-			if (!isNumber || sum === 0) {
-				return;
-			}
+      var isNumber = !isNaN(parseFloat(sum)) && isFinite(sum);
+      if (!isNumber || sum <= 0) {
+        return 0;
+      }
 
-			this.props.onPaymentSuccess({ sum: sum, phoneNumber: phoneNumber, commission: commission });
-		}
+      return Number(sum) + Number(commission);
+    }
 
-		/**
-   * Обработка изменения значения в input
-   * @param {Event} event событие изменения значения input
-   */
+    /**
+     * Отправка формы
+     * @param {Event} event событие отправки формы
+     */
 
-	}, {
-		key: 'handleInputChange',
-		value: function handleInputChange(event) {
-			if (!event) {
-				return;
-			}
+  }, {
+    key: 'handleSubmit',
+    value: function handleSubmit(event) {
+      if (event) {
+        event.preventDefault();
+      }
 
-			var _event$target = event.target,
-			    name = _event$target.name,
-			    value = _event$target.value;
-
-
-			this.setState(_defineProperty({}, name, value));
-		}
-
-		/**
-   * Рендер компонента
-   *
-   * @override
-   * @returns {JSX}
-   */
-
-	}, {
-		key: 'render',
-		value: function render() {
-			var _this2 = this;
-
-			var commission = this.state.commission;
+      var _state2 = this.state,
+          sum = _state2.sum,
+          phoneNumber = _state2.phoneNumber,
+          commission = _state2.commission;
 
 
-			return _react2.default.createElement(
-				MobilePaymentLayout,
-				null,
-				_react2.default.createElement(
-					'form',
-					{ onSubmit: function onSubmit(event) {
-							return _this2.handleSubmit(event);
-						} },
-					_react2.default.createElement(
-						MobilePaymentTitle,
-						null,
-						'\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0442\u0435\u043B\u0435\u0444\u043E\u043D'
-					),
-					_react2.default.createElement(
-						InputField,
-						null,
-						_react2.default.createElement(
-							Label,
-							null,
-							'\u0422\u0435\u043B\u0435\u0444\u043E\u043D'
-						),
-						_react2.default.createElement(InputPhoneNumber, {
-							name: 'phoneNumber',
-							value: this.state.phoneNumber,
-							readOnly: 'true' })
-					),
-					_react2.default.createElement(
-						InputField,
-						null,
-						_react2.default.createElement(
-							Label,
-							null,
-							'\u0421\u0443\u043C\u043C\u0430'
-						),
-						_react2.default.createElement(InputSum, {
-							name: 'sum',
-							value: this.state.sum,
-							onChange: function onChange(event) {
-								return _this2.handleInputChange(event);
-							} }),
-						_react2.default.createElement(
-							Currency,
-							null,
-							'\u20BD'
-						)
-					),
-					_react2.default.createElement(
-						InputField,
-						null,
-						_react2.default.createElement(
-							Label,
-							null,
-							'\u0421\u043F\u0438\u0448\u0435\u0442\u0441\u044F'
-						),
-						_react2.default.createElement(InputCommision, { value: this.getSumWithCommission() }),
-						_react2.default.createElement(
-							Currency,
-							null,
-							'\u20BD'
-						)
-					),
-					_react2.default.createElement(
-						Commission,
-						null,
-						'\u0420\u0430\u0437\u043C\u0435\u0440 \u043A\u043E\u043C\u043C\u0438\u0441\u0441\u0438\u0438 \u0441\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 ',
-						commission,
-						' \u20BD'
-					),
-					_react2.default.createElement(Underline, null),
-					_react2.default.createElement(
-						PaymentButton,
-						{ bgColor: '#fff', textColor: '#108051' },
-						'\u0417\u0430\u043F\u043B\u0430\u0442\u0438\u0442\u044C'
-					)
-				)
-			);
-		}
-	}]);
+      var isNumber = !isNaN(parseFloat(sum)) && isFinite(sum);
+      if (!isNumber || sum === 0) {
+        return;
+      }
 
-	return MobilePaymentContract;
+      this.props.onPaymentSuccess({ sum: sum, phoneNumber: phoneNumber, commission: commission });
+    }
+
+    /**
+     * Обработка изменения значения в input
+     * @param {Event} event событие изменения значения input
+     */
+
+  }, {
+    key: 'handleInputChange',
+    value: function handleInputChange(event) {
+      if (!event) {
+        return;
+      }
+
+      var _event$target = event.target,
+          name = _event$target.name,
+          value = _event$target.value;
+
+
+      this.setState(_defineProperty({}, name, value));
+    }
+
+    /**
+     * Рендер компонента
+     *
+     * @override
+     * @return {JSX}
+     */
+
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var commission = this.state.commission;
+
+
+      return _react2.default.createElement(
+        MobilePaymentLayout,
+        null,
+        _react2.default.createElement(
+          'form',
+          { onSubmit: function onSubmit(event) {
+              return _this2.handleSubmit(event);
+            } },
+          _react2.default.createElement(
+            MobilePaymentTitle,
+            null,
+            '\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0442\u0435\u043B\u0435\u0444\u043E\u043D'
+          ),
+          _react2.default.createElement(
+            InputField,
+            null,
+            _react2.default.createElement(
+              Label,
+              null,
+              '\u0422\u0435\u043B\u0435\u0444\u043E\u043D'
+            ),
+            _react2.default.createElement(InputPhoneNumber, {
+              name: 'phoneNumber',
+              value: this.state.phoneNumber,
+              readOnly: 'true' })
+          ),
+          _react2.default.createElement(
+            InputField,
+            null,
+            _react2.default.createElement(
+              Label,
+              null,
+              '\u0421\u0443\u043C\u043C\u0430'
+            ),
+            _react2.default.createElement(InputSum, {
+              name: 'sum',
+              value: this.state.sum,
+              onChange: function onChange(event) {
+                return _this2.handleInputChange(event);
+              } }),
+            _react2.default.createElement(
+              Currency,
+              null,
+              '\u20BD'
+            )
+          ),
+          _react2.default.createElement(
+            InputField,
+            null,
+            _react2.default.createElement(
+              Label,
+              null,
+              '\u0421\u043F\u0438\u0448\u0435\u0442\u0441\u044F'
+            ),
+            _react2.default.createElement(InputCommision, { value: this.getSumWithCommission() }),
+            _react2.default.createElement(
+              Currency,
+              null,
+              '\u20BD'
+            )
+          ),
+          _react2.default.createElement(
+            Commission,
+            null,
+            '\u0420\u0430\u0437\u043C\u0435\u0440 \u043A\u043E\u043C\u043C\u0438\u0441\u0441\u0438\u0438 \u0441\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 ',
+            commission,
+            ' \u20BD'
+          ),
+          _react2.default.createElement(Underline, null),
+          _react2.default.createElement(
+            PaymentButton,
+            { bgColor: '#fff', textColor: '#108051' },
+            '\u0417\u0430\u043F\u043B\u0430\u0442\u0438\u0442\u044C'
+          )
+        )
+      );
+    }
+  }]);
+
+  return MobilePaymentContract;
 }(_react.Component);
 
 MobilePaymentContract.propTypes = {
-	activeCard: _propTypes2.default.shape({
-		id: _propTypes2.default.number,
-		theme: _propTypes2.default.object
-	}).isRequired,
-	onPaymentSuccess: _propTypes2.default.func.isRequired
+  activeCard: _propTypes2.default.shape({
+    id: _propTypes2.default.number,
+    theme: _propTypes2.default.object
+  }).isRequired,
+  onPaymentSuccess: _propTypes2.default.func.isRequired
 };
 
 exports.default = MobilePaymentContract;
@@ -4013,7 +4013,7 @@ exports.default = MobilePaymentContract;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
@@ -4032,175 +4032,175 @@ var _ = __webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var MobilePaymentLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-MobilePaymentLayout-1f76chq0', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '440px',
-		'background': '#108051',
-		'position': 'relative',
-		'color': '#fff'
-	};
+var MobilePaymentLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-MobilePaymentLayout-159sipu0', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '440px',
+    'background': '#108051',
+    'position': 'relative',
+    'color': '#fff'
+  };
 });
 
-var SuccessIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-SuccessIcon-1f76chq1', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '48px',
-		'height': '48px',
-		'backgroundImage': 'url(/assets/round-check.svg)',
-		'position': 'absolute',
-		'top': '27',
-		'right': '32'
-	};
+var SuccessIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-SuccessIcon-159sipu1', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '48px',
+    'height': '48px',
+    'backgroundImage': 'url(/assets/round-check.svg)',
+    'position': 'absolute',
+    'top': '27',
+    'right': '32'
+  };
 });
 
-var Header = /*#__PURE__*/(0, _react4.default)('div', 'css-Header-1f76chq2', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '24px'
-	};
+var Header = /*#__PURE__*/(0, _react4.default)('div', 'css-Header-159sipu2', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '24px'
+  };
 });
 
-var Sum = /*#__PURE__*/(0, _react4.default)('div', 'css-Sum-1f76chq3', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '48px'
-	};
+var Sum = /*#__PURE__*/(0, _react4.default)('div', 'css-Sum-159sipu3', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '48px'
+  };
 });
 
-var CommissionTips = /*#__PURE__*/(0, _react4.default)('div', 'css-CommissionTips-1f76chq4', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '13px',
-		'opacity': '0.6',
-		'marginBottom': '20px'
-	};
+var CommissionTips = /*#__PURE__*/(0, _react4.default)('div', 'css-CommissionTips-159sipu4', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '13px',
+    'opacity': '0.6',
+    'marginBottom': '20px'
+  };
 });
 
-var Section = /*#__PURE__*/(0, _react4.default)('div', 'css-Section-1f76chq5', [], [], function createEmotionStyledRules() {
-	return {
-		'position': 'relative',
-		'paddingLeft': '160px',
-		'marginBottom': '20px'
-	};
+var Section = /*#__PURE__*/(0, _react4.default)('div', 'css-Section-159sipu5', [], [], function createEmotionStyledRules() {
+  return {
+    'position': 'relative',
+    'paddingLeft': '160px',
+    'marginBottom': '20px'
+  };
 });
 
-var SectionLabel = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionLabel-1f76chq6', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '15px',
-		'position': 'absolute',
-		'left': '0px'
-	};
+var SectionLabel = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionLabel-159sipu6', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '15px',
+    'position': 'absolute',
+    'left': '0px'
+  };
 });
 
-var SectionValue = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionValue-1f76chq7', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '15px'
-	};
+var SectionValue = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionValue-159sipu7', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '15px'
+  };
 });
 
-var Instruction = /*#__PURE__*/(0, _react4.default)('div', 'css-Instruction-1f76chq8', [], [], function createEmotionStyledRules() {
-	return {
-		'marginBottom': '40px',
-		'fontSize': '15px'
-	};
+var Instruction = /*#__PURE__*/(0, _react4.default)('div', 'css-Instruction-159sipu8', [], [], function createEmotionStyledRules() {
+  return {
+    'marginBottom': '40px',
+    'fontSize': '15px'
+  };
 });
 
-var RepeatPayment = /*#__PURE__*/(0, _react4.default)('button', 'css-RepeatPayment-1f76chq9', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '13px',
-		'backgroundColor': 'rgba(0, 0, 0, 0.08)',
-		'height': '42px',
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'WebkitBoxPack': 'center',
-		'msFlexPack': 'center',
-		'justifyContent': 'center',
-		'WebkitBoxAlign': 'center',
-		'msFlexAlign': 'center',
-		'alignItems': 'center',
-		'border': 'none',
-		'width': '100%',
-		'position': 'absolute',
-		'left': '0',
-		'bottom': '0',
-		'cursor': 'pointer',
-		'textTransform': 'uppercase'
-	};
+var RepeatPayment = /*#__PURE__*/(0, _react4.default)('button', 'css-RepeatPayment-159sipu9', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '13px',
+    'backgroundColor': 'rgba(0, 0, 0, 0.08)',
+    'height': '42px',
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'WebkitBoxPack': 'center',
+    'msFlexPack': 'center',
+    'justifyContent': 'center',
+    'WebkitBoxAlign': 'center',
+    'msFlexAlign': 'center',
+    'alignItems': 'center',
+    'border': 'none',
+    'width': '100%',
+    'position': 'absolute',
+    'left': '0',
+    'bottom': '0',
+    'cursor': 'pointer',
+    'textTransform': 'uppercase'
+  };
 });
 
 var MobilePaymentSuccess = function MobilePaymentSuccess(_ref) {
-	var transaction = _ref.transaction,
-	    repeatPayment = _ref.repeatPayment;
-	var sum = transaction.sum,
-	    phoneNumber = transaction.phoneNumber,
-	    commission = transaction.commission;
+  var transaction = _ref.transaction,
+      repeatPayment = _ref.repeatPayment;
+  var sum = transaction.sum,
+      phoneNumber = transaction.phoneNumber,
+      commission = transaction.commission;
 
 
-	return _react2.default.createElement(
-		MobilePaymentLayout,
-		null,
-		_react2.default.createElement(SuccessIcon, null),
-		_react2.default.createElement(
-			Header,
-			null,
-			'\u041C\u0435\u0433\u0430\u0424\u043E\u043D (\u0420\u043E\u0441\u0441\u0438\u044F)'
-		),
-		_react2.default.createElement(
-			Sum,
-			null,
-			sum,
-			' \u20BD'
-		),
-		_react2.default.createElement(
-			CommissionTips,
-			null,
-			'\u0412 \u0442\u043E\u043C \u0447\u0438\u0441\u043B\u0435 \u043A\u043E\u043C\u0438\u0441\u0441\u0438\u044F ',
-			commission,
-			' \u20BD'
-		),
-		_react2.default.createElement(
-			Section,
-			null,
-			_react2.default.createElement(
-				SectionLabel,
-				null,
-				'\u041D\u043E\u043C\u0435\u0440 \u0442\u0440\u0430\u043D\u0437\u0430\u043A\u0446\u0438\u0438'
-			),
-			_react2.default.createElement(
-				SectionValue,
-				null,
-				'200580211311'
-			)
-		),
-		_react2.default.createElement(
-			Section,
-			null,
-			_react2.default.createElement(
-				SectionLabel,
-				null,
-				'\u041D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430'
-			),
-			_react2.default.createElement(
-				SectionValue,
-				null,
-				phoneNumber
-			)
-		),
-		_react2.default.createElement(
-			Instruction,
-			null,
-			'\u041C\u044B \u043F\u0440\u0438\u0448\u043B\u0435\u043C \u0447\u0435\u043A \u043D\u0430 sam@yandex.ru. \u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C email \u0432 \xAB\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445\xBB.'
-		),
-		_react2.default.createElement(
-			RepeatPayment,
-			{ onClick: repeatPayment },
-			'\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u043E\u0434\u0438\u043D \u043F\u0435\u0440\u0435\u0432\u043E\u0434'
-		)
-	);
+  return _react2.default.createElement(
+    MobilePaymentLayout,
+    null,
+    _react2.default.createElement(SuccessIcon, null),
+    _react2.default.createElement(
+      Header,
+      null,
+      '\u041C\u0435\u0433\u0430\u0424\u043E\u043D (\u0420\u043E\u0441\u0441\u0438\u044F)'
+    ),
+    _react2.default.createElement(
+      Sum,
+      null,
+      sum,
+      ' \u20BD'
+    ),
+    _react2.default.createElement(
+      CommissionTips,
+      null,
+      '\u0412 \u0442\u043E\u043C \u0447\u0438\u0441\u043B\u0435 \u043A\u043E\u043C\u0438\u0441\u0441\u0438\u044F ',
+      commission,
+      ' \u20BD'
+    ),
+    _react2.default.createElement(
+      Section,
+      null,
+      _react2.default.createElement(
+        SectionLabel,
+        null,
+        '\u041D\u043E\u043C\u0435\u0440 \u0442\u0440\u0430\u043D\u0437\u0430\u043A\u0446\u0438\u0438'
+      ),
+      _react2.default.createElement(
+        SectionValue,
+        null,
+        '200580211311'
+      )
+    ),
+    _react2.default.createElement(
+      Section,
+      null,
+      _react2.default.createElement(
+        SectionLabel,
+        null,
+        '\u041D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430'
+      ),
+      _react2.default.createElement(
+        SectionValue,
+        null,
+        phoneNumber
+      )
+    ),
+    _react2.default.createElement(
+      Instruction,
+      null,
+      '\u041C\u044B \u043F\u0440\u0438\u0448\u043B\u0435\u043C \u0447\u0435\u043A \u043D\u0430 sam@yandex.ru. \u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u0438\u0437\u043C\u0435\u043D\u0438\u0442\u044C email \u0432 \xAB\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445\xBB.'
+    ),
+    _react2.default.createElement(
+      RepeatPayment,
+      { onClick: repeatPayment },
+      '\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u0435\u0449\u0435 \u043E\u0434\u0438\u043D \u043F\u0435\u0440\u0435\u0432\u043E\u0434'
+    )
+  );
 };
 
 MobilePaymentSuccess.propTypes = {
-	transaction: _propTypes2.default.shape({
-		sum: _propTypes2.default.string,
-		phoneNumber: _propTypes2.default.string,
-		commission: _propTypes2.default.number
-	}).isRequired,
-	repeatPayment: _propTypes2.default.func.isRequired
+  transaction: _propTypes2.default.shape({
+    sum: _propTypes2.default.string,
+    phoneNumber: _propTypes2.default.string,
+    commission: _propTypes2.default.number
+  }).isRequired,
+  repeatPayment: _propTypes2.default.func.isRequired
 };
 
 exports.default = MobilePaymentSuccess;
@@ -4213,7 +4213,7 @@ exports.default = MobilePaymentSuccess;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -4242,49 +4242,49 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var WithdrawTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-WithdrawTitle-kfu3lc0', [], [], function createEmotionStyledRules() {
-	return {
-		'textAlign': 'center'
-	};
+var WithdrawTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-WithdrawTitle-1sr71zx0', [], [], function createEmotionStyledRules() {
+  return {
+    'textAlign': 'center'
+  };
 });
 
-var WithdrawLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-WithdrawLayout-kfu3lc1', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '440px',
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'WebkitBoxOrient': 'vertical',
-		'WebkitBoxDirection': 'normal',
-		'msFlexDirection': 'column',
-		'flexDirection': 'column',
-		'WebkitBoxAlign': 'center',
-		'msFlexAlign': 'center',
-		'alignItems': 'center'
-	};
+var WithdrawLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-WithdrawLayout-1sr71zx1', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '440px',
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'WebkitBoxOrient': 'vertical',
+    'WebkitBoxDirection': 'normal',
+    'msFlexDirection': 'column',
+    'flexDirection': 'column',
+    'WebkitBoxAlign': 'center',
+    'msFlexAlign': 'center',
+    'alignItems': 'center'
+  };
 });
 
-var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-kfu3lc2', [], [], function createEmotionStyledRules() {
-	return {
-		'margin': '20px 0',
-		'position': 'relative'
-	};
+var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-1sr71zx2', [], [], function createEmotionStyledRules() {
+  return {
+    'margin': '20px 0',
+    'position': 'relative'
+  };
 });
 
-var SumInput = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-SumInput-kfu3lc3', [], [], function createEmotionStyledRules() {
-	return {
-		'maxWidth': '200px',
-		'paddingRight': '20px',
-		'backgroundColor': 'rgba(0, 0, 0, 0.08)',
-		'color': '\'#000\''
-	};
+var SumInput = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-SumInput-1sr71zx3', [], [], function createEmotionStyledRules() {
+  return {
+    'maxWidth': '200px',
+    'paddingRight': '20px',
+    'backgroundColor': 'rgba(0, 0, 0, 0.08)',
+    'color': '\'#000\''
+  };
 });
 
-var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-kfu3lc4', [], [], function createEmotionStyledRules() {
-	return {
-		'fontSize': '12px',
-		'position': 'absolute',
-		'right': '10',
-		'top': '8px'
-	};
+var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-1sr71zx4', [], [], function createEmotionStyledRules() {
+  return {
+    'fontSize': '12px',
+    'position': 'absolute',
+    'right': '10',
+    'top': '8px'
+  };
 });
 
 /**
@@ -4292,129 +4292,129 @@ var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-kfu3lc4',
  */
 
 var Withdraw = function (_Component) {
-	_inherits(Withdraw, _Component);
+  _inherits(Withdraw, _Component);
 
-	/**
-  * Конструктор
-  * @param {Object} props свойства компонента Withdraw
-  */
-	function Withdraw(props) {
-		_classCallCheck(this, Withdraw);
+  /**
+   * Конструктор
+   * @param {Object} props свойства компонента Withdraw
+   */
+  function Withdraw(props) {
+    _classCallCheck(this, Withdraw);
 
-		var _this = _possibleConstructorReturn(this, (Withdraw.__proto__ || Object.getPrototypeOf(Withdraw)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Withdraw.__proto__ || Object.getPrototypeOf(Withdraw)).call(this, props));
 
-		_this.state = {
-			selectedCard: props.inactiveCardsList[0],
-			sum: 0
-		};
-		return _this;
-	}
+    _this.state = {
+      selectedCard: props.inactiveCardsList[0],
+      sum: 0
+    };
+    return _this;
+  }
 
-	/**
-  * Обработка изменения значения в input
-  * @param {Event} event событие изменения значения input
-  */
-
-
-	_createClass(Withdraw, [{
-		key: 'onChangeInputValue',
-		value: function onChangeInputValue(event) {
-			if (!event) {
-				return;
-			}
-
-			var _event$target = event.target,
-			    name = _event$target.name,
-			    value = _event$target.value;
-
-
-			this.setState(_defineProperty({}, name, value));
-		}
-
-		/**
-   * Отправка формы
-   * @param {Event} event событие отправки формы
+  /**
+   * Обработка изменения значения в input
+   * @param {Event} event событие изменения значения input
    */
 
-	}, {
-		key: 'onSubmitForm',
-		value: function onSubmitForm(event) {
-			if (event) {
-				event.preventDefault();
-			}
 
-			var sum = this.state.sum;
+  _createClass(Withdraw, [{
+    key: 'onChangeInputValue',
+    value: function onChangeInputValue(event) {
+      if (!event) {
+        return;
+      }
 
-
-			var isNumber = !isNaN(parseFloat(sum)) && isFinite(sum);
-			if (!isNumber || sum <= 0) {
-				return;
-			}
-
-			this.setState({ sum: 0 });
-		}
-
-		/**
-   * Функция отрисовки компонента
-   * @returns {JSX}
-   */
-
-	}, {
-		key: 'render',
-		value: function render() {
-			var _this2 = this;
-
-			var inactiveCardsList = this.props.inactiveCardsList;
+      var _event$target = event.target,
+          name = _event$target.name,
+          value = _event$target.value;
 
 
-			return _react2.default.createElement(
-				'form',
-				{ onSubmit: function onSubmit(event) {
-						return _this2.onSubmitForm(event);
-					} },
-				_react2.default.createElement(
-					WithdrawLayout,
-					null,
-					_react2.default.createElement(
-						WithdrawTitle,
-						null,
-						'\u0412\u044B\u0432\u0435\u0441\u0442\u0438 \u0434\u0435\u043D\u044C\u0433\u0438 \u043D\u0430 \u043A\u0430\u0440\u0442\u0443'
-					),
-					_react2.default.createElement(_.Card, { type: 'select', data: inactiveCardsList }),
-					_react2.default.createElement(
-						InputField,
-						null,
-						_react2.default.createElement(SumInput, {
-							name: 'sum',
-							value: this.state.sum,
-							onChange: function onChange(event) {
-								return _this2.onChangeInputValue(event);
-							} }),
-						_react2.default.createElement(
-							Currency,
-							null,
-							'\u20BD'
-						)
-					),
-					_react2.default.createElement(
-						_.Button,
-						{ type: 'submit' },
-						'\u041F\u0435\u0440\u0435\u0432\u0435\u0441\u0442\u0438'
-					)
-				)
-			);
-		}
-	}]);
+      this.setState(_defineProperty({}, name, value));
+    }
 
-	return Withdraw;
+    /**
+     * Отправка формы
+     * @param {Event} event событие отправки формы
+     */
+
+  }, {
+    key: 'onSubmitForm',
+    value: function onSubmitForm(event) {
+      if (event) {
+        event.preventDefault();
+      }
+
+      var sum = this.state.sum;
+
+
+      var isNumber = !isNaN(parseFloat(sum)) && isFinite(sum);
+      if (!isNumber || sum <= 0) {
+        return;
+      }
+
+      this.setState({ sum: 0 });
+    }
+
+    /**
+     * Функция отрисовки компонента
+     * @return {JSX}
+     */
+
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var inactiveCardsList = this.props.inactiveCardsList;
+
+
+      return _react2.default.createElement(
+        'form',
+        { onSubmit: function onSubmit(event) {
+            return _this2.onSubmitForm(event);
+          } },
+        _react2.default.createElement(
+          WithdrawLayout,
+          null,
+          _react2.default.createElement(
+            WithdrawTitle,
+            null,
+            '\u0412\u044B\u0432\u0435\u0441\u0442\u0438 \u0434\u0435\u043D\u044C\u0433\u0438 \u043D\u0430 \u043A\u0430\u0440\u0442\u0443'
+          ),
+          _react2.default.createElement(_.Card, { type: 'select', data: inactiveCardsList }),
+          _react2.default.createElement(
+            InputField,
+            null,
+            _react2.default.createElement(SumInput, {
+              name: 'sum',
+              value: this.state.sum,
+              onChange: function onChange(event) {
+                return _this2.onChangeInputValue(event);
+              } }),
+            _react2.default.createElement(
+              Currency,
+              null,
+              '\u20BD'
+            )
+          ),
+          _react2.default.createElement(
+            _.Button,
+            { type: 'submit' },
+            '\u041F\u0435\u0440\u0435\u0432\u0435\u0441\u0442\u0438'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Withdraw;
 }(_react.Component);
 
 Withdraw.propTypes = {
-	activeCard: _propTypes2.default.shape({
-		id: _propTypes2.default.number,
-		theme: _propTypes2.default.object
-	}).isRequired,
-	inactiveCardsList: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired
+  activeCard: _propTypes2.default.shape({
+    id: _propTypes2.default.number,
+    theme: _propTypes2.default.object
+  }).isRequired,
+  inactiveCardsList: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired
 };
 
 exports.default = Withdraw;
@@ -4427,7 +4427,7 @@ exports.default = Withdraw;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
@@ -4450,157 +4450,157 @@ var _ = __webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var HistoryLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-HistoryLayout-2aghiu0', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '530px',
-		'maxHeight': '622px',
-		'overflowY': 'scroll',
-		'padding': '0',
-		'backgroundColor': 'rgba(0, 0, 0, 0.05)'
-	};
+var HistoryLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-HistoryLayout-osfi610', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '530px',
+    'maxHeight': '622px',
+    'overflowY': 'scroll',
+    'padding': '0',
+    'backgroundColor': 'rgba(0, 0, 0, 0.05)'
+  };
 });
 
-var HistoryTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryTitle-2aghiu1', [], [], function createEmotionStyledRules() {
-	return {
-		'paddingLeft': '12px',
-		'color': 'rgba(0, 0, 0, 0.4)',
-		'fontSize': '15px',
-		'lineHeight': '30px',
-		'textTransform': 'uppercase'
-	};
+var HistoryTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryTitle-osfi611', [], [], function createEmotionStyledRules() {
+  return {
+    'paddingLeft': '12px',
+    'color': 'rgba(0, 0, 0, 0.4)',
+    'fontSize': '15px',
+    'lineHeight': '30px',
+    'textTransform': 'uppercase'
+  };
 });
 
-var HistoryItem = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItem-2aghiu2', [], [], function createEmotionStyledRules() {
-	return {
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'msFlexPack': 'distribute',
-		'justifyContent': 'space-around',
-		'WebkitBoxAlign': 'center',
-		'msFlexAlign': 'center',
-		'alignItems': 'center',
-		'height': '74px',
-		'fontSize': '15px',
-		'whiteSpace': 'nowrap',
-		'&:nth-child(even)': {
-			'backgroundColor': '#fff'
-		},
-		'&:nth-child(odd)': {
-			'backgroundColor': 'rgba(255, 255, 255, 0.72)'
-		}
-	};
+var HistoryItem = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItem-osfi612', [], [], function createEmotionStyledRules() {
+  return {
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'msFlexPack': 'distribute',
+    'justifyContent': 'space-around',
+    'WebkitBoxAlign': 'center',
+    'msFlexAlign': 'center',
+    'alignItems': 'center',
+    'height': '74px',
+    'fontSize': '15px',
+    'whiteSpace': 'nowrap',
+    '&:nth-child(even)': {
+      'backgroundColor': '#fff'
+    },
+    '&:nth-child(odd)': {
+      'backgroundColor': 'rgba(255, 255, 255, 0.72)'
+    }
+  };
 });
 
-var HistoryItemIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemIcon-2aghiu3', [], [function (_ref) {
-	var bankSmLogoUrl = _ref.bankSmLogoUrl;
-	return bankSmLogoUrl;
+var HistoryItemIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemIcon-osfi613', [], [function (_ref) {
+  var bankSmLogoUrl = _ref.bankSmLogoUrl;
+  return bankSmLogoUrl;
 }], function createEmotionStyledRules(x0) {
-	return {
-		'width': '50px',
-		'height': '50px',
-		'borderRadius': '25px',
-		'backgroundColor': '#159761',
-		'backgroundImage': 'url(' + x0 + ')',
-		'backgroundSize': 'contain',
-		'backgroundRepeat': 'no-repeat'
-	};
+  return {
+    'width': '50px',
+    'height': '50px',
+    'borderRadius': '25px',
+    'backgroundColor': '#159761',
+    'backgroundImage': 'url(' + x0 + ')',
+    'backgroundSize': 'contain',
+    'backgroundRepeat': 'no-repeat'
+  };
 });
 
-var HistoryItemTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemTitle-2aghiu4', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '290px',
-		'overflow': 'hidden',
-		'textOverflow': 'ellipsis'
-	};
+var HistoryItemTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemTitle-osfi614', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '290px',
+    'overflow': 'hidden',
+    'textOverflow': 'ellipsis'
+  };
 });
 
-var HistoryItemTime = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemTime-2aghiu5', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '50px'
-	};
+var HistoryItemTime = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemTime-osfi615', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '50px'
+  };
 });
 
-var HistoryItemSum = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemSum-2aghiu6', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '50px',
-		'overflow': 'hidden',
-		'textOverflow': 'ellipsis'
-	};
+var HistoryItemSum = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemSum-osfi616', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '50px',
+    'overflow': 'hidden',
+    'textOverflow': 'ellipsis'
+  };
 });
 
 var History = function History(_ref2) {
-	var cardHistory = _ref2.cardHistory;
+  var cardHistory = _ref2.cardHistory;
 
-	var getHistoryItemTitle = function getHistoryItemTitle(item) {
-		var typeTitle = '';
+  var getHistoryItemTitle = function getHistoryItemTitle(item) {
+    var typeTitle = '';
 
-		switch (item.type) {
-			case 'paymentMobile':
-				{
-					typeTitle = 'Оплата телефона';
-					break;
-				}
-			case 'prepaidCard':
-				{
-					typeTitle = 'Пополнение с карты';
-					break;
-				}
-			case 'withdrawCard':
-				{
-					typeTitle = 'Перевод на карту';
-					break;
-				}
-			default:
-				{
-					typeTitle = 'Операция';
-				}
-		}
+    switch (item.type) {
+      case 'paymentMobile':
+        {
+          typeTitle = 'Оплата телефона';
+          break;
+        }
+      case 'prepaidCard':
+        {
+          typeTitle = 'Пополнение с карты';
+          break;
+        }
+      case 'withdrawCard':
+        {
+          typeTitle = 'Перевод на карту';
+          break;
+        }
+      default:
+        {
+          typeTitle = 'Операция';
+        }
+    }
 
-		return typeTitle + ': ' + item.data;
-	};
+    return typeTitle + ': ' + item.data;
+  };
 
-	return _react2.default.createElement(
-		HistoryLayout,
-		null,
-		_react2.default.createElement(
-			HistoryTitle,
-			null,
-			'\u0421\u0435\u0433\u043E\u0434\u043D\u044F'
-		),
-		cardHistory.map(function (item, index) {
-			var historyItemDate = (0, _moment2.default)(item.time, _moment2.default.ISO_8601);
-			var today = (0, _moment2.default)().format('L');
-			var isTodayHistoryItem = historyItemDate.format('L') === today;
+  return _react2.default.createElement(
+    HistoryLayout,
+    null,
+    _react2.default.createElement(
+      HistoryTitle,
+      null,
+      '\u0421\u0435\u0433\u043E\u0434\u043D\u044F'
+    ),
+    cardHistory.map(function (item, index) {
+      var historyItemDate = (0, _moment2.default)(item.time, _moment2.default.ISO_8601);
+      var today = (0, _moment2.default)().format('L');
+      var isTodayHistoryItem = historyItemDate.format('L') === today;
 
-			if (!isTodayHistoryItem) {
-				return '';
-			}
+      if (!isTodayHistoryItem) {
+        return '';
+      }
 
-			return _react2.default.createElement(
-				HistoryItem,
-				{ key: index },
-				_react2.default.createElement(HistoryItemIcon, { bankSmLogoUrl: item.card.theme.bankSmLogoUrl }),
-				_react2.default.createElement(
-					HistoryItemTitle,
-					null,
-					getHistoryItemTitle(item)
-				),
-				_react2.default.createElement(
-					HistoryItemTime,
-					null,
-					historyItemDate.format('HH:mm')
-				),
-				_react2.default.createElement(
-					HistoryItemSum,
-					null,
-					item.sum + ' \u20BD'
-				)
-			);
-		})
-	);
+      return _react2.default.createElement(
+        HistoryItem,
+        { key: index },
+        _react2.default.createElement(HistoryItemIcon, { bankSmLogoUrl: item.card.theme.bankSmLogoUrl }),
+        _react2.default.createElement(
+          HistoryItemTitle,
+          null,
+          getHistoryItemTitle(item)
+        ),
+        _react2.default.createElement(
+          HistoryItemTime,
+          null,
+          historyItemDate.format('HH:mm')
+        ),
+        _react2.default.createElement(
+          HistoryItemSum,
+          null,
+          item.sum + ' \u20BD'
+        )
+      );
+    })
+  );
 };
 
 History.propTypes = {
-	cardHistory: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired
+  cardHistory: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired
 };
 
 exports.default = History;
@@ -4619,7 +4619,7 @@ module.exports = require("moment");
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
@@ -4638,60 +4638,60 @@ var _ = __webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var HeaderLayout = /*#__PURE__*/(0, _react4.default)('header', 'css-HeaderLayout-1gatwbn0', [], [], function createEmotionStyledRules() {
-	return {
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'WebkitBoxPack': 'justify',
-		'msFlexPack': 'justify',
-		'justifyContent': 'space-between',
-		'WebkitBoxAlign': 'center',
-		'msFlexAlign': 'center',
-		'alignItems': 'center',
-		'height': '74px',
-		'background': '#fff',
-		'padding': '20px 30px',
-		'WebkitBoxSizing': 'border-box',
-		'boxSizing': 'border-box',
-		'borderBottom': '1px solid rgba(0, 0, 0, 0.06)'
-	};
+var HeaderLayout = /*#__PURE__*/(0, _react4.default)('header', 'css-HeaderLayout-13h75ts0', [], [], function createEmotionStyledRules() {
+  return {
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'WebkitBoxPack': 'justify',
+    'msFlexPack': 'justify',
+    'justifyContent': 'space-between',
+    'WebkitBoxAlign': 'center',
+    'msFlexAlign': 'center',
+    'alignItems': 'center',
+    'height': '74px',
+    'background': '#fff',
+    'padding': '20px 30px',
+    'WebkitBoxSizing': 'border-box',
+    'boxSizing': 'border-box',
+    'borderBottom': '1px solid rgba(0, 0, 0, 0.06)'
+  };
 });
 
-var Balance = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-Balance-1gatwbn1', [], [], function createEmotionStyledRules() {
-	return {
-		'margin': '0'
-	};
+var Balance = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-Balance-13h75ts1', [], [], function createEmotionStyledRules() {
+  return {
+    'margin': '0'
+  };
 });
 
-var BalanceSum = /*#__PURE__*/(0, _react4.default)('span', 'css-BalanceSum-1gatwbn2', [], [], function createEmotionStyledRules() {
-	return {
-		'fontWeight': 'bold'
-	};
+var BalanceSum = /*#__PURE__*/(0, _react4.default)('span', 'css-BalanceSum-13h75ts2', [], [], function createEmotionStyledRules() {
+  return {
+    'fontWeight': 'bold'
+  };
 });
 
 var Header = function Header(_ref) {
-	var activeCard = _ref.activeCard;
-	return _react2.default.createElement(
-		HeaderLayout,
-		null,
-		_react2.default.createElement(
-			Balance,
-			null,
-			activeCard.bankName + ': ',
-			_react2.default.createElement(
-				BalanceSum,
-				null,
-				activeCard.balance + ' \u20BD'
-			)
-		),
-		_react2.default.createElement(_.UserInfo, null)
-	);
+  var activeCard = _ref.activeCard;
+  return _react2.default.createElement(
+    HeaderLayout,
+    null,
+    _react2.default.createElement(
+      Balance,
+      null,
+      activeCard.bankName + ': ',
+      _react2.default.createElement(
+        BalanceSum,
+        null,
+        activeCard.balance + ' \u20BD'
+      )
+    ),
+    _react2.default.createElement(_.UserInfo, null)
+  );
 };
 
 Header.propTypes = {
-	activeCard: _propTypes2.default.shape({
-		bankName: _propTypes2.default.string.isRequired,
-		balance: _propTypes2.default.string.isRequired
-	})
+  activeCard: _propTypes2.default.shape({
+    bankName: _propTypes2.default.string.isRequired,
+    balance: _propTypes2.default.string.isRequired
+  })
 };
 
 exports.default = Header;
@@ -4704,7 +4704,7 @@ exports.default = Header;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
@@ -4717,33 +4717,33 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var User = /*#__PURE__*/(0, _react4.default)('div', 'css-User-di820n0', [], [], function createEmotionStyledRules() {
-	return {
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'WebkitBoxAlign': 'center',
-		'msFlexAlign': 'center',
-		'alignItems': 'center',
-		'fontSize': '15px',
-		'color': '#000'
-	};
+var User = /*#__PURE__*/(0, _react4.default)('div', 'css-User-f3jpmy0', [], [], function createEmotionStyledRules() {
+  return {
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'WebkitBoxAlign': 'center',
+    'msFlexAlign': 'center',
+    'alignItems': 'center',
+    'fontSize': '15px',
+    'color': '#000'
+  };
 });
 
-var Avatar = /*#__PURE__*/(0, _react4.default)('img', 'css-Avatar-di820n1', [], [], function createEmotionStyledRules() {
-	return {
-		'width': '42px',
-		'height': '42px',
-		'borderRadius': '50%',
-		'marginRight': '10px'
-	};
+var Avatar = /*#__PURE__*/(0, _react4.default)('img', 'css-Avatar-f3jpmy1', [], [], function createEmotionStyledRules() {
+  return {
+    'width': '42px',
+    'height': '42px',
+    'borderRadius': '50%',
+    'marginRight': '10px'
+  };
 });
 
 exports.default = function () {
-	return _react2.default.createElement(
-		User,
-		null,
-		_react2.default.createElement(Avatar, { src: '/assets/avatar.png' }),
-		'Samuel Johnson'
-	);
+  return _react2.default.createElement(
+    User,
+    null,
+    _react2.default.createElement(Avatar, { src: '/assets/avatar.png' }),
+    'Samuel Johnson'
+  );
 };
 
 /***/ }),
@@ -4754,7 +4754,7 @@ exports.default = function () {
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -4794,42 +4794,42 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 (0, _emotion.injectGlobal)([], [], function createEmotionStyledRules() {
-	return [{
-		'html,\n\tbody': {
-			'margin': '0'
-		},
-		'#root': {
-			'height': '100%',
-			'fontFamily': '\'Open Sans\'',
-			'color': '#000'
-		}
-	}];
+  return [{
+    'html,\n  body': {
+      'margin': '0'
+    },
+    '#root': {
+      'height': '100%',
+      'fontFamily': '\'Open Sans\'',
+      'color': '#000'
+    }
+  }];
 });
 
-var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-1um63t30', [], [], function createEmotionStyledRules() {
-	return {
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'minHeight': '100%',
-		'backgroundColor': '#fcfcfc'
-	};
+var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-1omz7a70', [], [], function createEmotionStyledRules() {
+  return {
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'minHeight': '100%',
+    'backgroundColor': '#fcfcfc'
+  };
 });
 
-var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-1um63t31', [], [], function createEmotionStyledRules() {
-	return {
-		'WebkitBoxFlex': '1',
-		'msFlexPositive': '1',
-		'flexGrow': '1'
-	};
+var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-1omz7a71', [], [], function createEmotionStyledRules() {
+  return {
+    'WebkitBoxFlex': '1',
+    'msFlexPositive': '1',
+    'flexGrow': '1'
+  };
 });
 
-var Workspace = /*#__PURE__*/(0, _react4.default)('div', 'css-Workspace-1um63t32', [], [], function createEmotionStyledRules() {
-	return {
-		'display': '-webkit-box; display: -ms-flexbox; display: flex',
-		'msFlexWrap': 'wrap',
-		'flexWrap': 'wrap',
-		'maxWidth': '970px',
-		'padding': '15px'
-	};
+var Workspace = /*#__PURE__*/(0, _react4.default)('div', 'css-Workspace-1omz7a72', [], [], function createEmotionStyledRules() {
+  return {
+    'display': '-webkit-box; display: -ms-flexbox; display: flex',
+    'msFlexWrap': 'wrap',
+    'flexWrap': 'wrap',
+    'maxWidth': '970px',
+    'padding': '15px'
+  };
 });
 
 /**
@@ -4837,139 +4837,139 @@ var Workspace = /*#__PURE__*/(0, _react4.default)('div', 'css-Workspace-1um63t32
  */
 
 var App = function (_Component) {
-	_inherits(App, _Component);
+  _inherits(App, _Component);
 
-	/**
-  * Конструктор
-  */
-	function App() {
-		_classCallCheck(this, App);
+  /**
+   * Конструктор
+   */
+  function App() {
+    _classCallCheck(this, App);
 
-		var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
-		var cardsList = _this.prepareCardsData(_cards2.default);
-		var cardHistory = _transactions2.default.map(function (data) {
-			var card = cardsList.find(function (card) {
-				return card.id === data.cardId;
-			});
-			return card ? Object.assign({}, data, { card: card }) : data;
-		});
+    var cardsList = _this.prepareCardsData(_cards2.default);
+    var cardHistory = _transactions2.default.map(function (data) {
+      var card = cardsList.find(function (card) {
+        return card.id === data.cardId;
+      });
+      return card ? Object.assign({}, data, { card: card }) : data;
+    });
 
-		_this.state = {
-			cardsList: cardsList,
-			cardHistory: cardHistory,
-			activeCardIndex: 0
-		};
-		return _this;
-	}
+    _this.state = {
+      cardsList: cardsList,
+      cardHistory: cardHistory,
+      activeCardIndex: 0
+    };
+    return _this;
+  }
 
-	/**
-  * Подготавливает данные карт
-  *
-  * @param {Object} cardsData данные карт
-  * @returns {Object[]}
-  */
-
-
-	_createClass(App, [{
-		key: 'prepareCardsData',
-		value: function prepareCardsData(cardsData) {
-			return cardsData.map(function (card) {
-				var cardInfo = new _cardInfo2.default(card.cardNumber, {
-					banksLogosPath: '/assets/',
-					brandsLogosPath: '/assets/'
-				});
-
-				return {
-					id: card.id,
-					balance: card.balance,
-					number: cardInfo.numberNice,
-					bankName: cardInfo.bankName,
-					theme: {
-						bgColor: cardInfo.backgroundColor,
-						textColor: cardInfo.textColor,
-						bankLogoUrl: cardInfo.bankLogoSvg,
-						brandLogoUrl: cardInfo.brandLogoSvg,
-						bankSmLogoUrl: '/assets/' + cardInfo.bankAlias + '-history.svg'
-					}
-				};
-			});
-		}
-
-		/**
-   * Обработчик переключения карты
+  /**
+   * Подготавливает данные карт
    *
-   * @param {Number} activeCardIndex индекс выбранной карты
+   * @param {Object} cardsData данные карт
+   * @return {Object[]}
    */
 
-	}, {
-		key: 'onCardChange',
-		value: function onCardChange(activeCardIndex) {
-			this.setState({ activeCardIndex: activeCardIndex });
-		}
 
-		/**
-   * Рендер компонента
-   *
-   * @override
-   * @returns {JSX}
-   */
+  _createClass(App, [{
+    key: 'prepareCardsData',
+    value: function prepareCardsData(cardsData) {
+      return cardsData.map(function (card) {
+        var cardInfo = new _cardInfo2.default(card.cardNumber, {
+          banksLogosPath: '/assets/',
+          brandsLogosPath: '/assets/'
+        });
 
-	}, {
-		key: 'render',
-		value: function render() {
-			var _this2 = this;
+        return {
+          id: card.id,
+          balance: card.balance,
+          number: cardInfo.numberNice,
+          bankName: cardInfo.bankName,
+          theme: {
+            bgColor: cardInfo.backgroundColor,
+            textColor: cardInfo.textColor,
+            bankLogoUrl: cardInfo.bankLogoSvg,
+            brandLogoUrl: cardInfo.brandLogoSvg,
+            bankSmLogoUrl: '/assets/' + cardInfo.bankAlias + '-history.svg'
+          }
+        };
+      });
+    }
 
-			var _state = this.state,
-			    cardsList = _state.cardsList,
-			    activeCardIndex = _state.activeCardIndex,
-			    cardHistory = _state.cardHistory;
+    /**
+     * Обработчик переключения карты
+     *
+     * @param {Number} activeCardIndex индекс выбранной карты
+     */
 
-			var activeCard = cardsList[activeCardIndex];
+  }, {
+    key: 'onCardChange',
+    value: function onCardChange(activeCardIndex) {
+      this.setState({ activeCardIndex: activeCardIndex });
+    }
 
-			var inactiveCardsList = cardsList.filter(function (card, index) {
-				return index === activeCardIndex ? false : card;
-			});
-			var filteredHistory = cardHistory.filter(function (data) {
-				return data.cardId === activeCard.id;
-			});
+    /**
+     * Рендер компонента
+     *
+     * @override
+     * @return {JSX}
+     */
 
-			return _react2.default.createElement(
-				Wallet,
-				null,
-				_react2.default.createElement(_.CardsBar, {
-					activeCardIndex: activeCardIndex,
-					cardsList: cardsList,
-					onCardChange: function onCardChange(activeCardIndex) {
-						return _this2.onCardChange(activeCardIndex);
-					} }),
-				_react2.default.createElement(
-					CardPane,
-					null,
-					_react2.default.createElement(_.Header, { activeCard: activeCard }),
-					_react2.default.createElement(
-						Workspace,
-						null,
-						_react2.default.createElement(_.History, { cardHistory: filteredHistory }),
-						_react2.default.createElement(_.Prepaid, {
-							activeCard: activeCard,
-							inactiveCardsList: inactiveCardsList,
-							onCardChange: function onCardChange(newActiveCardIndex) {
-								return _this2.onCardChange(newActiveCardIndex);
-							}
-						}),
-						_react2.default.createElement(_.MobilePayment, { activeCard: activeCard }),
-						_react2.default.createElement(_.Withdraw, {
-							activeCard: activeCard,
-							inactiveCardsList: inactiveCardsList
-						})
-					)
-				)
-			);
-		}
-	}]);
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
 
-	return App;
+      var _state = this.state,
+          cardsList = _state.cardsList,
+          activeCardIndex = _state.activeCardIndex,
+          cardHistory = _state.cardHistory;
+
+      var activeCard = cardsList[activeCardIndex];
+
+      var inactiveCardsList = cardsList.filter(function (card, index) {
+        return index === activeCardIndex ? false : card;
+      });
+      var filteredHistory = cardHistory.filter(function (data) {
+        return data.cardId === activeCard.id;
+      });
+
+      return _react2.default.createElement(
+        Wallet,
+        null,
+        _react2.default.createElement(_.CardsBar, {
+          activeCardIndex: activeCardIndex,
+          cardsList: cardsList,
+          onCardChange: function onCardChange(activeCardIndex) {
+            return _this2.onCardChange(activeCardIndex);
+          } }),
+        _react2.default.createElement(
+          CardPane,
+          null,
+          _react2.default.createElement(_.Header, { activeCard: activeCard }),
+          _react2.default.createElement(
+            Workspace,
+            null,
+            _react2.default.createElement(_.History, { cardHistory: filteredHistory }),
+            _react2.default.createElement(_.Prepaid, {
+              activeCard: activeCard,
+              inactiveCardsList: inactiveCardsList,
+              onCardChange: function onCardChange(newActiveCardIndex) {
+                return _this2.onCardChange(newActiveCardIndex);
+              }
+            }),
+            _react2.default.createElement(_.MobilePayment, { activeCard: activeCard }),
+            _react2.default.createElement(_.Withdraw, {
+              activeCard: activeCard,
+              inactiveCardsList: inactiveCardsList
+            })
+          )
+        )
+      );
+    }
+  }]);
+
+  return App;
 }(_react.Component);
 
 exports.default = App;

@@ -42,6 +42,17 @@ class FileModel {
     return this._sourceData;
   }
 
+  async saveChanges() {
+    await new Promise((resolve, reject) => {
+      fs.writeFile(this._sourceFile, JSON.stringify(this._sourceData, null, 4), (err) => {
+        if (err) {
+          return reject(err);
+        }
+        return resolve();
+      });
+    });
+  }
+
   _generateId() {
     return this._sourceData.reduce((max, item) => Math.max(max, item.id), 0) + 1;
   }

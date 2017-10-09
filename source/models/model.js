@@ -9,6 +9,14 @@ class Model {
     ]);
   }
 
+  async getCard(cardId) {
+    return await cardModel.getCard(cardId);
+  }
+
+  async changeBalance(cardId, amount) {
+    return await cardModel.changeBalance(cardId, amount);
+  }
+
   async getAllCards() {
     return await cardModel.getAllCards();
   }
