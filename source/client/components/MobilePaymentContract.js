@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'emotion/react';
+import axios from 'axios';
 
 import {Island, Title, Button, Input} from './';
 
@@ -99,15 +100,23 @@ class MobilePaymentContract extends Component {
     return Number(sum) + Number(commission);
   }
 
-  sendPayment(sum) {
-    return fetch(`/cards/6/pay/`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: `amount=${sum}`
-    });
-  }
+  // sendPayment(sum) {
+  //   return fetch(`/cards/6/pay/`, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/x-www-form-urlencoded'
+  //     },
+  //     body: `amount=${sum}`
+  //   });
+  // }
+  // sendPayment(sum) {
+  //   return axios.post('/cards/1/pay/', {
+  //     cardId
+  //     type
+  //     data
+  //     sum
+  //   });
+  // }
 
   /**
    * Отправка формы
@@ -124,11 +133,24 @@ class MobilePaymentContract extends Component {
     if (!isNumber || sum === 0) {
       return;
     }
-    this.sendPayment(this.getSumWithCommission())
-        .then(this.props.onPaymentSuccess({sum, phoneNumber, commission}))
-        .catch((err) => {
-          console.log(err);
-        });
+
+    // const SumWithCommission = this.getSumWithCommission();
+    const cardId = this.props.activeCard.id;
+    axios.post(`/cards/${cardId}/pay/`, {
+      cardId,
+      type: 'paymentMobile',
+      data: phoneNumber,
+      sum: `${this.getSumWithCommission()}`
+    }).then((response) => {
+      console.log(response)
+      if (response.status === 200) {
+        this.props.onPaymentSuccess({ sum, phoneNumber, commission })
+      } else {
+        console.log(response.data);
+      }
+    }).catch((error) => {
+      console.log(error);
+    });
 
     // this.props.onPaymentSuccess({sum, phoneNumber, commission});
   }

@@ -17,7 +17,8 @@ class TransactionModel extends FileModel {
   async createTransaction(transactionData) {
     const transactions = await this.readFile();
     const newTransaction = Object.assign({}, {
-      'id': this._generateId()
+      'id': this._generateId(),
+      'time': (new Date()).toISOString()
     }, transactionData);
     await this.writeFile([...transactions, newTransaction]);
 

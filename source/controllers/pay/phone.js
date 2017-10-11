@@ -4,18 +4,24 @@ module.exports = async (ctx) => {
   if (id > 0) {
     const card = await ctx.Model.getCard(id);
     console.log(ctx.request.body);
-    const amount = Number(ctx.request.body.amount);
+    const amount = Number(ctx.request.body.sum);
     const balance = Number(card.balance);
 
     if (typeof card === 'undefined') {
-      throw new Error('Карта не найдена');
+      // throw new Error('Карта не найдена');
+      ctx.status = 404;
+      ctx.body = ('Карта не найдена');
     }
 
     if (amount <= balance) {
       await ctx.Model.changeBalance(id, amount);
+      await ctx.Model.createTransaction(ctx.request.body);
       ctx.body = 'Деньги успешно списаны';
     } else {
-      throw new Error('Недостаточно денег на карте');
+      // throw new Error('Недостаточно денег на карте');
+      // ctx.statusCode = 500;
+      ctx.status = 400;
+      ctx.body = ('Недостаточно денег на карте');
     }
 
 

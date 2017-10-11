@@ -171,7 +171,6 @@ class App extends Component {
    */
   onCardChange(activeCardIndex) {
     this.setState({activeCardIndex});
-    this.updateCardsData();
   }
 
   /**

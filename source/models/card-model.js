@@ -32,8 +32,7 @@ class CardModel extends FileModel {
     if (typeof targetCard === 'undefined') {
       throw new Error('Карта не найдена');
     }
-
-    targetCard.balance -= amount;
+    targetCard.balance = `${targetCard.balance - amount}`;
     await this.saveChanges();
 
     return 'Баланс успешно обновлён';

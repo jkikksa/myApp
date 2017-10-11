@@ -8,9 +8,9 @@ const isDataValid = (data) => {
   return data.hasOwnProperty('data');
 };
 
-const isTimeValid = (data) => {
-  return data.hasOwnProperty('time');
-};
+// const isTimeValid = (data) => {
+//   return data.hasOwnProperty('time');
+// };
 
 const isSumValid = (data) => {
   return data.hasOwnProperty('sum');
@@ -20,7 +20,7 @@ const isTransactionDataValid = (data) => {
   return typeof data === 'object' ?
     isTypeValid(data) &&
     isDataValid(data) &&
-    isTimeValid(data) &&
+    // isTimeValid(data) &&
     isSumValid(data) : false;
 };
 
