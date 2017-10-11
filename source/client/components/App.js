@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import styled from 'emotion/react';
 import {injectGlobal} from 'emotion';
 import CardInfo from 'card-info';
@@ -16,6 +17,7 @@ import './fonts.css';
 import cardsData from '../../models/data/cards';
 import transactionsData from '../../models/data/transactions';
 
+/* eslint-disable */
 injectGlobal`
   html,
   body {
@@ -28,6 +30,7 @@ injectGlobal`
     color: #000;
   }
 `;
+/* eslint-enable */
 
 const Wallet = styled.div`
   display: flex;
@@ -58,15 +61,78 @@ class App extends Component {
 
     const cardsList = this.prepareCardsData(cardsData);
     const cardHistory = transactionsData.map((data) => {
-      const card = cardsList.find((card) => card.id === data.cardId);
+      const card = cardsList.find((it) => it.id === data.cardId);
       return card ? Object.assign({}, data, {card}) : data;
     });
+
+    // const cardHistory = transactionsData;
 
     this.state = {
       cardsList,
       cardHistory,
-      activeCardIndex: 0
+      activeCardIndex: 0,
     };
+  }
+
+  // componentWillMount() {
+  //   axios.get('/cards')
+  //       .then((res) => {
+  //         const newData = this.prepareCardsData(res.data);
+  //         this.setState({
+  //           cardsList: newData
+  //         });
+  //         return res.data;
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //       });
+  //
+  //   fetch(`/cards/${this.state.activeCardIndex + 1}/transactions/`)
+  //       .then((res) => {
+  //         return res.json();
+  //       })
+  //       .then((data) => {
+  //         this.setState({
+  //           cardHistory: data
+  //         });
+  //         return data;
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //       });
+  // }
+
+  updateCardsList() {
+    fetch('/cards')
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          // console.log(data);
+          this.setState({
+            cardsList: this.prepareCardsData(data)
+          });
+          return data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+  }
+
+  updateCardHistory() {
+    fetch(`/cards/${this.state.activeCardIndex + 1}/transactions/`)
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          this.setState({
+            cardHistory: data
+          });
+          return data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
   }
 
   /**
@@ -105,6 +171,7 @@ class App extends Component {
    */
   onCardChange(activeCardIndex) {
     this.setState({activeCardIndex});
+    this.updateCardsData();
   }
 
   /**

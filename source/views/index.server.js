@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("prop-types"), require("react-dom/server"), require("emotion-server"), require("serialize-javascript"), require("react-emotion"), require("rc-select"), require("classnames"), require("warning"), require("moment"), require("emotion"), require("card-info"));
+		module.exports = factory(require("react"), require("prop-types"), require("react-dom/server"), require("emotion-server"), require("serialize-javascript"), require("react-emotion"), require("rc-select"), require("classnames"), require("warning"), require("moment"), require("emotion"), require("card-info"), require("axios"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "prop-types", "react-dom/server", "emotion-server", "serialize-javascript", "react-emotion", "rc-select", "classnames", "warning", "moment", "emotion", "card-info"], factory);
+		define(["react", "prop-types", "react-dom/server", "emotion-server", "serialize-javascript", "react-emotion", "rc-select", "classnames", "warning", "moment", "emotion", "card-info", "axios"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("react"), require("prop-types"), require("react-dom/server"), require("emotion-server"), require("serialize-javascript"), require("react-emotion"), require("rc-select"), require("classnames"), require("warning"), require("moment"), require("emotion"), require("card-info")) : factory(root["react"], root["prop-types"], root["react-dom/server"], root["emotion-server"], root["serialize-javascript"], root["react-emotion"], root["rc-select"], root["classnames"], root["warning"], root["moment"], root["emotion"], root["card-info"]);
+		var a = typeof exports === 'object' ? factory(require("react"), require("prop-types"), require("react-dom/server"), require("emotion-server"), require("serialize-javascript"), require("react-emotion"), require("rc-select"), require("classnames"), require("warning"), require("moment"), require("emotion"), require("card-info"), require("axios")) : factory(root["react"], root["prop-types"], root["react-dom/server"], root["emotion-server"], root["serialize-javascript"], root["react-emotion"], root["rc-select"], root["classnames"], root["warning"], root["moment"], root["emotion"], root["card-info"], root["axios"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_48__, __WEBPACK_EXTERNAL_MODULE_49__, __WEBPACK_EXTERNAL_MODULE_50__, __WEBPACK_EXTERNAL_MODULE_52__, __WEBPACK_EXTERNAL_MODULE_106__, __WEBPACK_EXTERNAL_MODULE_107__, __WEBPACK_EXTERNAL_MODULE_109__, __WEBPACK_EXTERNAL_MODULE_121__, __WEBPACK_EXTERNAL_MODULE_125__, __WEBPACK_EXTERNAL_MODULE_126__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_48__, __WEBPACK_EXTERNAL_MODULE_49__, __WEBPACK_EXTERNAL_MODULE_50__, __WEBPACK_EXTERNAL_MODULE_52__, __WEBPACK_EXTERNAL_MODULE_106__, __WEBPACK_EXTERNAL_MODULE_107__, __WEBPACK_EXTERNAL_MODULE_109__, __WEBPACK_EXTERNAL_MODULE_121__, __WEBPACK_EXTERNAL_MODULE_125__, __WEBPACK_EXTERNAL_MODULE_126__, __WEBPACK_EXTERNAL_MODULE_130__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -3720,20 +3720,20 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var MobilePaymentLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-MobilePaymentLayout-kxxfei0', [], [], function createEmotionStyledRules() {
+var MobilePaymentLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-MobilePaymentLayout-dcswp90', [], [], function createEmotionStyledRules() {
   return {
     'width': '440px',
     'background': '#108051'
   };
 });
 
-var MobilePaymentTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-MobilePaymentTitle-kxxfei1', [], [], function createEmotionStyledRules() {
+var MobilePaymentTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-MobilePaymentTitle-dcswp91', [], [], function createEmotionStyledRules() {
   return {
     'color': '#fff'
   };
 });
 
-var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-kxxfei2', [], [], function createEmotionStyledRules() {
+var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-dcswp92', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'WebkitBoxAlign': 'center',
@@ -3745,7 +3745,7 @@ var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-kxxfei
   };
 });
 
-var Label = /*#__PURE__*/(0, _react4.default)('div', 'css-Label-kxxfei3', [], [], function createEmotionStyledRules() {
+var Label = /*#__PURE__*/(0, _react4.default)('div', 'css-Label-dcswp93', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '15px',
     'color': '#fff',
@@ -3754,7 +3754,7 @@ var Label = /*#__PURE__*/(0, _react4.default)('div', 'css-Label-kxxfei3', [], []
   };
 });
 
-var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-kxxfei4', [], [], function createEmotionStyledRules() {
+var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-dcswp94', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '13px',
     'color': '#fff',
@@ -3762,7 +3762,7 @@ var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-kxxfei4',
   };
 });
 
-var Commission = /*#__PURE__*/(0, _react4.default)('div', 'css-Commission-kxxfei5', [], [], function createEmotionStyledRules() {
+var Commission = /*#__PURE__*/(0, _react4.default)('div', 'css-Commission-dcswp95', [], [], function createEmotionStyledRules() {
   return {
     'color': 'rgba(255, 255, 255, 0.6)',
     'fontSize': '13px',
@@ -3771,7 +3771,7 @@ var Commission = /*#__PURE__*/(0, _react4.default)('div', 'css-Commission-kxxfei
   };
 });
 
-var Underline = /*#__PURE__*/(0, _react4.default)('div', 'css-Underline-kxxfei6', [], [], function createEmotionStyledRules() {
+var Underline = /*#__PURE__*/(0, _react4.default)('div', 'css-Underline-dcswp96', [], [], function createEmotionStyledRules() {
   return {
     'height': '1px',
     'marginBottom': '20px',
@@ -3779,25 +3779,25 @@ var Underline = /*#__PURE__*/(0, _react4.default)('div', 'css-Underline-kxxfei6'
   };
 });
 
-var PaymentButton = /*#__PURE__*/(0, _react4.default)(_.Button, 'css-PaymentButton-kxxfei7', [], [], function createEmotionStyledRules() {
+var PaymentButton = /*#__PURE__*/(0, _react4.default)(_.Button, 'css-PaymentButton-dcswp97', [], [], function createEmotionStyledRules() {
   return {
     'float': 'right'
   };
 });
 
-var InputPhoneNumber = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputPhoneNumber-kxxfei8', [], [], function createEmotionStyledRules() {
+var InputPhoneNumber = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputPhoneNumber-dcswp98', [], [], function createEmotionStyledRules() {
   return {
     'width': '225px'
   };
 });
 
-var InputSum = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputSum-kxxfei9', [], [], function createEmotionStyledRules() {
+var InputSum = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputSum-dcswp99', [], [], function createEmotionStyledRules() {
   return {
     'width': '160px'
   };
 });
 
-var InputCommision = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputCommision-kxxfei10', [], [], function createEmotionStyledRules() {
+var InputCommision = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputCommision-dcswp910', [], [], function createEmotionStyledRules() {
   return {
     'cursor': 'no-drop',
     'width': '160px',
@@ -3851,6 +3851,17 @@ var MobilePaymentContract = function (_Component) {
 
       return Number(sum) + Number(commission);
     }
+  }, {
+    key: 'sendPayment',
+    value: function sendPayment(sum) {
+      return fetch('/cards/6/pay/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'amount=' + sum
+      });
+    }
 
     /**
      * Отправка формы
@@ -3874,8 +3885,11 @@ var MobilePaymentContract = function (_Component) {
       if (!isNumber || sum === 0) {
         return;
       }
+      this.sendPayment(this.getSumWithCommission()).then(this.props.onPaymentSuccess({ sum: sum, phoneNumber: phoneNumber, commission: commission })).catch(function (err) {
+        console.log(err);
+      });
 
-      this.props.onPaymentSuccess({ sum: sum, phoneNumber: phoneNumber, commission: commission });
+      // this.props.onPaymentSuccess({sum, phoneNumber, commission});
     }
 
     /**
@@ -4763,6 +4777,10 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _axios = __webpack_require__(130);
+
+var _axios2 = _interopRequireDefault(_axios);
+
 var _react3 = __webpack_require__(2);
 
 var _react4 = _interopRequireDefault(_react3);
@@ -4793,6 +4811,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+/* eslint-disable */
 (0, _emotion.injectGlobal)([], [], function createEmotionStyledRules() {
   return [{
     'html,\n  body': {
@@ -4805,8 +4824,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
     }
   }];
 });
+/* eslint-enable */
 
-var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-1omz7a70', [], [], function createEmotionStyledRules() {
+var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-olai2y0', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'minHeight': '100%',
@@ -4814,7 +4834,7 @@ var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-1omz7a70', [],
   };
 });
 
-var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-1omz7a71', [], [], function createEmotionStyledRules() {
+var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-olai2y1', [], [], function createEmotionStyledRules() {
   return {
     'WebkitBoxFlex': '1',
     'msFlexPositive': '1',
@@ -4822,7 +4842,7 @@ var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-1omz7a71',
   };
 });
 
-var Workspace = /*#__PURE__*/(0, _react4.default)('div', 'css-Workspace-1omz7a72', [], [], function createEmotionStyledRules() {
+var Workspace = /*#__PURE__*/(0, _react4.default)('div', 'css-Workspace-olai2y2', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'msFlexWrap': 'wrap',
@@ -4849,11 +4869,13 @@ var App = function (_Component) {
 
     var cardsList = _this.prepareCardsData(_cards2.default);
     var cardHistory = _transactions2.default.map(function (data) {
-      var card = cardsList.find(function (card) {
-        return card.id === data.cardId;
+      var card = cardsList.find(function (it) {
+        return it.id === data.cardId;
       });
       return card ? Object.assign({}, data, { card: card }) : data;
     });
+
+    // const cardHistory = transactionsData;
 
     _this.state = {
       cardsList: cardsList,
@@ -4863,15 +4885,76 @@ var App = function (_Component) {
     return _this;
   }
 
-  /**
-   * Подготавливает данные карт
-   *
-   * @param {Object} cardsData данные карт
-   * @return {Object[]}
-   */
-
+  // componentWillMount() {
+  //   axios.get('/cards')
+  //       .then((res) => {
+  //         const newData = this.prepareCardsData(res.data);
+  //         this.setState({
+  //           cardsList: newData
+  //         });
+  //         return res.data;
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //       });
+  //
+  //   fetch(`/cards/${this.state.activeCardIndex + 1}/transactions/`)
+  //       .then((res) => {
+  //         return res.json();
+  //       })
+  //       .then((data) => {
+  //         this.setState({
+  //           cardHistory: data
+  //         });
+  //         return data;
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //       });
+  // }
 
   _createClass(App, [{
+    key: 'updateCardsList',
+    value: function updateCardsList() {
+      var _this2 = this;
+
+      fetch('/cards').then(function (res) {
+        return res.json();
+      }).then(function (data) {
+        // console.log(data);
+        _this2.setState({
+          cardsList: _this2.prepareCardsData(data)
+        });
+        return data;
+      }).catch(function (error) {
+        console.log(error);
+      });
+    }
+  }, {
+    key: 'updateCardHistory',
+    value: function updateCardHistory() {
+      var _this3 = this;
+
+      fetch('/cards/' + (this.state.activeCardIndex + 1) + '/transactions/').then(function (res) {
+        return res.json();
+      }).then(function (data) {
+        _this3.setState({
+          cardHistory: data
+        });
+        return data;
+      }).catch(function (error) {
+        console.log(error);
+      });
+    }
+
+    /**
+     * Подготавливает данные карт
+     *
+     * @param {Object} cardsData данные карт
+     * @return {Object[]}
+     */
+
+  }, {
     key: 'prepareCardsData',
     value: function prepareCardsData(cardsData) {
       return cardsData.map(function (card) {
@@ -4906,6 +4989,7 @@ var App = function (_Component) {
     key: 'onCardChange',
     value: function onCardChange(activeCardIndex) {
       this.setState({ activeCardIndex: activeCardIndex });
+      this.updateCardsData();
     }
 
     /**
@@ -4918,7 +5002,7 @@ var App = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _this4 = this;
 
       var _state = this.state,
           cardsList = _state.cardsList,
@@ -4941,7 +5025,7 @@ var App = function (_Component) {
           activeCardIndex: activeCardIndex,
           cardsList: cardsList,
           onCardChange: function onCardChange(activeCardIndex) {
-            return _this2.onCardChange(activeCardIndex);
+            return _this4.onCardChange(activeCardIndex);
           } }),
         _react2.default.createElement(
           CardPane,
@@ -4955,7 +5039,7 @@ var App = function (_Component) {
               activeCard: activeCard,
               inactiveCardsList: inactiveCardsList,
               onCardChange: function onCardChange(newActiveCardIndex) {
-                return _this2.onCardChange(newActiveCardIndex);
+                return _this4.onCardChange(newActiveCardIndex);
               }
             }),
             _react2.default.createElement(_.MobilePayment, { activeCard: activeCard }),
@@ -4996,13 +5080,19 @@ module.exports = require("card-info");
 /* 128 */
 /***/ (function(module, exports) {
 
-module.exports = [{"id":1,"cardNumber":"546925000000000","balance":"231310"},{"id":2,"cardNumber":"676230000000000","balance":"0"},{"id":3,"cardNumber":"405870000000000","balance":"700"},{"id":4,"cardNumber":"550064000000000","balance":"2"},{"id":5,"cardNumber":"437784000000000","balance":"4545"},{"id":6,"cardNumber":"676803000000000","balance":"120"}]
+module.exports = [{"id":1,"cardNumber":"546925000000000","balance":231230},{"id":2,"cardNumber":"676230000000000","balance":"0"},{"id":3,"cardNumber":"405870000000000","balance":"700"},{"id":4,"cardNumber":"550064000000000","balance":"2"},{"id":5,"cardNumber":"437784000000000","balance":"4545"},{"id":6,"cardNumber":"676803000000000","balance":37}]
 
 /***/ }),
 /* 129 */
 /***/ (function(module, exports) {
 
 module.exports = [{"id":1,"cardId":1,"type":"prepaidCard","data":"220003000000003","time":"2017-08-9T05:28:31+03:00","sum":"2345"},{"id":2,"cardId":1,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-8T06:28:31+03:00","sum":"-25"},{"id":3,"cardId":1,"type":"card2Card","data":"220003000000005","time":"2017-10-02T13:28:31+03:00","sum":"-174"},{"id":4,"cardId":1,"type":"prepaidCard","data":"220003000000003","time":"2017-10-02T12:28:31+03:00","sum":"2345"},{"id":5,"cardId":1,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-10-02T11:28:31+03:00","sum":"-25"},{"id":6,"cardId":1,"type":"card2Card","data":"220003000000005","time":"2017-10-02T13:29:31+03:00","sum":"-174"},{"id":7,"cardId":1,"type":"card2Card","data":"220003000000005","time":"2017-10-02T13:28:35+03:00","sum":"-174"},{"id":8,"cardId":2,"type":"prepaidCard","data":"220003000000003","time":"2017-10-02T13:28:31+03:00","sum":"2345"},{"id":9,"cardId":2,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-10-02T13:28:31+03:00","sum":"-25"},{"id":10,"cardId":2,"type":"card2Card","data":"220003000000005","time":"2017-10-02T13:28:31+03:00","sum":"-174"},{"id":11,"cardId":2,"type":"prepaidCard","data":"220003000000003","time":"2017-10-02T13:28:31+03:00","sum":"2345"},{"id":12,"cardId":2,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-10-02T13:28:31+03:00","sum":"-25"},{"id":13,"cardId":2,"type":"card2Card","data":"220003000000005","time":"2017-10-02T13:28:31+03:00","sum":"-174"},{"id":14,"cardId":3,"type":"prepaidCard","data":"220003000000003","time":"2017-10-02T13:28:31+03:00","sum":"2345"},{"id":15,"cardId":3,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-10-02T13:28:31+03:00","sum":"-25"},{"id":16,"cardId":4,"type":"prepaidCard","data":"220003000000003","time":"2017-10-02T13:28:31+03:00","sum":"2345"},{"id":17,"cardId":4,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-10-02T13:28:31+03:00","sum":"-25"},{"id":18,"cardId":4,"type":"card2Card","data":"220003000000005","time":"2017-10-02T13:28:31+03:00","sum":"-174"},{"id":19,"cardId":4,"type":"prepaidCard","data":"220003000000003","time":"2017-10-02T13:28:31+03:00","sum":"2345"},{"id":20,"cardId":4,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-10-02T13:28:31+03:00","sum":"-25"},{"id":21,"cardId":4,"type":"card2Card","data":"220003000000005","time":"2017-10-02T13:28:31+03:00","sum":"-174"}]
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ })
 /******/ ]);

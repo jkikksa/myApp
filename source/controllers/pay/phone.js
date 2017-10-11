@@ -3,6 +3,7 @@ module.exports = async (ctx) => {
 
   if (id > 0) {
     const card = await ctx.Model.getCard(id);
+    console.log(ctx.request.body);
     const amount = Number(ctx.request.body.amount);
     const balance = Number(card.balance);
 
