@@ -33,6 +33,10 @@ class Model {
     return await transactionModel.getTransactions(cardId);
   }
 
+  async getAllTransactions(cardId) {
+    return await transactionModel.getAllTransactions(cardId);
+  }
+
   async createTransaction(transactionData) {
     return await transactionModel.createTransaction(transactionData);
   }

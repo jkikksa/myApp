@@ -65,6 +65,8 @@ class App extends Component {
       return card ? Object.assign({}, data, {card}) : data;
     });
 
+    this.onPaymentSuccess = this.onPaymentSuccess.bind(this);
+
     // const cardHistory = transactionsData;
 
     this.state = {
@@ -74,45 +76,18 @@ class App extends Component {
     };
   }
 
-  // componentWillMount() {
-  //   axios.get('/cards')
-  //       .then((res) => {
-  //         const newData = this.prepareCardsData(res.data);
-  //         this.setState({
-  //           cardsList: newData
-  //         });
-  //         return res.data;
-  //       })
-  //       .catch((error) => {
-  //         console.log(error);
-  //       });
-  //
-  //   fetch(`/cards/${this.state.activeCardIndex + 1}/transactions/`)
-  //       .then((res) => {
-  //         return res.json();
-  //       })
-  //       .then((data) => {
-  //         this.setState({
-  //           cardHistory: data
-  //         });
-  //         return data;
-  //       })
-  //       .catch((error) => {
-  //         console.log(error);
-  //       });
-  // }
+  componentDidMount() {
+    this.updateCardsList();
+    this.updateCardHistory();
+  }
 
   updateCardsList() {
-    fetch('/cards')
+    axios.get('/cards')
         .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          // console.log(data);
           this.setState({
-            cardsList: this.prepareCardsData(data)
+            cardsList: this.prepareCardsData(res.data)
           });
-          return data;
+          return res.data;
         })
         .catch((error) => {
           console.log(error);
@@ -120,15 +95,17 @@ class App extends Component {
   }
 
   updateCardHistory() {
-    fetch(`/cards/${this.state.activeCardIndex + 1}/transactions/`)
+    console.log('Обновление последних транзаций');
+    axios.get(`/cards/${this.state.activeCardIndex + 1}/transactions/`)
         .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          this.setState({
-            cardHistory: data
+          const cardHistory = res.data.map((data) => {
+            const card = this.state.cardsList.find((it) => it.id === data.cardId);
+            return card ? Object.assign({}, data, {card}) : data;
           });
-          return data;
+          this.setState({
+            cardHistory
+          });
+          return res.data;
         })
         .catch((error) => {
           console.log(error);
@@ -162,6 +139,11 @@ class App extends Component {
         }
       };
     });
+  }
+
+  onPaymentSuccess() {
+    this.updateCardsList();
+    this.updateCardHistory();
   }
 
   /**
@@ -201,7 +183,7 @@ class App extends Component {
               inactiveCardsList={inactiveCardsList}
               onCardChange={(newActiveCardIndex) => this.onCardChange(newActiveCardIndex)}
             />
-            <MobilePayment activeCard={activeCard} />
+            <MobilePayment activeCard={activeCard} onPaymentSuccess={this.onPaymentSuccess}/>
             <Withdraw
               activeCard={activeCard}
               inactiveCardsList={inactiveCardsList}

@@ -100,24 +100,6 @@ class MobilePaymentContract extends Component {
     return Number(sum) + Number(commission);
   }
 
-  // sendPayment(sum) {
-  //   return fetch(`/cards/6/pay/`, {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/x-www-form-urlencoded'
-  //     },
-  //     body: `amount=${sum}`
-  //   });
-  // }
-  // sendPayment(sum) {
-  //   return axios.post('/cards/1/pay/', {
-  //     cardId
-  //     type
-  //     data
-  //     sum
-  //   });
-  // }
-
   /**
    * Отправка формы
    * @param {Event} event событие отправки формы
@@ -142,9 +124,8 @@ class MobilePaymentContract extends Component {
       data: phoneNumber,
       sum: `${this.getSumWithCommission()}`
     }).then((response) => {
-      console.log(response)
       if (response.status === 200) {
-        this.props.onPaymentSuccess({ sum, phoneNumber, commission })
+        this.props.onPaymentSuccess({sum, phoneNumber, commission})
       } else {
         console.log(response.data);
       }

@@ -14,6 +14,10 @@ class TransactionModel extends FileModel {
     return transactions.filter((it) => it.cardId === cardId);
   }
 
+  async getAllTransactions(cardId) {
+    return await this.readFile();
+  }
+
   async createTransaction(transactionData) {
     const transactions = await this.readFile();
     const newTransaction = Object.assign({}, {

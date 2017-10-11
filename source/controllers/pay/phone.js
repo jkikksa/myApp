@@ -3,7 +3,6 @@ module.exports = async (ctx) => {
 
   if (id > 0) {
     const card = await ctx.Model.getCard(id);
-    console.log(ctx.request.body);
     const amount = Number(ctx.request.body.sum);
     const balance = Number(card.balance);
 
@@ -15,6 +14,7 @@ module.exports = async (ctx) => {
 
     if (amount <= balance) {
       await ctx.Model.changeBalance(id, amount);
+      ctx.request.body.sum = -amount;
       await ctx.Model.createTransaction(ctx.request.body);
       ctx.body = 'Деньги успешно списаны';
     } else {
