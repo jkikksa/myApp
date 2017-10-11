@@ -82,6 +82,7 @@ class App extends Component {
   }
 
   updateCardsList() {
+    console.log('Обновление списка карт');
     axios.get('/cards')
         .then((res) => {
           this.setState({
@@ -96,7 +97,7 @@ class App extends Component {
 
   updateCardHistory() {
     console.log('Обновление последних транзаций');
-    axios.get(`/cards/${this.state.activeCardIndex + 1}/transactions/`)
+    axios.get('/cards/transactions/')
         .then((res) => {
           const cardHistory = res.data.map((data) => {
             const card = this.state.cardsList.find((it) => it.id === data.cardId);

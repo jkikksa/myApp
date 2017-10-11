@@ -14,7 +14,7 @@ class TransactionModel extends FileModel {
     return transactions.filter((it) => it.cardId === cardId);
   }
 
-  async getAllTransactions(cardId) {
+  async getAllTransactions() {
     return await this.readFile();
   }
 

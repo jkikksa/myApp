@@ -55182,7 +55182,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 });
 /* eslint-enable */
 
-var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-1v9p7l90', [], [], function createEmotionStyledRules() {
+var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-uk3bgh0', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'minHeight': '100%',
@@ -55190,7 +55190,7 @@ var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-1v9p7l90', [],
   };
 });
 
-var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-1v9p7l91', [], [], function createEmotionStyledRules() {
+var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-uk3bgh1', [], [], function createEmotionStyledRules() {
   return {
     'WebkitBoxFlex': '1',
     'msFlexPositive': '1',
@@ -55198,7 +55198,7 @@ var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-1v9p7l91',
   };
 });
 
-var Workspace = /*#__PURE__*/(0, _react4.default)('div', 'css-Workspace-1v9p7l92', [], [], function createEmotionStyledRules() {
+var Workspace = /*#__PURE__*/(0, _react4.default)('div', 'css-Workspace-uk3bgh2', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'msFlexWrap': 'wrap',
@@ -55254,6 +55254,7 @@ var App = function (_Component) {
     value: function updateCardsList() {
       var _this2 = this;
 
+      console.log('Обновление списка карт');
       _axios2.default.get('/cards').then(function (res) {
         _this2.setState({
           cardsList: _this2.prepareCardsData(res.data)
@@ -55269,7 +55270,7 @@ var App = function (_Component) {
       var _this3 = this;
 
       console.log('Обновление последних транзаций');
-      _axios2.default.get('/cards/' + (this.state.activeCardIndex + 1) + '/transactions/').then(function (res) {
+      _axios2.default.get('/cards/transactions/').then(function (res) {
         var cardHistory = res.data.map(function (data) {
           var card = _this3.state.cardsList.find(function (it) {
             return it.id === data.cardId;

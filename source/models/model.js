@@ -33,8 +33,8 @@ class Model {
     return await transactionModel.getTransactions(cardId);
   }
 
-  async getAllTransactions(cardId) {
-    return await transactionModel.getAllTransactions(cardId);
+  async getAllTransactions() {
+    return await transactionModel.getAllTransactions();
   }
 
   async createTransaction(transactionData) {

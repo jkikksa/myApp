@@ -12,6 +12,7 @@ const removeCardController = require('./controllers/card/remove');
 
 
 const getTransactionsController = require('./controllers/transaction/get');
+const getAllTransactionsController = require('./controllers/transaction/get-all');
 const createTransactionController = require('./controllers/transaction/create');
 
 const app = new Koa();
@@ -34,6 +35,7 @@ router.get('/cards/', getCardsController);
 router.post('/cards/', createCardController);
 router.delete('/cards/:id/', removeCardController);
 router.get('/cards/:id/transactions/', getTransactionsController);
+router.get('/cards/transactions/', getAllTransactionsController);
 router.post('/cards/:id/transactions/', createTransactionController);
 
 router.post('/cards/:id/pay/', payPhoneController);

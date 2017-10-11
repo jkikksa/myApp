@@ -2,7 +2,7 @@ module.exports = async (ctx) => {
   const id = Number(ctx.params.id);
 
   if (id > 0) {
-    ctx.body = await ctx.Model.getAllTransactions(id);
+    ctx.body = await ctx.Model.getTransactions(id);
   } else {
     throw new Error('Id карты должен быть больше 0');
   }
