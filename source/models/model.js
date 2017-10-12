@@ -13,8 +13,16 @@ class Model {
     return await cardModel.getCard(cardId);
   }
 
-  async changeBalance(cardId, amount) {
-    return await cardModel.changeBalance(cardId, amount);
+  // async changeBalance(cardId, amount) {
+  //   return await cardModel.changeBalance(cardId, amount);
+  // }
+
+  async increaseBalance(cardId, amount) {
+    return await cardModel.increaseBalance(cardId, amount);
+  }
+
+  async decreaseBalance(cardId, amount) {
+    return await cardModel.decreaseBalance(cardId, amount);
   }
 
   async getAllCards() {

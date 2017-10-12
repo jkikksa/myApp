@@ -25,18 +25,56 @@ class CardModel extends FileModel {
     }
   }
 
-  async changeBalance(cardId, amount) {
-    const cards = await this.getAll();
-    const targetCard = cards.find((it) => it.id === cardId);
+  async increaseBalance(cardId, amount) {
+    try {
+      const cards = await this.getAll();
+      const targetCard = cards.find((it) => it.id === cardId);
 
-    if (typeof targetCard === 'undefined') {
-      throw new Error('Карта не найдена');
+      if (typeof targetCard === 'undefined') {
+        throw new Error('Карта не найдена');
+      }
+
+      targetCard.balance = `${Number(targetCard.balance) + amount}`;
+
+      await this.saveChanges();
+
+      return 'Баланс успешно обновлён';
+    } catch (e) {
+      throw new Error(e.message);
     }
-    targetCard.balance = `${targetCard.balance - amount}`;
-    await this.saveChanges();
-
-    return 'Баланс успешно обновлён';
   }
+
+  async decreaseBalance(cardId, amount) {
+    try {
+      const cards = await this.getAll();
+      const targetCard = cards.find((it) => it.id === cardId);
+
+      if (typeof targetCard === 'undefined') {
+        throw new Error('Карта не найдена');
+      }
+
+      targetCard.balance = `${Number(targetCard.balance) - amount}`;
+
+      await this.saveChanges();
+
+      return 'Баланс успешно обновлён';
+    } catch (e) {
+      throw new Error(e.message);
+    }
+  }
+
+  // async changeBalance(cardId, amount) {
+  //   const cards = await this.getAll();
+  //   const targetCard = cards.find((it) => it.id === cardId);
+  //
+  //   if (typeof targetCard === 'undefined') {
+  //     throw new Error('Карта не найдена');
+  //   }
+  //   targetCard.balance = `${targetCard.balance - amount}`;
+  //   await this.saveChanges();
+  //
+  //   return 'Баланс успешно обновлён';
+  // }
 
   async getCard(cardId) {
     const cards = await this.getAll();

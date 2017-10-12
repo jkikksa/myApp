@@ -168,35 +168,59 @@
         "sum": "-174"
     },
     {
-        "cardId": 44,
-        "type": "prepaidCard",
-        "data": "220003000000003",
-        "time": "2017-08-9T05:28:31+03:00",
-        "sum": "2345",
-        "id": 22
+        "id": 22,
+        "time": "2017-10-11T20:15:05.598Z",
+        "cardId": 1,
+        "type": "paymentMobile",
+        "data": "+79218908064",
+        "sum": -43
     },
     {
         "id": 23,
-        "time": "2017-10-11T19:45:55.413Z",
+        "time": "2017-10-11T20:58:20.521Z",
         "cardId": 1,
         "type": "paymentMobile",
         "data": "+79218908064",
-        "sum": "-40"
+        "sum": -57
     },
     {
         "id": 24,
-        "time": "2017-10-11T19:47:27.955Z",
+        "time": "2017-10-11T21:18:14.479Z",
         "cardId": 1,
         "type": "paymentMobile",
         "data": "+79218908064",
-        "sum": -40
+        "sum": -28
     },
     {
         "id": 25,
-        "time": "2017-10-11T19:47:41.418Z",
+        "time": "2017-10-12T07:30:08.620Z",
         "cardId": 1,
         "type": "paymentMobile",
         "data": "+79218908064",
-        "sum": -110
+        "sum": -13
+    },
+    {
+        "id": 26,
+        "time": "2017-10-12T07:30:41.940Z",
+        "cardId": 1,
+        "type": "paymentMobile",
+        "data": "+79218908064",
+        "sum": -4
+    },
+    {
+        "id": 27,
+        "time": "2017-10-12T07:31:15.466Z",
+        "cardId": 1,
+        "type": "paymentMobile",
+        "data": "+79218908064",
+        "sum": -4
+    },
+    {
+        "id": 28,
+        "time": "2017-10-12T07:31:25.127Z",
+        "cardId": 1,
+        "type": "paymentMobile",
+        "data": "+79218908064",
+        "sum": -13
     }
 ]

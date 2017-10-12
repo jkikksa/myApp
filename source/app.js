@@ -6,7 +6,10 @@ const {renderToStaticMarkup} = require('react-dom/server');
 
 const Model = require('./models/model');
 const getCardsController = require('./controllers/card/get-all');
+
 const payPhoneController = require('./controllers/pay/phone');
+const transferController = require('./controllers/pay/transfer');
+
 const createCardController = require('./controllers/card/create');
 const removeCardController = require('./controllers/card/remove');
 
@@ -39,6 +42,7 @@ router.get('/cards/transactions/', getAllTransactionsController);
 router.post('/cards/:id/transactions/', createTransactionController);
 
 router.post('/cards/:id/pay/', payPhoneController);
+router.post('/cards/:id/transfer/', transferController);
 
 app.use(async (ctx, next) => {
   try {
