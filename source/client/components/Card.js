@@ -77,7 +77,7 @@ class Card extends Component {
    */
   onCardChange(activeCardIndex) {
     this.setState({activeCardIndex});
-    this.props.onCardChange(activeCardIndex);
+    this.props.onCardSelected(activeCardIndex);
   }
 
   /**
@@ -134,7 +134,7 @@ Card.propTypes = {
   type: PropTypes.string,
   active: PropTypes.bool,
   onClick: PropTypes.func,
-  onCardChange: PropTypes.func
+  onCardSelected: PropTypes.func
 };
 
 export default Card;

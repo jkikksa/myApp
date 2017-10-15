@@ -23,6 +23,7 @@ class Prepaid extends Component {
    * @param {Object} transaction данные о транзакции
    */
   onPaymentSuccess(transaction) {
+    this.props.onPaymentSuccess();
     this.setState({
       stage: 'success',
       transaction
@@ -63,7 +64,8 @@ Prepaid.propTypes = {
   activeCard: PropTypes.shape({
     id: PropTypes.number
   }).isRequired,
-  inactiveCardsList: PropTypes.arrayOf(PropTypes.object).isRequired
+  inactiveCardsList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onPaymentSuccess: PropTypes.func.isRequired
 };
 
 export default Prepaid;

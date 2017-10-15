@@ -68,9 +68,9 @@ class Withdraw extends Component {
     });
   }
 
-  onCardChange(activeCardIndex) {
+  onCardSelected(selectedCardIndex) {
     this.setState({
-      selectedCard: this.props.inactiveCardsList[activeCardIndex]
+      selectedCard: this.props.inactiveCardsList[selectedCardIndex]
     });
   }
 
@@ -93,6 +93,7 @@ class Withdraw extends Component {
           sum
         })
         .then((response) => {
+          this.props.onPaymentSuccess();
         })
         .catch((error) => {
           console.log(error.message);
@@ -117,7 +118,7 @@ class Withdraw extends Component {
       <form onSubmit={(event) => this.onSubmitForm(event)}>
         <WithdrawLayout>
           <WithdrawTitle>Вывести деньги на карту</WithdrawTitle>
-          <Card type='select' data={inactiveCardsList} onCardChange={(activeCardIndex) => this.onCardChange(activeCardIndex)}/>
+          <Card type='select' data={inactiveCardsList} onCardSelected={(selectedCardIndex) => this.onCardSelected(selectedCardIndex)}/>
           <InputField>
             <SumInput
               name='sum'
@@ -137,7 +138,8 @@ Withdraw.propTypes = {
     id: PropTypes.number,
     theme: PropTypes.object
   }).isRequired,
-  inactiveCardsList: PropTypes.arrayOf(PropTypes.object).isRequired
+  inactiveCardsList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onPaymentSuccess: PropTypes.func.isRequired
 };
 
 export default Withdraw;

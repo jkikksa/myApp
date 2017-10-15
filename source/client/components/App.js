@@ -179,11 +179,13 @@ class App extends Component {
               activeCard={activeCard}
               inactiveCardsList={inactiveCardsList}
               onCardChange={(newActiveCardIndex) => this.onCardChange(newActiveCardIndex)}
+              onPaymentSuccess={this.onPaymentSuccess}
             />
             <MobilePayment activeCard={activeCard} onPaymentSuccess={this.onPaymentSuccess}/>
             <Withdraw
               activeCard={activeCard}
               inactiveCardsList={inactiveCardsList}
+              onPaymentSuccess={this.onPaymentSuccess}
             />
           </Workspace>
         </CardPane>

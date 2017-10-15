@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'emotion/react';
+import axios from 'axios';
 
 import {Island, Title, Button, Input} from './';
 
@@ -121,17 +122,30 @@ class PrepaidContract extends Component {
     }
 
     const {sum} = this.state;
-    const {activeCard} = this.props;
-
+    const prepaidCard = this.props.inactiveCardsList[this.state.activeCardIndex];
     const isNumber = !isNaN(parseFloat(sum)) && isFinite(sum);
     if (!isNumber || sum <= 0) {
       return;
     }
 
-    this.props.onPaymentSuccess({
-      sum,
-      number: activeCard.number
-    });
+    axios
+        .post(`/cards/${this.props.activeCard.id}/fill/`, {
+          number: prepaidCard.number.replace(/\s/g, ''),
+          sum
+        })
+        .then((response) => {
+          if (response.data.transactionStatus === 'ok') {
+            this.props.onPaymentSuccess({
+              sum,
+              number: prepaidCard.number
+            });
+          } else {
+            console.log(response.data.message);
+          }
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
   }
 
   /**
