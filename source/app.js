@@ -69,3 +69,5 @@ app.use(serve('./public'));
 app.listen(3000, () => {
   logger.log('info', 'Application started');
 });
+
+module.exports = app;

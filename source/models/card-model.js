@@ -63,19 +63,6 @@ class CardModel extends FileModel {
     }
   }
 
-  // async changeBalance(cardId, amount) {
-  //   const cards = await this.getAll();
-  //   const targetCard = cards.find((it) => it.id === cardId);
-  //
-  //   if (typeof targetCard === 'undefined') {
-  //     throw new Error('Карта не найдена');
-  //   }
-  //   targetCard.balance = `${targetCard.balance - amount}`;
-  //   await this.saveChanges();
-  //
-  //   return 'Баланс успешно обновлён';
-  // }
-
   async getCard(cardId) {
     const cards = await this.getAll();
     return cards.find((it) => it.id === cardId);
@@ -94,7 +81,6 @@ class CardModel extends FileModel {
 
     return newCard;
   }
-
 }
 
 module.exports = CardModel;
