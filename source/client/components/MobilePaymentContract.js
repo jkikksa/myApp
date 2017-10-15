@@ -116,24 +116,23 @@ class MobilePaymentContract extends Component {
       return;
     }
 
-    // const SumWithCommission = this.getSumWithCommission();
-    const cardId = this.props.activeCard.id;
-    axios.post(`/cards/${cardId}/pay/`, {
-      cardId,
-      type: 'paymentMobile',
-      data: phoneNumber,
-      sum: `${this.getSumWithCommission()}`
-    }).then((response) => {
-      if (response.status === 200) {
-        this.props.onPaymentSuccess({sum, phoneNumber, commission})
-      } else {
-        console.log(response.data);
-      }
-    }).catch((error) => {
-      console.log(error);
-    });
+    // const cardId = this.props.activeCard.id;
 
-    // this.props.onPaymentSuccess({sum, phoneNumber, commission});
+    axios
+        .post(`/cards/${this.props.activeCard.id}/pay/`, {
+          phoneNumber,
+          sum: `${this.getSumWithCommission()}`
+        })
+        .then((response) => {
+          if (response.data.transactionStatus === 'ok') {
+            this.props.onPaymentSuccess({sum, phoneNumber, commission});
+          } else {
+            console.log(response.data.message);
+          }
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
   }
 
   /**

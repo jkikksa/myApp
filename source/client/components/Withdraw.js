@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'emotion/react';
+import axios from 'axios';
 
 import {Card, Title, Button, Island, Input} from './';
 
@@ -67,6 +68,12 @@ class Withdraw extends Component {
     });
   }
 
+  onCardChange(activeCardIndex) {
+    this.setState({
+      selectedCard: this.props.inactiveCardsList[activeCardIndex]
+    });
+  }
+
   /**
    * Отправка формы
    * @param {Event} event событие отправки формы
@@ -75,8 +82,21 @@ class Withdraw extends Component {
     if (event) {
       event.preventDefault();
     }
-
     const {sum} = this.state;
+
+    const receiverCardId = this.state.selectedCard.id;
+    const cardId = this.props.activeCard.id;
+    // console.log({cardId, receiverCardId});
+    axios
+        .post(`/cards/${cardId}/transfer/`, {
+          receiverCardId,
+          sum
+        })
+        .then((response) => {
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
 
     const isNumber = !isNaN(parseFloat(sum)) && isFinite(sum);
     if (!isNumber || sum <= 0) {
@@ -97,7 +117,7 @@ class Withdraw extends Component {
       <form onSubmit={(event) => this.onSubmitForm(event)}>
         <WithdrawLayout>
           <WithdrawTitle>Вывести деньги на карту</WithdrawTitle>
-          <Card type='select' data={inactiveCardsList} />
+          <Card type='select' data={inactiveCardsList} onCardChange={(activeCardIndex) => this.onCardChange(activeCardIndex)}/>
           <InputField>
             <SumInput
               name='sum'

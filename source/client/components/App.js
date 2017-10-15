@@ -67,8 +67,6 @@ class App extends Component {
 
     this.onPaymentSuccess = this.onPaymentSuccess.bind(this);
 
-    // const cardHistory = transactionsData;
-
     this.state = {
       cardsList,
       cardHistory,
@@ -82,7 +80,6 @@ class App extends Component {
   }
 
   updateCardsList() {
-    console.log('Обновление списка карт');
     axios.get('/cards')
         .then((res) => {
           this.setState({
@@ -96,7 +93,6 @@ class App extends Component {
   }
 
   updateCardHistory() {
-    console.log('Обновление последних транзаций');
     axios.get('/cards/transactions/')
         .then((res) => {
           const cardHistory = res.data.map((data) => {

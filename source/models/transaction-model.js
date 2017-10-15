@@ -1,8 +1,6 @@
 const TRANSACTIONS_FILE = 'transactions.json';
 
 const FileModel = require('./file-model');
-// const fileModel = new FileModel(TRANSACTIONS_FILE);
-// fileModel.read();
 
 class TransactionModel extends FileModel {
   constructor() {
@@ -22,7 +20,6 @@ class TransactionModel extends FileModel {
     const transactions = await this.readFile();
     const newTransaction = Object.assign({}, {
       'id': this._generateId(),
-      'time': (new Date()).toISOString()
     }, transactionData);
     await this.writeFile([...transactions, newTransaction]);
 

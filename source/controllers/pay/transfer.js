@@ -1,35 +1,47 @@
 module.exports = async (ctx) => {
-  const id = Number(ctx.params.id);
+  const cardId = Number(ctx.params.id);
+  const {receiverCardId, sum} = ctx.request.body;
 
-  if (id > 0) {
-    const card = await ctx.Model.getCard(id);
+  if (cardId > 0 && receiverCardId > 0) {
+    const card = await ctx.Model.getCard(cardId);
+    const receiverCard = await ctx.Model.getCard(receiverCardId);
 
-
-    if (typeof card === 'undefined') {
-      // throw new Error('Карта не найдена');
+    if (typeof card === 'undefined' || typeof receiverCard === 'undefined') {
       ctx.status = 404;
-      ctx.body = ('Карта не найдена');
+      ctx.body = ('Карты не найдены');
     }
 
-    const receiverCardId = ctx.request.body.receiverCardId;
-
-    const amount = Number(ctx.request.body.amount);
+    const amount = Number(sum);
     const balance = Number(card.balance);
 
     if (amount <= balance) {
-      await ctx.Model.decreaseBalance(id, amount);
+      await ctx.Model.decreaseBalance(cardId, amount);
       await ctx.Model.increaseBalance(receiverCardId, amount);
-      // ctx.request.body.sum = -amount;
-      await ctx.Model.createTransaction(ctx.request.body);
+
+      await ctx.Model.createTransaction({
+        cardId,
+        type: 'card2Card',
+        data: receiverCard.cardNumber,
+        time: (new Date()).toISOString(),
+        sum: `${-amount}`
+      });
+
+      await ctx.Model.createTransaction({
+        cardId: receiverCardId,
+        type: 'card2Card',
+        data: card.cardNumber,
+        time: (new Date()).toISOString(),
+        sum: `${amount}`
+      });
+
       ctx.body = 'Деньги успешно переведены';
     } else {
-      // throw new Error('Недостаточно денег на карте');
-      // ctx.statusCode = 500;
       ctx.status = 400;
       ctx.body = ('Недостаточно денег на карте');
     }
 
   } else {
-    throw new Error('Id карты должен быть больше 0');
+    ctx.status = 404;
+    ctx.body = 'Карты не найдены. Id карты должен быть больше 0';
   }
 };
