@@ -29,9 +29,16 @@ router.param('id', (id, ctx, next) => {
 });
 
 const indexView = require('./views/index.server.js');
+const NewCardModel = require('./models/new-cards-model');
+const cardModel = new NewCardModel();
 
-router.get('/', (ctx) => {
-  const indexViewHtml = renderToStaticMarkup(indexView());
+const getCards = async () => {
+  return await cardModel.readFile();
+};
+
+router.get('/', async (ctx) => {
+  const cards = await getCards();
+  const indexViewHtml = renderToStaticMarkup(indexView(cards));
   ctx.body = indexViewHtml;
 });
 

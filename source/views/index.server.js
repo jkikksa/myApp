@@ -1035,7 +1035,7 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledTitle = /*#__PURE__*/(0, _react4.default)('h2', 'css-StyledTitle-b7zxyf0', [], [], function createEmotionStyledRules() {
+var StyledTitle = /*#__PURE__*/(0, _react4.default)('h2', 'css-StyledTitle-g6wqby0', [], [], function createEmotionStyledRules() {
   return {
     'margin': '0 0 20px',
     'fontSize': '24px',
@@ -1092,7 +1092,7 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledButton = /*#__PURE__*/(0, _react4.default)('button', 'css-StyledButton-1rl13kv0', [], [function (_ref) {
+var StyledButton = /*#__PURE__*/(0, _react4.default)('button', 'css-StyledButton-xz5sg70', [], [function (_ref) {
   var bgColor = _ref.bgColor;
   return bgColor || 'rgba(0, 0, 0, 0.05)';
 }, function (_ref2) {
@@ -1170,7 +1170,7 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledInput = /*#__PURE__*/(0, _react4.default)('input', 'css-StyledInput-1h8z7dh0', [], [function (_ref) {
+var StyledInput = /*#__PURE__*/(0, _react4.default)('input', 'css-StyledInput-wyj23k0', [], [function (_ref) {
   var textColor = _ref.textColor;
   return textColor || '#fff';
 }], function createEmotionStyledRules(x0) {
@@ -1226,7 +1226,7 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var StyledSelect = /*#__PURE__*/(0, _react4.default)(_select2.default, 'css-StyledSelect-17celhd0', [], [function (_ref) {
+var StyledSelect = /*#__PURE__*/(0, _react4.default)(_select2.default, 'css-StyledSelect-76qomd0', [], [function (_ref) {
   var textColor = _ref.textColor;
   return textColor || '#fff';
 }], function createEmotionStyledRules(x0) {
@@ -2526,7 +2526,7 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var IslandLayout = /*#__PURE__*/(0, _react4.default)('div', 'css-IslandLayout-oshedm0', [], [], function createEmotionStyledRules() {
+var IslandLayout = /*#__PURE__*/(0, _react4.default)('div', 'css-IslandLayout-1wnz2zy0', [], [], function createEmotionStyledRules() {
   return {
     'margin': '15px',
     'padding': '30px 30px 20px',
@@ -2589,7 +2589,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var CardLayout = /*#__PURE__*/(0, _react4.default)('div', 'css-CardLayout-67fcb10', [], [function (_ref) {
+var CardLayout = /*#__PURE__*/(0, _react4.default)('div', 'css-CardLayout-w9q5ju0', [], [function (_ref) {
   var bgColor = _ref.bgColor,
       active = _ref.active;
   return active ? bgColor : 'rgba(255, 255, 255, 0.1)';
@@ -2607,7 +2607,7 @@ var CardLayout = /*#__PURE__*/(0, _react4.default)('div', 'css-CardLayout-67fcb1
   };
 });
 
-var CardLogo = /*#__PURE__*/(0, _react4.default)('div', 'css-CardLogo-67fcb11', [], [function (_ref2) {
+var CardLogo = /*#__PURE__*/(0, _react4.default)('div', 'css-CardLogo-w9q5ju1', [], [function (_ref2) {
   var url = _ref2.url;
   return url;
 }, function (_ref3) {
@@ -2625,7 +2625,7 @@ var CardLogo = /*#__PURE__*/(0, _react4.default)('div', 'css-CardLogo-67fcb11', 
   };
 });
 
-var CardNumber = /*#__PURE__*/(0, _react4.default)('div', 'css-CardNumber-67fcb12', [], [function (_ref4) {
+var CardNumber = /*#__PURE__*/(0, _react4.default)('div', 'css-CardNumber-w9q5ju2', [], [function (_ref4) {
   var active = _ref4.active,
       textColor = _ref4.textColor;
   return active ? textColor : 'rgba(255, 255, 255, 0.6)';
@@ -2638,7 +2638,7 @@ var CardNumber = /*#__PURE__*/(0, _react4.default)('div', 'css-CardNumber-67fcb1
   };
 });
 
-var CardType = /*#__PURE__*/(0, _react4.default)('div', 'css-CardType-67fcb13', [], [function (_ref5) {
+var CardType = /*#__PURE__*/(0, _react4.default)('div', 'css-CardType-w9q5ju3', [], [function (_ref5) {
   var url = _ref5.url;
   return url;
 }, function (_ref6) {
@@ -2655,7 +2655,7 @@ var CardType = /*#__PURE__*/(0, _react4.default)('div', 'css-CardType-67fcb13', 
   };
 });
 
-var NewCardLayout = /*#__PURE__*/(0, _react4.default)(CardLayout, 'css-NewCardLayout-67fcb14', [], [], function createEmotionStyledRules() {
+var NewCardLayout = /*#__PURE__*/(0, _react4.default)(CardLayout, 'css-NewCardLayout-w9q5ju4', [], [], function createEmotionStyledRules() {
   return {
     'backgroundColor': 'transparent',
     'backgroundImage': 'url(\'/assets/cards-add.svg\')',
@@ -2667,7 +2667,7 @@ var NewCardLayout = /*#__PURE__*/(0, _react4.default)(CardLayout, 'css-NewCardLa
   };
 });
 
-var CardSelect = /*#__PURE__*/(0, _react4.default)(_.Select, 'css-CardSelect-67fcb15', [], [], function createEmotionStyledRules() {
+var CardSelect = /*#__PURE__*/(0, _react4.default)(_.Select, 'css-CardSelect-w9q5ju5', [], [], function createEmotionStyledRules() {
   return {
     'width': '100%',
     'marginBottom': '15px'
@@ -2828,7 +2828,7 @@ var _ = __webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Layout = /*#__PURE__*/(0, _react4.default)('div', 'css-Layout-yj10he0', [], [], function createEmotionStyledRules() {
+var Layout = /*#__PURE__*/(0, _react4.default)('div', 'css-Layout-10t3j350', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'WebkitBoxOrient': 'vertical',
@@ -2841,7 +2841,7 @@ var Layout = /*#__PURE__*/(0, _react4.default)('div', 'css-Layout-yj10he0', [], 
   };
 });
 
-var Logo = /*#__PURE__*/(0, _react4.default)('div', 'css-Logo-yj10he1', [], [], function createEmotionStyledRules() {
+var Logo = /*#__PURE__*/(0, _react4.default)('div', 'css-Logo-10t3j351', [], [], function createEmotionStyledRules() {
   return {
     'width': '147px',
     'height': '28px',
@@ -2850,7 +2850,7 @@ var Logo = /*#__PURE__*/(0, _react4.default)('div', 'css-Logo-yj10he1', [], [], 
   };
 });
 
-var Edit = /*#__PURE__*/(0, _react4.default)('div', 'css-Edit-yj10he2', [], [], function createEmotionStyledRules() {
+var Edit = /*#__PURE__*/(0, _react4.default)('div', 'css-Edit-10t3j352', [], [], function createEmotionStyledRules() {
   return {
     'position': 'absolute',
     'top': '25px',
@@ -2861,7 +2861,7 @@ var Edit = /*#__PURE__*/(0, _react4.default)('div', 'css-Edit-yj10he2', [], [], 
   };
 });
 
-var CardsList = /*#__PURE__*/(0, _react4.default)('div', 'css-CardsList-yj10he3', [], [], function createEmotionStyledRules() {
+var CardsList = /*#__PURE__*/(0, _react4.default)('div', 'css-CardsList-10t3j353', [], [], function createEmotionStyledRules() {
   return {
     'WebkitBoxFlex': '1',
     'msFlex': '1',
@@ -2869,7 +2869,7 @@ var CardsList = /*#__PURE__*/(0, _react4.default)('div', 'css-CardsList-yj10he3'
   };
 });
 
-var Footer = /*#__PURE__*/(0, _react4.default)('footer', 'css-Footer-yj10he4', [], [], function createEmotionStyledRules() {
+var Footer = /*#__PURE__*/(0, _react4.default)('footer', 'css-Footer-10t3j354', [], [], function createEmotionStyledRules() {
   return {
     'color': 'rgba(255, 255, 255, 0.2)',
     'fontSize': '15px'
@@ -3087,7 +3087,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PrepaidLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-PrepaidLayout-4fwnhu0', [], [], function createEmotionStyledRules() {
+var PrepaidLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-PrepaidLayout-14ciivm0', [], [], function createEmotionStyledRules() {
   return {
     'width': '350px',
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
@@ -3102,20 +3102,20 @@ var PrepaidLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-PrepaidLayo
   };
 });
 
-var PrepaidTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-PrepaidTitle-4fwnhu1', [], [], function createEmotionStyledRules() {
+var PrepaidTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-PrepaidTitle-14ciivm1', [], [], function createEmotionStyledRules() {
   return {
     'color': '#fff'
   };
 });
 
-var PrepaidItems = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItems-4fwnhu2', [], [], function createEmotionStyledRules() {
+var PrepaidItems = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItems-14ciivm2', [], [], function createEmotionStyledRules() {
   return {
     'width': '285px',
     'marginBottom': '40px'
   };
 });
 
-var PrepaidItem = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItem-4fwnhu3', [], [function (_ref) {
+var PrepaidItem = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItem-14ciivm3', [], [function (_ref) {
   var selected = _ref.selected,
       bgColor = _ref.bgColor;
   return selected ? bgColor : 'rgba(0, 0, 0, 0.05)';
@@ -3132,7 +3132,7 @@ var PrepaidItem = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItem-4fwn
   };
 });
 
-var PrepaidItemIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemIcon-4fwnhu4', [], [function (_ref2) {
+var PrepaidItemIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemIcon-14ciivm4', [], [function (_ref2) {
   var bankSmLogoUrl = _ref2.bankSmLogoUrl;
   return bankSmLogoUrl;
 }, function (_ref3) {
@@ -3152,7 +3152,7 @@ var PrepaidItemIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemI
   };
 });
 
-var PrepaidItemTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemTitle-4fwnhu5', [], [function (_ref4) {
+var PrepaidItemTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemTitle-14ciivm5', [], [function (_ref4) {
   var selected = _ref4.selected,
       textColor = _ref4.textColor;
   return selected ? textColor : 'rgba(255, 255, 255, 0.6)';
@@ -3163,7 +3163,7 @@ var PrepaidItemTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItem
   };
 });
 
-var PrepaidItemDescription = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemDescription-4fwnhu6', [], [function (_ref5) {
+var PrepaidItemDescription = /*#__PURE__*/(0, _react4.default)('div', 'css-PrepaidItemDescription-14ciivm6', [], [function (_ref5) {
   var selected = _ref5.selected,
       textColor = _ref5.textColor;
   return selected ? textColor : 'rgba(255, 255, 255, 0.4)';
@@ -3173,14 +3173,14 @@ var PrepaidItemDescription = /*#__PURE__*/(0, _react4.default)('div', 'css-Prepa
   };
 });
 
-var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-4fwnhu7', [], [], function createEmotionStyledRules() {
+var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-14ciivm7', [], [], function createEmotionStyledRules() {
   return {
     'margin': '20px 0',
     'position': 'relative'
   };
 });
 
-var SumInput = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-SumInput-4fwnhu8', [], [], function createEmotionStyledRules() {
+var SumInput = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-SumInput-14ciivm8', [], [], function createEmotionStyledRules() {
   return {
     'maxWidth': '200px',
     'paddingRight': '20px',
@@ -3189,7 +3189,7 @@ var SumInput = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-SumInput-4fwnhu8'
   };
 });
 
-var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-4fwnhu9', [], [], function createEmotionStyledRules() {
+var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-14ciivm9', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '12px',
     'position': 'absolute',
@@ -3423,7 +3423,7 @@ var _ = __webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PrepaidLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-PrepaidLayout-1x6805s0', [], [], function createEmotionStyledRules() {
+var PrepaidLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-PrepaidLayout-1vnmata0', [], [], function createEmotionStyledRules() {
   return {
     'width': '350px',
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
@@ -3437,7 +3437,7 @@ var PrepaidLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-PrepaidLayo
   };
 });
 
-var CheckIcom = /*#__PURE__*/(0, _react4.default)('div', 'css-CheckIcom-1x6805s1', [], [], function createEmotionStyledRules() {
+var CheckIcom = /*#__PURE__*/(0, _react4.default)('div', 'css-CheckIcom-1vnmata1', [], [], function createEmotionStyledRules() {
   return {
     'width': '48px',
     'height': '48px',
@@ -3448,40 +3448,40 @@ var CheckIcom = /*#__PURE__*/(0, _react4.default)('div', 'css-CheckIcom-1x6805s1
   };
 });
 
-var Header = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-Header-1x6805s2', [], [], function createEmotionStyledRules() {
+var Header = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-Header-1vnmata2', [], [], function createEmotionStyledRules() {
   return {
     'color': '#fff'
   };
 });
 
-var SectionGroup = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionGroup-1x6805s3', [], [], function createEmotionStyledRules() {
+var SectionGroup = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionGroup-1vnmata3', [], [], function createEmotionStyledRules() {
   return {
     'marginBottom': '20px'
   };
 });
 
-var Section = /*#__PURE__*/(0, _react4.default)('div', 'css-Section-1x6805s4', [], [], function createEmotionStyledRules() {
+var Section = /*#__PURE__*/(0, _react4.default)('div', 'css-Section-1vnmata4', [], [], function createEmotionStyledRules() {
   return {
     'marginBottom': '20px',
     'width': '100%'
   };
 });
 
-var SectionLabel = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionLabel-1x6805s5', [], [], function createEmotionStyledRules() {
+var SectionLabel = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionLabel-1vnmata5', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '13px',
     'textAlign': 'left'
   };
 });
 
-var SectionValue = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionValue-1x6805s6', [], [], function createEmotionStyledRules() {
+var SectionValue = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionValue-1vnmata6', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '13px',
     'letterSpacing': '0.6px'
   };
 });
 
-var RepeatPayment = /*#__PURE__*/(0, _react4.default)('button', 'css-RepeatPayment-1x6805s7', [], [], function createEmotionStyledRules() {
+var RepeatPayment = /*#__PURE__*/(0, _react4.default)('button', 'css-RepeatPayment-1vnmata7', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '13px',
     'backgroundColor': 'rgba(0, 0, 0, 0.08)',
@@ -3753,20 +3753,20 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var MobilePaymentLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-MobilePaymentLayout-hezdm0', [], [], function createEmotionStyledRules() {
+var MobilePaymentLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-MobilePaymentLayout-ecehel0', [], [], function createEmotionStyledRules() {
   return {
     'width': '440px',
     'background': '#108051'
   };
 });
 
-var MobilePaymentTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-MobilePaymentTitle-hezdm1', [], [], function createEmotionStyledRules() {
+var MobilePaymentTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-MobilePaymentTitle-ecehel1', [], [], function createEmotionStyledRules() {
   return {
     'color': '#fff'
   };
 });
 
-var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-hezdm2', [], [], function createEmotionStyledRules() {
+var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-ecehel2', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'WebkitBoxAlign': 'center',
@@ -3778,7 +3778,7 @@ var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-hezdm2
   };
 });
 
-var Label = /*#__PURE__*/(0, _react4.default)('div', 'css-Label-hezdm3', [], [], function createEmotionStyledRules() {
+var Label = /*#__PURE__*/(0, _react4.default)('div', 'css-Label-ecehel3', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '15px',
     'color': '#fff',
@@ -3787,7 +3787,7 @@ var Label = /*#__PURE__*/(0, _react4.default)('div', 'css-Label-hezdm3', [], [],
   };
 });
 
-var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-hezdm4', [], [], function createEmotionStyledRules() {
+var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-ecehel4', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '13px',
     'color': '#fff',
@@ -3795,7 +3795,7 @@ var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-hezdm4', 
   };
 });
 
-var Commission = /*#__PURE__*/(0, _react4.default)('div', 'css-Commission-hezdm5', [], [], function createEmotionStyledRules() {
+var Commission = /*#__PURE__*/(0, _react4.default)('div', 'css-Commission-ecehel5', [], [], function createEmotionStyledRules() {
   return {
     'color': 'rgba(255, 255, 255, 0.6)',
     'fontSize': '13px',
@@ -3804,7 +3804,7 @@ var Commission = /*#__PURE__*/(0, _react4.default)('div', 'css-Commission-hezdm5
   };
 });
 
-var Underline = /*#__PURE__*/(0, _react4.default)('div', 'css-Underline-hezdm6', [], [], function createEmotionStyledRules() {
+var Underline = /*#__PURE__*/(0, _react4.default)('div', 'css-Underline-ecehel6', [], [], function createEmotionStyledRules() {
   return {
     'height': '1px',
     'marginBottom': '20px',
@@ -3812,25 +3812,25 @@ var Underline = /*#__PURE__*/(0, _react4.default)('div', 'css-Underline-hezdm6',
   };
 });
 
-var PaymentButton = /*#__PURE__*/(0, _react4.default)(_.Button, 'css-PaymentButton-hezdm7', [], [], function createEmotionStyledRules() {
+var PaymentButton = /*#__PURE__*/(0, _react4.default)(_.Button, 'css-PaymentButton-ecehel7', [], [], function createEmotionStyledRules() {
   return {
     'float': 'right'
   };
 });
 
-var InputPhoneNumber = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputPhoneNumber-hezdm8', [], [], function createEmotionStyledRules() {
+var InputPhoneNumber = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputPhoneNumber-ecehel8', [], [], function createEmotionStyledRules() {
   return {
     'width': '225px'
   };
 });
 
-var InputSum = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputSum-hezdm9', [], [], function createEmotionStyledRules() {
+var InputSum = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputSum-ecehel9', [], [], function createEmotionStyledRules() {
   return {
     'width': '160px'
   };
 });
 
-var InputCommision = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputCommision-hezdm10', [], [], function createEmotionStyledRules() {
+var InputCommision = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-InputCommision-ecehel10', [], [], function createEmotionStyledRules() {
   return {
     'cursor': 'no-drop',
     'width': '160px',
@@ -4080,7 +4080,7 @@ var _ = __webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var MobilePaymentLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-MobilePaymentLayout-159sipu0', [], [], function createEmotionStyledRules() {
+var MobilePaymentLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-MobilePaymentLayout-1t1dfi90', [], [], function createEmotionStyledRules() {
   return {
     'width': '440px',
     'background': '#108051',
@@ -4089,7 +4089,7 @@ var MobilePaymentLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-Mobil
   };
 });
 
-var SuccessIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-SuccessIcon-159sipu1', [], [], function createEmotionStyledRules() {
+var SuccessIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-SuccessIcon-1t1dfi91', [], [], function createEmotionStyledRules() {
   return {
     'width': '48px',
     'height': '48px',
@@ -4100,19 +4100,19 @@ var SuccessIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-SuccessIcon-159s
   };
 });
 
-var Header = /*#__PURE__*/(0, _react4.default)('div', 'css-Header-159sipu2', [], [], function createEmotionStyledRules() {
+var Header = /*#__PURE__*/(0, _react4.default)('div', 'css-Header-1t1dfi92', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '24px'
   };
 });
 
-var Sum = /*#__PURE__*/(0, _react4.default)('div', 'css-Sum-159sipu3', [], [], function createEmotionStyledRules() {
+var Sum = /*#__PURE__*/(0, _react4.default)('div', 'css-Sum-1t1dfi93', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '48px'
   };
 });
 
-var CommissionTips = /*#__PURE__*/(0, _react4.default)('div', 'css-CommissionTips-159sipu4', [], [], function createEmotionStyledRules() {
+var CommissionTips = /*#__PURE__*/(0, _react4.default)('div', 'css-CommissionTips-1t1dfi94', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '13px',
     'opacity': '0.6',
@@ -4120,7 +4120,7 @@ var CommissionTips = /*#__PURE__*/(0, _react4.default)('div', 'css-CommissionTip
   };
 });
 
-var Section = /*#__PURE__*/(0, _react4.default)('div', 'css-Section-159sipu5', [], [], function createEmotionStyledRules() {
+var Section = /*#__PURE__*/(0, _react4.default)('div', 'css-Section-1t1dfi95', [], [], function createEmotionStyledRules() {
   return {
     'position': 'relative',
     'paddingLeft': '160px',
@@ -4128,7 +4128,7 @@ var Section = /*#__PURE__*/(0, _react4.default)('div', 'css-Section-159sipu5', [
   };
 });
 
-var SectionLabel = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionLabel-159sipu6', [], [], function createEmotionStyledRules() {
+var SectionLabel = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionLabel-1t1dfi96', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '15px',
     'position': 'absolute',
@@ -4136,20 +4136,20 @@ var SectionLabel = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionLabel-15
   };
 });
 
-var SectionValue = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionValue-159sipu7', [], [], function createEmotionStyledRules() {
+var SectionValue = /*#__PURE__*/(0, _react4.default)('div', 'css-SectionValue-1t1dfi97', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '15px'
   };
 });
 
-var Instruction = /*#__PURE__*/(0, _react4.default)('div', 'css-Instruction-159sipu8', [], [], function createEmotionStyledRules() {
+var Instruction = /*#__PURE__*/(0, _react4.default)('div', 'css-Instruction-1t1dfi98', [], [], function createEmotionStyledRules() {
   return {
     'marginBottom': '40px',
     'fontSize': '15px'
   };
 });
 
-var RepeatPayment = /*#__PURE__*/(0, _react4.default)('button', 'css-RepeatPayment-159sipu9', [], [], function createEmotionStyledRules() {
+var RepeatPayment = /*#__PURE__*/(0, _react4.default)('button', 'css-RepeatPayment-1t1dfi99', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '13px',
     'backgroundColor': 'rgba(0, 0, 0, 0.08)',
@@ -4294,13 +4294,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var WithdrawTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-WithdrawTitle-ym0wkv0', [], [], function createEmotionStyledRules() {
+var WithdrawTitle = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-WithdrawTitle-emigev0', [], [], function createEmotionStyledRules() {
   return {
     'textAlign': 'center'
   };
 });
 
-var WithdrawLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-WithdrawLayout-ym0wkv1', [], [], function createEmotionStyledRules() {
+var WithdrawLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-WithdrawLayout-emigev1', [], [], function createEmotionStyledRules() {
   return {
     'width': '440px',
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
@@ -4314,14 +4314,14 @@ var WithdrawLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-WithdrawLa
   };
 });
 
-var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-ym0wkv2', [], [], function createEmotionStyledRules() {
+var InputField = /*#__PURE__*/(0, _react4.default)('div', 'css-InputField-emigev2', [], [], function createEmotionStyledRules() {
   return {
     'margin': '20px 0',
     'position': 'relative'
   };
 });
 
-var SumInput = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-SumInput-ym0wkv3', [], [], function createEmotionStyledRules() {
+var SumInput = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-SumInput-emigev3', [], [], function createEmotionStyledRules() {
   return {
     'maxWidth': '200px',
     'paddingRight': '20px',
@@ -4330,7 +4330,7 @@ var SumInput = /*#__PURE__*/(0, _react4.default)(_.Input, 'css-SumInput-ym0wkv3'
   };
 });
 
-var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-ym0wkv4', [], [], function createEmotionStyledRules() {
+var Currency = /*#__PURE__*/(0, _react4.default)('span', 'css-Currency-emigev4', [], [], function createEmotionStyledRules() {
   return {
     'fontSize': '12px',
     'position': 'absolute',
@@ -4525,7 +4525,7 @@ var _ = __webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var HistoryLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-HistoryLayout-osfi610', [], [], function createEmotionStyledRules() {
+var HistoryLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-HistoryLayout-8h4kxe0', [], [], function createEmotionStyledRules() {
   return {
     'width': '530px',
     'maxHeight': '622px',
@@ -4535,7 +4535,7 @@ var HistoryLayout = /*#__PURE__*/(0, _react4.default)(_.Island, 'css-HistoryLayo
   };
 });
 
-var HistoryTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryTitle-osfi611', [], [], function createEmotionStyledRules() {
+var HistoryTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryTitle-8h4kxe1', [], [], function createEmotionStyledRules() {
   return {
     'paddingLeft': '12px',
     'color': 'rgba(0, 0, 0, 0.4)',
@@ -4545,7 +4545,7 @@ var HistoryTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryTitle-os
   };
 });
 
-var HistoryItem = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItem-osfi612', [], [], function createEmotionStyledRules() {
+var HistoryItem = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItem-8h4kxe2', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'msFlexPack': 'distribute',
@@ -4565,7 +4565,7 @@ var HistoryItem = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItem-osfi
   };
 });
 
-var HistoryItemIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemIcon-osfi613', [], [function (_ref) {
+var HistoryItemIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemIcon-8h4kxe3', [], [function (_ref) {
   var bankSmLogoUrl = _ref.bankSmLogoUrl;
   return bankSmLogoUrl;
 }], function createEmotionStyledRules(x0) {
@@ -4580,7 +4580,7 @@ var HistoryItemIcon = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemI
   };
 });
 
-var HistoryItemTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemTitle-osfi614', [], [], function createEmotionStyledRules() {
+var HistoryItemTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemTitle-8h4kxe4', [], [], function createEmotionStyledRules() {
   return {
     'width': '290px',
     'overflow': 'hidden',
@@ -4588,13 +4588,13 @@ var HistoryItemTitle = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItem
   };
 });
 
-var HistoryItemTime = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemTime-osfi615', [], [], function createEmotionStyledRules() {
+var HistoryItemTime = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemTime-8h4kxe5', [], [], function createEmotionStyledRules() {
   return {
     'width': '50px'
   };
 });
 
-var HistoryItemSum = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemSum-osfi616', [], [], function createEmotionStyledRules() {
+var HistoryItemSum = /*#__PURE__*/(0, _react4.default)('div', 'css-HistoryItemSum-8h4kxe6', [], [], function createEmotionStyledRules() {
   return {
     'width': '50px',
     'overflow': 'hidden',
@@ -4713,7 +4713,7 @@ var _ = __webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var HeaderLayout = /*#__PURE__*/(0, _react4.default)('header', 'css-HeaderLayout-13h75ts0', [], [], function createEmotionStyledRules() {
+var HeaderLayout = /*#__PURE__*/(0, _react4.default)('header', 'css-HeaderLayout-1ey78i0', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'WebkitBoxPack': 'justify',
@@ -4731,13 +4731,13 @@ var HeaderLayout = /*#__PURE__*/(0, _react4.default)('header', 'css-HeaderLayout
   };
 });
 
-var Balance = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-Balance-13h75ts1', [], [], function createEmotionStyledRules() {
+var Balance = /*#__PURE__*/(0, _react4.default)(_.Title, 'css-Balance-1ey78i1', [], [], function createEmotionStyledRules() {
   return {
     'margin': '0'
   };
 });
 
-var BalanceSum = /*#__PURE__*/(0, _react4.default)('span', 'css-BalanceSum-13h75ts2', [], [], function createEmotionStyledRules() {
+var BalanceSum = /*#__PURE__*/(0, _react4.default)('span', 'css-BalanceSum-1ey78i2', [], [], function createEmotionStyledRules() {
   return {
     'fontWeight': 'bold'
   };
@@ -4792,7 +4792,7 @@ var _react4 = _interopRequireDefault(_react3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var User = /*#__PURE__*/(0, _react4.default)('div', 'css-User-f3jpmy0', [], [], function createEmotionStyledRules() {
+var User = /*#__PURE__*/(0, _react4.default)('div', 'css-User-3gawja0', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'WebkitBoxAlign': 'center',
@@ -4803,7 +4803,7 @@ var User = /*#__PURE__*/(0, _react4.default)('div', 'css-User-f3jpmy0', [], [], 
   };
 });
 
-var Avatar = /*#__PURE__*/(0, _react4.default)('img', 'css-Avatar-f3jpmy1', [], [], function createEmotionStyledRules() {
+var Avatar = /*#__PURE__*/(0, _react4.default)('img', 'css-Avatar-3gawja1', [], [], function createEmotionStyledRules() {
   return {
     'width': '42px',
     'height': '42px',
@@ -4856,11 +4856,7 @@ var _ = __webpack_require__(3);
 
 __webpack_require__(128);
 
-var _cards = __webpack_require__(129);
-
-var _cards2 = _interopRequireDefault(_cards);
-
-var _transactions = __webpack_require__(130);
+var _transactions = __webpack_require__(129);
 
 var _transactions2 = _interopRequireDefault(_transactions);
 
@@ -4871,6 +4867,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import cardsData from '../../models/data/cards';
+
 
 /* eslint-disable */
 (0, _emotion.injectGlobal)([], [], function createEmotionStyledRules() {
@@ -4887,7 +4886,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 });
 /* eslint-enable */
 
-var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-itucfn0', [], [], function createEmotionStyledRules() {
+var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-1c85zoa0', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'minHeight': '100%',
@@ -4895,7 +4894,7 @@ var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-itucfn0', [], 
   };
 });
 
-var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-itucfn1', [], [], function createEmotionStyledRules() {
+var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-1c85zoa1', [], [], function createEmotionStyledRules() {
   return {
     'WebkitBoxFlex': '1',
     'msFlexPositive': '1',
@@ -4903,7 +4902,7 @@ var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-itucfn1', 
   };
 });
 
-var Workspace = /*#__PURE__*/(0, _react4.default)('div', 'css-Workspace-itucfn2', [], [], function createEmotionStyledRules() {
+var Workspace = /*#__PURE__*/(0, _react4.default)('div', 'css-Workspace-1c85zoa2', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'msFlexWrap': 'wrap',
@@ -4926,30 +4925,38 @@ var App = function (_Component) {
   function App() {
     _classCallCheck(this, App);
 
-    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+    // console.log(t);
+    // this.cardsData = this.props.cardsData;
+    // const cardsList = this.prepareCardsData(cardsData);
+    // const cardHistory = transactionsData.map((data) => {
+    //   const card = cardsList.find((it) => it.id === data.cardId);
+    //   return card ? Object.assign({}, data, {card}) : data;
+    // });
 
-    var cardsList = _this.prepareCardsData(_cards2.default);
-    var cardHistory = _transactions2.default.map(function (data) {
-      var card = cardsList.find(function (it) {
-        return it.id === data.cardId;
-      });
-      return card ? Object.assign({}, data, { card: card }) : data;
-    });
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.onPaymentSuccess = _this.onPaymentSuccess.bind(_this);
 
     _this.state = {
-      cardsList: cardsList,
-      cardHistory: cardHistory,
+      cardsList: [],
+      cardHistory: [],
       activeCardIndex: 0
     };
     return _this;
   }
 
   _createClass(App, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+
+      this.setState({
+        cardsList: this.prepareCardsData(this.props.data)
+      });
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      this.updateCardsList();
+      // this.updateCardsList();
       this.updateCardHistory();
     }
   }, {
@@ -5125,12 +5132,6 @@ module.exports = require("card-info");
 
 /***/ }),
 /* 129 */
-/***/ (function(module, exports) {
-
-module.exports = [{"id":1,"cardNumber":"546925000000000","balance":"300"},{"id":2,"cardNumber":"676230000000000","balance":"50"},{"id":3,"cardNumber":"405870000000000","balance":"1553"},{"id":4,"cardNumber":"550064000000000","balance":"2"},{"id":5,"cardNumber":"437784000000000","balance":"4545"},{"id":6,"cardNumber":"676803000000000","balance":"57"}]
-
-/***/ }),
-/* 130 */
 /***/ (function(module, exports) {
 
 module.exports = [{"id":1,"cardId":1,"type":"prepaidCard","data":"220003000000003","time":"2017-08-9T05:28:31+03:00","sum":"2345"},{"id":2,"cardId":1,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-8T06:28:31+03:00","sum":"-25"},{"id":3,"cardId":1,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:31+03:00","sum":"-174"},{"id":4,"cardId":1,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T12:28:31+03:00","sum":"2345"},{"id":5,"cardId":1,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T11:28:31+03:00","sum":"-25"},{"id":6,"cardId":1,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:29:31+03:00","sum":"-174"},{"id":7,"cardId":1,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:35+03:00","sum":"-174"},{"id":8,"cardId":2,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T13:28:31+03:00","sum":"2345"},{"id":9,"cardId":2,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T13:28:31+03:00","sum":"-25"},{"id":10,"cardId":2,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:31+03:00","sum":"-174"},{"id":11,"cardId":2,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T13:28:31+03:00","sum":"2345"},{"id":12,"cardId":2,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T13:28:31+03:00","sum":"-25"},{"id":13,"cardId":2,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:31+03:00","sum":"-174"},{"id":14,"cardId":3,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T13:28:31+03:00","sum":"2345"},{"id":15,"cardId":3,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T13:28:31+03:00","sum":"-25"},{"id":16,"cardId":4,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T13:28:31+03:00","sum":"2345"},{"id":17,"cardId":4,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T13:28:31+03:00","sum":"-25"},{"id":18,"cardId":4,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:31+03:00","sum":"-174"},{"id":19,"cardId":4,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T13:28:31+03:00","sum":"2345"},{"id":20,"cardId":4,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T13:28:31+03:00","sum":"-25"},{"id":21,"cardId":4,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:31+03:00","sum":"-174"},{"id":22,"cardId":1,"type":"prepaidCard","data":"676230000000000","time":"2017-10-15T20:09:39.017Z","sum":"30"},{"id":23,"cardId":1,"type":"prepaidCard","data":"676803000000000","time":"2017-10-15T20:09:58.350Z","sum":"50"},{"id":24,"cardId":1,"type":"prepaidCard","data":"405870000000000","time":"2017-10-15T20:10:11.503Z","sum":"30"},{"id":25,"cardId":2,"type":"prepaidCard","data":"546925000000000","time":"2017-10-15T20:11:59.526Z","sum":"50"},{"id":26,"cardId":3,"type":"prepaidCard","data":"676803000000000","time":"2017-10-15T20:12:17.880Z","sum":"123"},{"id":27,"cardId":1,"type":"card2Card","data":"405870000000000","time":"2017-10-15T20:12:47.006Z","sum":"-130"},{"id":28,"cardId":3,"type":"card2Card","data":"546925000000000","time":"2017-10-15T20:12:47.006Z","sum":"130"}]

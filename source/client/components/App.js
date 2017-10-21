@@ -14,7 +14,7 @@ import {
 
 import './fonts.css';
 
-import cardsData from '../../models/data/cards';
+// import cardsData from '../../models/data/cards';
 import transactionsData from '../../models/data/transactions';
 
 /* eslint-disable */
@@ -58,24 +58,32 @@ class App extends Component {
    */
   constructor() {
     super();
-
-    const cardsList = this.prepareCardsData(cardsData);
-    const cardHistory = transactionsData.map((data) => {
-      const card = cardsList.find((it) => it.id === data.cardId);
-      return card ? Object.assign({}, data, {card}) : data;
-    });
+    // console.log(t);
+    // this.cardsData = this.props.cardsData;
+    // const cardsList = this.prepareCardsData(cardsData);
+    // const cardHistory = transactionsData.map((data) => {
+    //   const card = cardsList.find((it) => it.id === data.cardId);
+    //   return card ? Object.assign({}, data, {card}) : data;
+    // });
 
     this.onPaymentSuccess = this.onPaymentSuccess.bind(this);
 
     this.state = {
-      cardsList,
-      cardHistory,
+      cardsList: [],
+      cardHistory: [],
       activeCardIndex: 0,
     };
   }
 
+  componentWillMount() {
+
+    this.setState({
+      cardsList: this.prepareCardsData(this.props.data)
+    });
+  }
+
   componentDidMount() {
-    this.updateCardsList();
+    // this.updateCardsList();
     this.updateCardHistory();
   }
 

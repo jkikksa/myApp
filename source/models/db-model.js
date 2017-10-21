@@ -1,0 +1,5 @@
+class DBModel {
+    constructor() {
+
+    }
+}
