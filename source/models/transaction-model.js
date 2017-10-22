@@ -1,29 +1,53 @@
-const TRANSACTIONS_FILE = 'transactions.json';
+const Transaction = require('./transaction-db-model');
 
-const FileModel = require('./file-model');
-
-class TransactionModel extends FileModel {
+class TransactionModel {
   constructor() {
-    super(TRANSACTIONS_FILE);
+    this.Transaction = Transaction;
+    this._cacheData = null;
   }
 
-  async getTransactions(cardId) {
-    const transactions = await this.readFile();
-    return transactions.filter((it) => it.cardId === cardId);
+  async init() {
+    await this.updateCache();
+  }
+
+  async updateCache() {
+    this._cacheData = await this.readDB();
+  }
+
+  async readDB() {
+    return await this.Transaction.find((err, transactions) => {
+      if (err) {
+        throw new Error(err.message);
+      }
+      return transactions;
+    });
   }
 
   async getAllTransactions() {
-    return await this.readFile();
+    return this._cacheData;
+  }
+
+  async getTransactions(cardId) {
+    const transactions = await this.getAllTransactions();
+    return transactions.filter((it) => it.cardId === cardId);
   }
 
   async createTransaction(transactionData) {
-    const transactions = await this.readFile();
-    const newTransaction = Object.assign({}, {
-      'id': this._generateId(),
+    const newTransactionData = Object.assign({}, {
+      'id': this._generateId()
     }, transactionData);
-    await this.writeFile([...transactions, newTransaction]);
+    const transaction = new this.Transaction(newTransactionData);
+    await transaction.save((err) => {
+      if (err) {
+        throw new Error(err.message);
+      }
+    });
+    await this.updateCache();
+    return transaction;
+  }
 
-    return newTransaction;
+  _generateId() {
+    return this._cacheData.reduce((max, item) => Math.max(max, item.id), 0) + 1;
   }
 }
 

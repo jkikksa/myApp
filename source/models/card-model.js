@@ -1,85 +1,94 @@
-const CARDS_FILE = 'cards.json';
+const Card = require('./card-db-model');
 
-const FileModel = require('./file-model');
-
-class CardModel extends FileModel {
+class CardModel {
   constructor() {
-    super(CARDS_FILE);
+    this.Card = Card;
+    this._cacheData = null;
   }
 
-  async removeCard(id) {
-    const cards = await this.getAllCards();
-    const cardIndex = cards.findIndex((it) => it.id === id);
-    if (cardIndex !== -1) {
-      cards.splice(cardIndex, 1);
-      await this.writeFile(cards);
-      return {
-        success: true,
-        id
-      };
-    } else {
-      return {
-        success: false,
-        id
-      };
-    }
+  async init() {
+    await this.updateCache();
   }
 
-  async increaseBalance(cardId, amount) {
-    try {
-      const cards = await this.getAll();
-      const targetCard = cards.find((it) => it.id === cardId);
+  async updateCache() {
+    this._cacheData = await this.readDB();
+  }
 
-      if (typeof targetCard === 'undefined') {
-        throw new Error('Карта не найдена');
+  async readDB() {
+    return await this.Card.find((err, cards) => {
+      if (err) {
+        throw new Error(err.message);
       }
-
-      targetCard.balance = `${Number(targetCard.balance) + amount}`;
-
-      await this.saveChanges();
-
-      return 'Баланс успешно обновлён';
-    } catch (e) {
-      throw new Error(e.message);
-    }
-  }
-
-  async decreaseBalance(cardId, amount) {
-    try {
-      const cards = await this.getAll();
-      const targetCard = cards.find((it) => it.id === cardId);
-
-      if (typeof targetCard === 'undefined') {
-        throw new Error('Карта не найдена');
-      }
-
-      targetCard.balance = `${Number(targetCard.balance) - amount}`;
-
-      await this.saveChanges();
-
-      return 'Баланс успешно обновлён';
-    } catch (e) {
-      throw new Error(e.message);
-    }
-  }
-
-  async getCard(cardId) {
-    const cards = await this.getAll();
-    return cards.find((it) => it.id === cardId);
+      return cards;
+    });
   }
 
   async getAllCards() {
-    return await this.getAll();
+    return this._cacheData;
+  }
+
+  async getCard(cardId) {
+    const cards = await this.getAllCards();
+    return cards.find((it) => it.id === cardId);
   }
 
   async createCard(cardData) {
-    const cards = await this.getAllCards();
-    const newCard = Object.assign({}, {
+    const newCardData = Object.assign({}, {
       'id': this._generateId()
     }, cardData);
-    await this.writeFile([...cards, newCard]);
+    const card = new this.Card(newCardData);
+    await card.save((err) => {
+      if (err) {
+        throw new Error(err.message);
+      }
+    });
+    await this.updateCache();
+    return card;
+  }
 
-    return newCard;
+  async removeCard(cardId) {
+    const targetCard = await this.getCard(cardId);
+    if (typeof targetCard === 'undefined') {
+      return false;
+    }
+
+    await this.Card.remove({id: cardId}, (err) => {
+      if (err) {
+        throw new Error(err.message);
+      }
+    });
+    await this.updateCache();
+    return true;
+  }
+
+  async increaseBalance(cardId, amount) {
+    const targetCard = await this.getCard(cardId);
+    targetCard.balance = `${Number(targetCard.balance) + amount}`;
+
+    await this.Card.update({id: cardId}, targetCard, (err) => {
+      if (err) {
+        throw new Error(err.message);
+      }
+    });
+
+    await this.updateCache();
+  }
+
+  async decreaseBalance(cardId, amount) {
+    const targetCard = await this.getCard(cardId);
+    targetCard.balance = `${Number(targetCard.balance) - amount}`;
+
+    await this.Card.update({id: cardId}, targetCard, (err) => {
+      if (err) {
+        throw new Error(err.message);
+      }
+    });
+
+    await this.updateCache();
+  }
+
+  _generateId() {
+    return this._cacheData.reduce((max, item) => Math.max(max, item.id), 0) + 1;
   }
 }
 

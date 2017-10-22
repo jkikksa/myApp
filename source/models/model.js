@@ -4,18 +4,14 @@ const transactionModel = new (require('./transaction-model'))();
 class Model {
   async init() {
     await Promise.all([
-      cardModel.readFile(),
-      transactionModel.readFile()
+      cardModel.init(),
+      transactionModel.init()
     ]);
   }
 
   async getCard(cardId) {
     return await cardModel.getCard(cardId);
   }
-
-  // async changeBalance(cardId, amount) {
-  //   return await cardModel.changeBalance(cardId, amount);
-  // }
 
   async increaseBalance(cardId, amount) {
     return await cardModel.increaseBalance(cardId, amount);
@@ -33,8 +29,8 @@ class Model {
     return await cardModel.createCard(card);
   }
 
-  async removeCard(id) {
-    return await cardModel.removeCard(id);
+  async removeCard(cardId) {
+    return await cardModel.removeCard(cardId);
   }
 
   async getTransactions(cardId) {
@@ -48,16 +44,6 @@ class Model {
   async createTransaction(transactionData) {
     return await transactionModel.createTransaction(transactionData);
   }
-
-  // async getTransaction(cardId) {
-  //
-  // }
-  //
-  // async createTransaction(transactionData) {
-  //
-  // }
-
-
 }
 
 module.exports = Model;

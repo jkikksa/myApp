@@ -11,7 +11,7 @@ module.exports = async (ctx) => {
     const savedCard = await ctx.Model.createCard(card);
     ctx.body = savedCard;
   } else {
-    // 400 Bad request
-    throw new Error('Невалидная карта');
+    ctx.status = 400;
+    ctx.body = ('Невалидная карта');
   }
 };
