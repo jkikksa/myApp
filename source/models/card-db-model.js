@@ -6,12 +6,20 @@ mongoose.connect('mongodb://localhost/app', {
 mongoose.Promise = global.Promise;
 
 const cardSchema = new mongoose.Schema({
-  id: Number,
+  id: {
+    type: Number,
+    unique: true,
+    required: true
+  },
   cardNumber: {
     type: String,
-    required: true,
+    unique: true,
+    required: true
   },
-  balance: String
+  balance: {
+    type: String,
+    required: true
+  }
 });
 
 const Card = mongoose.model('Card', cardSchema);

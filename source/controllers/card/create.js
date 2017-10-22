@@ -8,10 +8,19 @@ module.exports = async (ctx) => {
   const card = ctx.request.body;
 
   if (isCardValid(card)) {
-    const savedCard = await ctx.Model.createCard(card);
-    ctx.body = savedCard;
+    try {
+      const savedCard = await ctx.Model.createCard(card);
+      ctx.body = savedCard;
+    } catch (err) {
+      if (err.code === 11000) {
+        ctx.status = 404;
+        ctx.body = 'Такая карта уже существует';
+      } else {
+        throw new Error(err);
+      }
+    }
   } else {
-    ctx.status = 400;
-    ctx.body = ('Невалидная карта');
+    ctx.status = 404;
+    ctx.body = 'Невалидная карта';
   }
 };

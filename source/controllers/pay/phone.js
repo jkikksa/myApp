@@ -2,14 +2,14 @@ module.exports = async (ctx) => {
   const cardId = Number(ctx.params.id);
 
   const card = await ctx.Model.getCard(cardId);
-  const {phoneNumber, sum} = ctx.request.body;
-  const amount = Number(sum);
-  const balance = Number(card.balance);
-
   if (typeof card === 'undefined') {
     ctx.status = 404;
     ctx.body = 'Карта не найдена';
   }
+
+  const {phoneNumber, sum} = ctx.request.body;
+  const amount = Number(sum);
+  const balance = Number(card.balance);
 
   if (amount <= balance) {
     await ctx.Model.decreaseBalance(cardId, amount);

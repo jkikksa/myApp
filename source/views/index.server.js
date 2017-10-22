@@ -4838,6 +4838,10 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _axios = __webpack_require__(20);
 
 var _axios2 = _interopRequireDefault(_axios);
@@ -4855,14 +4859,6 @@ var _cardInfo2 = _interopRequireDefault(_cardInfo);
 var _ = __webpack_require__(3);
 
 __webpack_require__(128);
-
-var _cards = __webpack_require__(129);
-
-var _cards2 = _interopRequireDefault(_cards);
-
-var _transactions = __webpack_require__(130);
-
-var _transactions2 = _interopRequireDefault(_transactions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4887,7 +4883,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 });
 /* eslint-enable */
 
-var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-19q8ju90', [], [], function createEmotionStyledRules() {
+var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-1c9lhte0', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'minHeight': '100%',
@@ -4895,7 +4891,7 @@ var Wallet = /*#__PURE__*/(0, _react4.default)('div', 'css-Wallet-19q8ju90', [],
   };
 });
 
-var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-19q8ju91', [], [], function createEmotionStyledRules() {
+var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-1c9lhte1', [], [], function createEmotionStyledRules() {
   return {
     'WebkitBoxFlex': '1',
     'msFlexPositive': '1',
@@ -4903,7 +4899,7 @@ var CardPane = /*#__PURE__*/(0, _react4.default)('div', 'css-CardPane-19q8ju91',
   };
 });
 
-var Workspace = /*#__PURE__*/(0, _react4.default)('div', 'css-Workspace-19q8ju92', [], [], function createEmotionStyledRules() {
+var Workspace = /*#__PURE__*/(0, _react4.default)('div', 'css-Workspace-1c9lhte2', [], [], function createEmotionStyledRules() {
   return {
     'display': '-webkit-box; display: -ms-flexbox; display: flex',
     'msFlexWrap': 'wrap',
@@ -4928,25 +4924,29 @@ var App = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
-    var cardsList = _this.prepareCardsData(_cards2.default);
-    var cardHistory = _transactions2.default.map(function (data) {
-      var card = cardsList.find(function (it) {
-        return it.id === data.cardId;
-      });
-      return card ? Object.assign({}, data, { card: card }) : data;
-    });
+    _this.onPaymentSuccess = function () {
+      _this.updateCardsList();
+      _this.updateCardHistory();
+    };
 
-    _this.onPaymentSuccess = _this.onPaymentSuccess.bind(_this);
+    // this.onPaymentSuccess = this.onPaymentSuccess.bind(this);
 
     _this.state = {
-      cardsList: cardsList,
-      cardHistory: cardHistory,
+      cardsList: [],
+      cardHistory: [],
       activeCardIndex: 0
     };
     return _this;
   }
 
   _createClass(App, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.setState({
+        cardsList: this.prepareCardsData(this.props.data)
+      });
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.updateCardsList();
@@ -5017,12 +5017,6 @@ var App = function (_Component) {
           }
         };
       });
-    }
-  }, {
-    key: 'onPaymentSuccess',
-    value: function onPaymentSuccess() {
-      this.updateCardsList();
-      this.updateCardHistory();
     }
 
     /**
@@ -5103,6 +5097,10 @@ var App = function (_Component) {
   return App;
 }(_react.Component);
 
+App.propTypes = {
+  data: _propTypes2.default.array
+};
+
 exports.default = App;
 
 /***/ }),
@@ -5122,18 +5120,6 @@ module.exports = require("card-info");
 /***/ (function(module, exports) {
 
 
-
-/***/ }),
-/* 129 */
-/***/ (function(module, exports) {
-
-module.exports = [{"id":1,"cardNumber":"546925000000000","balance":"300"},{"id":2,"cardNumber":"676230000000000","balance":"50"},{"id":3,"cardNumber":"405870000000000","balance":"1553"},{"id":4,"cardNumber":"550064000000000","balance":"2"},{"id":5,"cardNumber":"437784000000000","balance":"4545"},{"id":6,"cardNumber":"676803000000000","balance":"57"}]
-
-/***/ }),
-/* 130 */
-/***/ (function(module, exports) {
-
-module.exports = [{"id":1,"cardId":1,"type":"prepaidCard","data":"220003000000003","time":"2017-08-9T05:28:31+03:00","sum":"2345"},{"id":2,"cardId":1,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-8T06:28:31+03:00","sum":"-25"},{"id":3,"cardId":1,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:31+03:00","sum":"-174"},{"id":4,"cardId":1,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T12:28:31+03:00","sum":"2345"},{"id":5,"cardId":1,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T11:28:31+03:00","sum":"-25"},{"id":6,"cardId":1,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:29:31+03:00","sum":"-174"},{"id":7,"cardId":1,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:35+03:00","sum":"-174"},{"id":8,"cardId":2,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T13:28:31+03:00","sum":"2345"},{"id":9,"cardId":2,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T13:28:31+03:00","sum":"-25"},{"id":10,"cardId":2,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:31+03:00","sum":"-174"},{"id":11,"cardId":2,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T13:28:31+03:00","sum":"2345"},{"id":12,"cardId":2,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T13:28:31+03:00","sum":"-25"},{"id":13,"cardId":2,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:31+03:00","sum":"-174"},{"id":14,"cardId":3,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T13:28:31+03:00","sum":"2345"},{"id":15,"cardId":3,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T13:28:31+03:00","sum":"-25"},{"id":16,"cardId":4,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T13:28:31+03:00","sum":"2345"},{"id":17,"cardId":4,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T13:28:31+03:00","sum":"-25"},{"id":18,"cardId":4,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:31+03:00","sum":"-174"},{"id":19,"cardId":4,"type":"prepaidCard","data":"220003000000003","time":"2017-08-25T13:28:31+03:00","sum":"2345"},{"id":20,"cardId":4,"type":"paymentMobile","data":"+7(921)3333333","time":"2017-08-25T13:28:31+03:00","sum":"-25"},{"id":21,"cardId":4,"type":"card2Card","data":"220003000000005","time":"2017-08-25T13:28:31+03:00","sum":"-174"},{"id":22,"cardId":1,"type":"paymentMobile","time":"2017-10-22T14:12:53.069Z","sum":"-100"},{"id":23,"cardId":1,"type":"paymentMobile","time":"2017-10-22T14:12:57.789Z","sum":"-100"}]
 
 /***/ })
 /******/ ]);

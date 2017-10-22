@@ -8,7 +8,7 @@ module.exports = async (ctx) => {
 
     if (typeof card === 'undefined' || typeof receiverCard === 'undefined') {
       ctx.status = 404;
-      ctx.body = ('Карты не найдены');
+      ctx.body = 'Карты не найдены';
     }
 
     const amount = Number(sum);
@@ -37,7 +37,7 @@ module.exports = async (ctx) => {
       ctx.body = 'Деньги успешно переведены';
     } else {
       ctx.status = 400;
-      ctx.body = ('Недостаточно денег на карте');
+      ctx.body = 'Недостаточно денег на карте';
     }
 
   } else {

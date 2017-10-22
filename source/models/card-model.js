@@ -36,14 +36,14 @@ class CardModel {
     const newCardData = Object.assign({}, {
       'id': this._generateId()
     }, cardData);
-    const card = new this.Card(newCardData);
-    await card.save((err) => {
+    const newCard = new this.Card(newCardData);
+    return await newCard.save(async (err, card) => {
       if (err) {
-        throw new Error(err.message);
+        return err;
       }
+      await this.updateCache();
+      return card;
     });
-    await this.updateCache();
-    return card;
   }
 
   async removeCard(cardId) {

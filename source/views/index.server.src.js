@@ -32,6 +32,5 @@ module.exports = (appData) => {
         <script src='js/script.js'></script>
       </body>
     </html>
-
   );
 };

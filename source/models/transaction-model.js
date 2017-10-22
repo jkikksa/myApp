@@ -36,14 +36,14 @@ class TransactionModel {
     const newTransactionData = Object.assign({}, {
       'id': this._generateId()
     }, transactionData);
-    const transaction = new this.Transaction(newTransactionData);
-    await transaction.save((err) => {
+    const newTransaction = new this.Transaction(newTransactionData);
+    return await newTransaction.save(async (err, transaction) => {
       if (err) {
-        throw new Error(err.message);
+        return err;
       }
+      await this.updateCache();
+      return transaction;
     });
-    await this.updateCache();
-    return transaction;
   }
 
   _generateId() {

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import styled from 'emotion/react';
 import {injectGlobal} from 'emotion';
@@ -13,9 +14,6 @@ import {
 } from './';
 
 import './fonts.css';
-
-import cardsData from '../../models/data/cards';
-import transactionsData from '../../models/data/transactions';
 
 /* eslint-disable */
 injectGlobal`
@@ -59,19 +57,24 @@ class App extends Component {
   constructor() {
     super();
 
-    const cardsList = this.prepareCardsData(cardsData);
-    const cardHistory = transactionsData.map((data) => {
-      const card = cardsList.find((it) => it.id === data.cardId);
-      return card ? Object.assign({}, data, {card}) : data;
-    });
+    this.onPaymentSuccess = () => {
+      this.updateCardsList();
+      this.updateCardHistory();
+    };
 
-    this.onPaymentSuccess = this.onPaymentSuccess.bind(this);
+    // this.onPaymentSuccess = this.onPaymentSuccess.bind(this);
 
     this.state = {
-      cardsList,
-      cardHistory,
+      cardsList: [],
+      cardHistory: [],
       activeCardIndex: 0,
     };
+  }
+
+  componentWillMount() {
+    this.setState({
+      cardsList: this.prepareCardsData(this.props.data)
+    });
   }
 
   componentDidMount() {
@@ -138,11 +141,6 @@ class App extends Component {
     });
   }
 
-  onPaymentSuccess() {
-    this.updateCardsList();
-    this.updateCardHistory();
-  }
-
   /**
    * Обработчик переключения карты
    *
@@ -193,5 +191,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  data: PropTypes.array,
+};
 
 export default App;

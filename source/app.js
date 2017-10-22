@@ -14,7 +14,6 @@ const transferController = require('./controllers/pay/transfer');
 const createCardController = require('./controllers/card/create');
 const removeCardController = require('./controllers/card/remove');
 
-
 const getTransactionsController = require('./controllers/transaction/get');
 const getAllTransactionsController = require('./controllers/transaction/get-all');
 const createTransactionController = require('./controllers/transaction/create');
@@ -30,8 +29,9 @@ router.param('id', (id, ctx, next) => {
 
 const indexView = require('./views/index.server.js');
 
-router.get('/', (ctx) => {
-  const indexViewHtml = renderToStaticMarkup(indexView());
+router.get('/', async (ctx) => {
+  const cards = await ctx.Model.getAllCards();
+  const indexViewHtml = renderToStaticMarkup(indexView(cards));
   ctx.body = indexViewHtml;
 });
 
