@@ -52,6 +52,12 @@ class Withdraw extends Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      selectedCard: nextProps.inactiveCardsList[0]
+    });
+  }
+
   /**
    * Обработка изменения значения в input
    * @param {Event} event событие изменения значения input
