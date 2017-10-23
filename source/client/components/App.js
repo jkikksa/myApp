@@ -53,8 +53,9 @@ const Workspace = styled.div`
 class App extends Component {
   /**
    * Конструктор
+   * @param {Object} props свойства компонента
    */
-  constructor() {
+  constructor(props) {
     super();
 
     this.onPaymentSuccess = () => {
@@ -62,23 +63,14 @@ class App extends Component {
       this.updateCardHistory();
     };
 
-    // this.onPaymentSuccess = this.onPaymentSuccess.bind(this);
-
     this.state = {
-      cardsList: [],
+      cardsList: this.prepareCardsData(props.data),
       cardHistory: [],
       activeCardIndex: 0,
     };
   }
 
-  componentWillMount() {
-    this.setState({
-      cardsList: this.prepareCardsData(this.props.data)
-    });
-  }
-
   componentDidMount() {
-    this.updateCardsList();
     this.updateCardHistory();
   }
 
