@@ -70,18 +70,6 @@ app.use(bodyParser());
 app.use(router.routes());
 app.use(serve('./public'));
 
-// app.listen(3000, () => {
-//   logger.log('info', 'Application started');
-// });
-
-// const listenCallback = function () {
-//   const {
-//     port
-//   } = this.address();
-
-//   logger.info(`Application started on ${port}`);
-// };
-
 const LISTEN_PORT = 3000;
 
 if (!module.parent && process.env.NODE_HTTPS) {
