@@ -5,6 +5,7 @@
   "author": "",
   "scripts": {
     "start": "node ./source/app.js",
+    "start:https": "cross-env NODE_HTTPS=1 npm start",
     "debug": "node --inspect ./source/app.js",
     "watch": "nodemon --watch source ./source/app.js",
     "build": "webpack",
@@ -43,6 +44,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "card-info": "git+https://github.com/iniel/card-info.git",
+    "cross-env": "^5.1.0",
     "css-loader": "^0.28.7",
     "emotion": "^7.3.2",
     "eslint": "^4.8.0",

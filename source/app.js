@@ -1,3 +1,7 @@
+const fs = require('fs');
+const http = require('http');
+const https = require('https');
+
 const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
@@ -66,8 +70,39 @@ app.use(bodyParser());
 app.use(router.routes());
 app.use(serve('./public'));
 
-app.listen(3000, () => {
-  logger.log('info', 'Application started');
-});
+// app.listen(3000, () => {
+//   logger.log('info', 'Application started');
+// });
+
+// const listenCallback = function () {
+//   const {
+//     port
+//   } = this.address();
+
+//   logger.info(`Application started on ${port}`);
+// };
+
+const LISTEN_PORT = 3000;
+
+if (!module.parent && process.env.NODE_HTTPS) {
+  const protocolSecrets = {
+    key: fs.readFileSync('keys/key.key'),
+    cert: fs.readFileSync('keys/cert.crt')
+  };
+
+  https
+      .createServer(protocolSecrets, app.callback())
+      .listen(LISTEN_PORT, () => {
+        logger.log('info', 'Application started HTTPS');
+      });
+}
+
+if (!module.parent && !process.env.NODE_HTTPS) {
+  http
+      .createServer(app.callback())
+      .listen(LISTEN_PORT, () => {
+        logger.log('info', 'Application started HTTP');
+      });
+}
 
 module.exports = app;
