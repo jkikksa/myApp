@@ -15,6 +15,7 @@ const createCardController = require('./controllers/card/create');
 const removeCardController = require('./controllers/card/remove');
 
 const getTransactionsController = require('./controllers/transaction/get');
+const getFileTransactionsController = require('./controllers/transaction/get-file');
 const getAllTransactionsController = require('./controllers/transaction/get-all');
 const createTransactionController = require('./controllers/transaction/create');
 
@@ -39,6 +40,7 @@ router.get('/cards/', getCardsController);
 router.post('/cards/', createCardController);
 router.delete('/cards/:id/', removeCardController);
 router.get('/cards/:id/transactions/', getTransactionsController);
+router.get('/cards/:id/file-transactions/', getFileTransactionsController);
 router.get('/cards/transactions/', getAllTransactionsController);
 router.post('/cards/:id/transactions/', createTransactionController);
 

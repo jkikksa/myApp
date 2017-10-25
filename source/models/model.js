@@ -37,6 +37,10 @@ class Model {
     return await transactionModel.getTransactions(cardId);
   }
 
+  getFileTransactions(cardId) {
+    return transactionModel.getFileTransactions(cardId);
+  }
+
   async getAllTransactions() {
     return await transactionModel.getAllTransactions();
   }

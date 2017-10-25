@@ -32,6 +32,14 @@ class TransactionModel {
     return transactions.filter((it) => it.cardId === cardId);
   }
 
+  getFileTransactions(cardId) {
+    const data = this.Transaction
+        .find({cardId})
+        .lean()
+        .cursor();
+    return data;
+  }
+
   async createTransaction(transactionData) {
     const newTransactionData = Object.assign({}, {
       'id': this._generateId()
