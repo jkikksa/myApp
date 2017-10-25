@@ -21,8 +21,8 @@ class Model {
     return await cardModel.decreaseBalance(cardId, amount);
   }
 
-  async getAllCards() {
-    return await cardModel.getAllCards();
+  getAllCards() {
+    return cardModel.getAllCards();
   }
 
   async createCard(card) {

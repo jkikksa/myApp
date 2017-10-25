@@ -23,8 +23,12 @@ class CardModel {
     });
   }
 
-  async getAllCards() {
-    return this._cacheData;
+  getAllCards() {
+    const data = this.Card
+        .find()
+        .lean()
+        .cursor();
+    return data;
   }
 
   async getCard(cardId) {
