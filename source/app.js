@@ -1,7 +1,7 @@
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
-
+const mongoose = require('mongoose');
 const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
@@ -9,18 +9,21 @@ const serve = require('koa-static');
 const {renderToStaticMarkup} = require('react-dom/server');
 
 const Model = require('./models/model');
+
 const getCardsController = require('./controllers/card/get-all');
-
-const payPhoneController = require('./controllers/pay/phone');
-const fillPhoneController = require('./controllers/pay/fill');
-const transferController = require('./controllers/pay/transfer');
-
 const createCardController = require('./controllers/card/create');
 const removeCardController = require('./controllers/card/remove');
-
 const getTransactionsController = require('./controllers/transaction/get');
 const getAllTransactionsController = require('./controllers/transaction/get-all');
 const createTransactionController = require('./controllers/transaction/create');
+const cardToPhoneController = require('./controllers/operations/card-to-phone');
+const phoneToCardController = require('./controllers/operations/phone-to-card');
+const cardToCardController = require('./controllers/operations/card-to-card');
+
+mongoose.connect('mongodb://localhost/app', {
+  useMongoClient: true
+});
+mongoose.Promise = global.Promise;
 
 const app = new Koa();
 const router = new Router();
@@ -45,10 +48,9 @@ router.delete('/cards/:id/', removeCardController);
 router.get('/cards/:id/transactions/', getTransactionsController);
 router.get('/cards/transactions/', getAllTransactionsController);
 router.post('/cards/:id/transactions/', createTransactionController);
-
-router.post('/cards/:id/pay/', payPhoneController);
-router.post('/cards/:id/fill/', fillPhoneController);
-router.post('/cards/:id/transfer/', transferController);
+router.post('/cards/:id/pay/', cardToPhoneController);
+router.post('/cards/:id/fill/', phoneToCardController);
+router.post('/cards/:id/transfer/', cardToCardController);
 
 app.use(async (ctx, next) => {
   try {
@@ -61,8 +63,7 @@ app.use(async (ctx, next) => {
 });
 
 app.use(async (ctx, next) => {
-  ctx.Model = new Model();
-  await ctx.Model.init();
+  ctx.Model = Model;
   await next();
 });
 

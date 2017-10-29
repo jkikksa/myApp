@@ -27,13 +27,14 @@ module.exports = async (ctx) => {
       ctx.body = await ctx.Model.createTransaction(transactionData);
     } catch (err) {
       if (err.code === 11000) {
-        ctx.status = 404;
+        ctx.status = 400;
         ctx.body = 'Такая транзакция уже существует';
       } else {
         throw new Error(err);
       }
     }
   } else {
-    throw new Error('Неправильный формат данных');
+    ctx.status = 400;
+    ctx.body = 'Неправильный формат данных';
   }
 };

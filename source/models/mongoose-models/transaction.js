@@ -1,10 +1,5 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/app', {
-  useMongoClient: true
-});
-mongoose.Promise = global.Promise;
-
 const transactionSchema = new mongoose.Schema({
   id: {
     type: Number,

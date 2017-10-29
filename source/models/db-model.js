@@ -10,9 +10,16 @@ class DbModel {
         .exec();
   }
 
-  async _getById(id) {
+  async _getOneById(id) {
     return await this._MongooseModel
-        .find({id})
+        .findOne({id})
+        .lean()
+        .exec();
+  }
+
+  async _getAllByCond(cond) {
+    return await this._MongooseModel
+        .find(cond)
         .lean()
         .exec();
   }
@@ -21,7 +28,26 @@ class DbModel {
     return await this._MongooseModel
         .create(item);
   }
-}
 
+  async _remove(id) {
+    return await this._MongooseModel
+        .remove({id});
+  }
+
+  async _update(cond, set) {
+    await this._MongooseModel
+        .update(cond, {$set: set});
+  }
+
+  async _generateId() {
+    const data = await this._MongooseModel
+        .find({})
+        .sort({id: -1})
+        .limit(1)
+        .lean()
+        .exec();
+    return data[0].id + 1;
+  }
+}
 
 module.exports = DbModel;

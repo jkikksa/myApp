@@ -1,54 +1,24 @@
-const Transaction = require('./transaction-db-model');
+const DbModel = require('./db-model');
+const TransactionMongooseModel = require('./mongoose-models/transaction');
 
-class TransactionModel {
+class TransactionModel extends DbModel {
   constructor() {
-    this.Transaction = Transaction;
-    this._cacheData = null;
-  }
-
-  async init() {
-    await this.updateCache();
-  }
-
-  async updateCache() {
-    this._cacheData = await this.readDB();
-  }
-
-  async readDB() {
-    return await this.Transaction.find((err, transactions) => {
-      if (err) {
-        throw new Error(err.message);
-      }
-      return transactions;
-    });
+    super(TransactionMongooseModel);
   }
 
   async getAllTransactions() {
-    return this._cacheData;
+    return await this._getAll();
   }
 
   async getTransactions(cardId) {
-    const transactions = await this.getAllTransactions();
-    return transactions.filter((it) => it.cardId === cardId);
+    return await this._getAllByCond({cardId});
   }
 
   async createTransaction(transactionData) {
     const newTransactionData = Object.assign({}, {
-      'id': this._generateId()
+      'id': await this._generateId()
     }, transactionData);
-    const transaction = new this.Transaction(newTransactionData);
-    const newTransaction = await transaction.save((err, data) => {
-      if (err) {
-        return err;
-      }
-      return data;
-    });
-    await this.updateCache();
-    return newTransaction;
-  }
-
-  _generateId() {
-    return this._cacheData.reduce((max, item) => Math.max(max, item.id), 0) + 1;
+    return await this._create(newTransactionData);
   }
 }
 

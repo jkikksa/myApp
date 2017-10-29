@@ -2,46 +2,39 @@ const cardModel = new (require('./card-model'))();
 const transactionModel = new (require('./transaction-model'))();
 
 class Model {
-  async init() {
-    await Promise.all([
-      cardModel.init(),
-      transactionModel.init()
-    ]);
-  }
-
-  async getCard(cardId) {
+  static async getCard(cardId) {
     return await cardModel.getCard(cardId);
   }
 
-  async increaseBalance(cardId, amount) {
+  static async increaseBalance(cardId, amount) {
     return await cardModel.increaseBalance(cardId, amount);
   }
 
-  async decreaseBalance(cardId, amount) {
+  static async decreaseBalance(cardId, amount) {
     return await cardModel.decreaseBalance(cardId, amount);
   }
 
-  async getAllCards() {
+  static async getAllCards() {
     return await cardModel.getAllCards();
   }
 
-  async createCard(card) {
+  static async createCard(card) {
     return await cardModel.createCard(card);
   }
 
-  async removeCard(cardId) {
+  static async removeCard(cardId) {
     return await cardModel.removeCard(cardId);
   }
 
-  async getTransactions(cardId) {
+  static async getTransactions(cardId) {
     return await transactionModel.getTransactions(cardId);
   }
 
-  async getAllTransactions() {
+  static async getAllTransactions() {
     return await transactionModel.getAllTransactions();
   }
 
-  async createTransaction(transactionData) {
+  static async createTransaction(transactionData) {
     return await transactionModel.createTransaction(transactionData);
   }
 }
