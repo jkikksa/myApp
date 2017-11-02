@@ -8,3 +8,4 @@ npm-debug.log*
 package-lock.json
 source/views/index.server.js
 public/js/script.js
+public/css/style.css
